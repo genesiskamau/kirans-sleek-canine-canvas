@@ -1,0 +1,62 @@
+import { PawPrint, Phone, Mail, MapPin, Heart } from "lucide-react";
+
+const Footer = () => {
+  return (
+    <footer className="bg-primary text-primary-foreground py-12">
+      <div className="container mx-auto px-6">
+        <div className="grid md:grid-cols-3 gap-8 mb-8">
+          <div>
+            <div className="flex items-center space-x-3 mb-4">
+              <PawPrint className="w-8 h-8" />
+              <span className="font-serif text-2xl font-bold">Kirangi Dogs</span>
+            </div>
+            <p className="opacity-90 mb-4">
+              Premium dog breeding and training services in Kenya. We breed the best, train the best!
+            </p>
+            <p className="text-sm opacity-75">
+              Registered with Kennel Club of Kenya
+            </p>
+          </div>
+          
+          <div>
+            <h3 className="font-semibold text-lg mb-4">Contact Info</h3>
+            <div className="space-y-3">
+              <div className="flex items-center space-x-3">
+                <Phone className="w-4 h-4" />
+                <span>+254-785-535-569</span>
+              </div>
+              <div className="flex items-center space-x-3">
+                <Mail className="w-4 h-4" />
+                <span>kirangidogs@gmail.com</span>
+              </div>
+              <div className="flex items-center space-x-3">
+                <MapPin className="w-4 h-4" />
+                <span>Kenya</span>
+              </div>
+            </div>
+          </div>
+          
+          <div>
+            <h3 className="font-semibold text-lg mb-4">Our Services</h3>
+            <ul className="space-y-2 text-sm opacity-90">
+              <li>Black Russian Terrier Breeding</li>
+              <li>German Shepherd Breeding</li>
+              <li>Professional Dog Training</li>
+              <li>K-9 Security Services</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div className="border-t border-white/20 pt-8 text-center">
+          <p className="flex items-center justify-center space-x-2 text-sm opacity-75">
+            <span>Made with</span>
+            <Heart className="w-4 h-4 fill-current" />
+            <span>for dog lovers everywhere</span>
+          </p>
+        </div>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;
