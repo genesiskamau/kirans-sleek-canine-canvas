@@ -16,11 +16,13 @@ const HeroSection = () => {
       {/* Content */}
       <div className="relative z-10 container mx-auto px-6 text-center text-white">
         <div className="animate-fade-in">
-          <img 
-            src="/lovable-uploads/3eb3333d-5f52-4ded-87dd-83a308207920.png" 
-            alt="Kirangi Dogs Logo" 
-            className="w-20 h-20 mx-auto mb-6 animate-float"
-          />
+          <div className="mb-8">
+            <img 
+              src="/lovable-uploads/3eb3333d-5f52-4ded-87dd-83a308207920.png" 
+              alt="Kirangi Dogs Logo" 
+              className="w-32 h-32 mx-auto animate-float drop-shadow-2xl bg-white/10 backdrop-blur-sm rounded-full p-4"
+            />
+          </div>
           <h1 className="font-serif text-5xl md:text-7xl font-bold mb-6 leading-tight">
             Kirangi Dogs
             <span className="block text-3xl md:text-4xl font-normal mt-2 opacity-90">
