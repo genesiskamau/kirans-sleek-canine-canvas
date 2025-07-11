@@ -46,11 +46,6 @@ const Navigation = () => {
               alt="Kirangi Dogs Logo" 
               className="w-10 h-10 animate-float"
             />
-            <div className={`font-serif font-bold text-xl transition-colors duration-300 ${
-              isScrolled ? 'text-primary' : 'text-white'
-            }`}>
-              Kirangi Dogs
-            </div>
           </div>
 
           {/* Desktop Navigation */}
