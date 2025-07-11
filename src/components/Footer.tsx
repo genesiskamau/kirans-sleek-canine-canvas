@@ -6,10 +6,7 @@ const Footer = () => {
       <div className="container mx-auto px-6">
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           <div>
-            <div className="flex items-center space-x-3 mb-4">
-              <PawPrint className="w-8 h-8" />
-              <span className="font-serif text-2xl font-bold">Kirangi Dogs</span>
-            </div>
+            <h3 className="font-serif text-2xl font-bold mb-4">Kirangi Dogs</h3>
             <p className="opacity-90 mb-4">
               Premium dog breeding and training services in Kenya. We breed the best, train the best!
             </p>
