@@ -16,7 +16,11 @@ const HeroSection = () => {
       {/* Content */}
       <div className="relative z-10 container mx-auto px-6 text-center text-white">
         <div className="animate-fade-in">
-          <PawPrint className="w-16 h-16 mx-auto mb-6 animate-float" />
+          <img 
+            src="/lovable-uploads/3eb3333d-5f52-4ded-87dd-83a308207920.png" 
+            alt="Kirangi Dogs Logo" 
+            className="w-20 h-20 mx-auto mb-6 animate-float"
+          />
           <h1 className="font-serif text-5xl md:text-7xl font-bold mb-6 leading-tight">
             Kirangi Dogs
             <span className="block text-3xl md:text-4xl font-normal mt-2 opacity-90">

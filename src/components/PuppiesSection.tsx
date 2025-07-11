@@ -2,42 +2,40 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Heart, Star, Phone } from "lucide-react";
-import puppyImage from "@/assets/puppy.jpg";
-
 const PuppiesSection = () => {
   const availablePuppies = [
     {
       id: 1,
-      name: "Vladimir",
-      breed: "Black Russian Terrier",
+      name: "Max",
+      breed: "German Shepherd",
       age: "8 weeks",
       gender: "Male",
       price: "Contact for pricing",
       features: ["Champion bloodline", "Health tested", "Vaccinated", "Microchipped"],
-      image: puppyImage,
+      image: "/lovable-uploads/76d917e7-6e5a-47de-adc5-d6da990f5df4.png",
       available: true
     },
     {
       id: 2,
-      name: "Katarina",
-      breed: "Black Russian Terrier",
+      name: "Luna",
+      breed: "German Shepherd",
       age: "10 weeks",
       gender: "Female",
       price: "Contact for pricing",
       features: ["Show quality", "Health guarantee", "Early training", "Socialized"],
-      image: puppyImage,
+      image: "/lovable-uploads/321ee2e8-4ea3-4b01-ac2b-941b4a91b537.png",
       available: true
     },
     {
       id: 3,
-      name: "Boris",
+      name: "Zeus",
       breed: "German Shepherd",
       age: "12 weeks",
       gender: "Male",
       price: "Contact for pricing",
       features: ["Working line", "Hip tested parents", "Protective instinct", "Family friendly"],
-      image: puppyImage,
-      available: false
+      image: "/lovable-uploads/f6b5736c-8dbb-4b4a-96d2-ea5129c44125.png",
+      available: true
     }
   ];
 

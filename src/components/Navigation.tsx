@@ -41,13 +41,11 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <div className="flex items-center space-x-3">
-            <div className={`p-2 rounded-full transition-all duration-300 ${
-              isScrolled ? 'bg-primary' : 'bg-white/20 backdrop-blur-sm'
-            }`}>
-              <PawPrint className={`w-6 h-6 ${
-                isScrolled ? 'text-primary-foreground' : 'text-white'
-              }`} />
-            </div>
+            <img 
+              src="/lovable-uploads/3eb3333d-5f52-4ded-87dd-83a308207920.png" 
+              alt="Kirangi Dogs Logo" 
+              className="w-10 h-10 animate-float"
+            />
             <div className={`font-serif font-bold text-xl transition-colors duration-300 ${
               isScrolled ? 'text-primary' : 'text-white'
             }`}>
