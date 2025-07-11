@@ -44,11 +44,14 @@ const Footer = () => {
           </div>
         </div>
         
-        <div className="border-t border-white/20 pt-8 text-center">
+        <div className="border-t border-white/20 pt-8 text-center space-y-3">
           <p className="flex items-center justify-center space-x-2 text-sm opacity-75">
             <span>Made with</span>
             <Heart className="w-4 h-4 fill-current" />
             <span>for dog lovers everywhere</span>
+          </p>
+          <p className="text-sm opacity-75">
+            © 2025 kirangidogs.com - All rights reserved
           </p>
         </div>
       </div>
