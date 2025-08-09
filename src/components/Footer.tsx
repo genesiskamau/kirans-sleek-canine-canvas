@@ -53,6 +53,9 @@ const Footer = () => {
           <p className="text-sm opacity-75">
             © 2025 kirangidogs.com - All rights reserved
           </p>
+          <p className="text-sm opacity-60">
+            Made By Genco Designs- Genesis Kamau
+          </p>
         </div>
       </div>
     </footer>
