@@ -10,7 +10,7 @@ const ServicesSection = () => {
       description: "We do selective breeding of Black Russian Terriers and German Shepherds from world-class sires and dams. Every puppy comes with full registration and health guarantees.",
       features: [
         "Genetic health screening",
-        "Kennel Club registration",
+        "Dogs registered with Kennel Club",
         "World-class bloodlines",
         "Health guarantees"
       ],

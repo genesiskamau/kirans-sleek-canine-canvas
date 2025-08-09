@@ -54,7 +54,7 @@ const HeroSection = () => {
           </div>
           
           <div className="text-sm opacity-75">
-            Registered with Kennel Club of Kenya
+            Dogs Registered with The Kennel Club of Kenya
           </div>
         </div>
       </div>

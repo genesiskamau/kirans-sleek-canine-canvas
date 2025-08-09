@@ -6,8 +6,8 @@ const AboutSection = () => {
   const highlights = [
     {
       icon: Award,
-      title: "Registered Kennel",
-      description: "Official registration with Kennel Club of Kenya"
+      title: "Registered Dogs",
+      description: "Dogs Registered with The Kennel Club of Kenya"
     },
     {
       icon: Heart,
