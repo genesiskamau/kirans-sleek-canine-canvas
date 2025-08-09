@@ -59,13 +59,14 @@ const ServicesSection = () => {
           {services.map((service, index) => (
             <Card 
               key={index} 
-              className="group bg-card border-0 shadow-card hover:shadow-warm transition-all duration-500 transform hover:-translate-y-4 overflow-hidden"
+              className="group bg-card border-0 shadow-card hover:shadow-warm transition-all duration-700 transform hover:-translate-y-6 hover:rotate-1 overflow-hidden animate-fade-in-up hover:animate-glow-pulse"
+              style={{ animationDelay: `${index * 200}ms` }}
             >
               <CardHeader className="relative">
-                <div className={`absolute top-0 left-0 right-0 h-1 ${service.color} transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500`}></div>
+                <div className={`absolute top-0 left-0 right-0 h-1 ${service.color} transform scale-x-0 group-hover:scale-x-100 transition-transform duration-700 ease-out`}></div>
                 <div className="flex items-center space-x-4 mb-4">
-                  <div className={`p-3 rounded-full ${service.color.replace('bg-', 'bg-')} text-white`}>
-                    <service.icon className="w-6 h-6" />
+                  <div className={`p-3 rounded-full ${service.color.replace('bg-', 'bg-')} text-white transform group-hover:scale-110 group-hover:rotate-12 transition-all duration-500`}>
+                    <service.icon className="w-6 h-6 group-hover:animate-bounce-gentle" />
                   </div>
                   <CardTitle className="font-serif text-2xl text-foreground">
                     {service.title}
@@ -89,10 +90,10 @@ const ServicesSection = () => {
                 
                 <Button 
                   variant="outline" 
-                  className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300"
+                  className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-500 group-hover:shadow-glow transform group-hover:scale-105"
                 >
                   Learn More
-                  <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+                  <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-2 group-hover:scale-110 transition-all duration-500" />
                 </Button>
               </CardContent>
             </Card>

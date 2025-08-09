@@ -52,9 +52,16 @@ All colors MUST be HSL.
     
     /* Animations */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-spring: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+    --transition-bounce: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     
     /* Float animation for logo */
     --float-animation: float 3s ease-in-out infinite;
+    
+    /* Advanced animation shadows */
+    --shadow-glow: 0 0 40px hsl(var(--primary) / 0.3);
+    --shadow-float: 0 20px 40px -15px hsl(var(--primary) / 0.25);
+    --shadow-intense: 0 25px 50px -12px hsl(var(--foreground) / 0.15);
 
     --radius: 0.5rem;
 
