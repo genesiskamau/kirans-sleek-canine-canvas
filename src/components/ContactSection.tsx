@@ -43,9 +43,9 @@ const ContactSection = () => {
     {
       icon: Mail,
       title: "Email",
-      primary: "kirangidogs@gmail.com",
+      primary: "uniquepawkennels@gmail.com",
       secondary: "We reply within 24 hours",
-      action: "mailto:kirangidogs@gmail.com"
+      action: "mailto:uniquepawkennels@gmail.com"
     },
     {
       icon: MapPin,
