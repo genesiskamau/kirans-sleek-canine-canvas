@@ -41,8 +41,8 @@ serve(async (req) => {
     }
 
     const emailData = {
-      from: 'noreply@yourdomain.com', // You'll need to configure this with your domain
-      to: ['uniquepawkennels@gmail.com'],
+      from: 'noreply@resend.dev', // Using Resend's default domain
+      to: ['kirangidogs@gmail.com'],
       subject: `New Contact Form Submission from ${name}`,
       html: `
         <h2>New Contact Form Submission</h2>
