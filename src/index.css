@@ -8,63 +8,68 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Modern vibrant design system */
-    --background: 0 0% 100%;
-    --foreground: 240 10% 3.9%;
+    /* Ultra-premium luxury design system */
+    --background: 0 0% 99%;
+    --foreground: 210 15% 8%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 240 10% 3.9%;
+    --card: 0 0% 98%;
+    --card-foreground: 210 15% 8%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 240 10% 3.9%;
+    --popover: 0 0% 98%;
+    --popover-foreground: 210 15% 8%;
 
-    /* Electric blue primary with depth */
-    --primary: 221 83% 53%;
-    --primary-foreground: 210 40% 98%;
+    /* Deep royal blue - sophisticated and premium */
+    --primary: 220 70% 15%;
+    --primary-foreground: 45 100% 96%;
 
-    /* Sophisticated purple secondary */
-    --secondary: 270 95% 75%;
-    --secondary-foreground: 240 10% 3.9%;
+    /* Champagne gold - luxury accent */
+    --secondary: 45 85% 75%;
+    --secondary-foreground: 210 15% 8%;
 
-    /* Neutral with warmth */
-    --muted: 210 40% 96%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Warm platinum */
+    --muted: 210 20% 95%;
+    --muted-foreground: 210 15% 35%;
 
-    /* Vibrant coral accent */
-    --accent: 346 87% 67%;
-    --accent-foreground: 355.7 100% 97.3%;
+    /* Rich amber gold */
+    --accent: 42 95% 65%;
+    --accent-foreground: 210 15% 8%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 0 0% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 221 83% 53%;
+    --border: 210 20% 88%;
+    --input: 210 20% 88%;
+    --ring: 220 70% 15%;
 
-    /* Revolutionary gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(346 87% 67%));
-    --gradient-secondary: linear-gradient(135deg, hsl(var(--secondary)), hsl(290 95% 85%));
-    --gradient-hero: linear-gradient(135deg, hsl(var(--primary) / 0.95), hsl(270 95% 75% / 0.9));
-    --gradient-glass: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
-    --gradient-mesh: radial-gradient(at 40% 20%, hsl(var(--primary) / 0.3) 0px, transparent 50%), radial-gradient(at 80% 0%, hsl(var(--accent) / 0.2) 0px, transparent 50%), radial-gradient(at 0% 50%, hsl(var(--secondary) / 0.2) 0px, transparent 50%);
+    /* Luxury gradients with metallic finish */
+    --gradient-primary: linear-gradient(135deg, hsl(220 70% 15%), hsl(220 60% 25%));
+    --gradient-gold: linear-gradient(135deg, hsl(42 95% 65%), hsl(45 85% 75%));
+    --gradient-platinum: linear-gradient(135deg, hsl(210 20% 95%), hsl(220 15% 92%));
+    --gradient-royal: linear-gradient(135deg, hsl(220 70% 15% / 0.95), hsl(210 60% 20% / 0.9));
+    --gradient-luxury: linear-gradient(135deg, hsl(220 70% 15%), hsl(42 95% 65% / 0.3), hsl(220 70% 15%));
+    --gradient-glass-premium: linear-gradient(135deg, rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.1));
+    --gradient-mesh-luxury: radial-gradient(at 40% 20%, hsl(42 95% 65% / 0.15) 0px, transparent 50%), 
+                           radial-gradient(at 80% 0%, hsl(220 70% 15% / 0.1) 0px, transparent 50%), 
+                           radial-gradient(at 0% 50%, hsl(45 85% 75% / 0.1) 0px, transparent 50%);
     
-    /* Advanced shadows with color */
-    --shadow-primary: 0 25px 50px -12px hsl(var(--primary) / 0.4);
-    --shadow-secondary: 0 25px 50px -12px hsl(var(--secondary) / 0.3);
-    --shadow-accent: 0 25px 50px -12px hsl(var(--accent) / 0.4);
-    --shadow-glass: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-    --shadow-float: 0 35px 60px -15px rgba(0, 0, 0, 0.3);
+    /* Premium shadow system with gold accents */
+    --shadow-luxury: 0 25px 50px -12px hsl(220 70% 15% / 0.3);
+    --shadow-gold: 0 20px 40px -15px hsl(42 95% 65% / 0.4);
+    --shadow-platinum: 0 15px 35px -10px hsl(210 20% 80% / 0.5);
+    --shadow-royal: 0 30px 60px -15px hsl(220 70% 15% / 0.4);
+    --shadow-glass-luxury: 0 8px 32px 0 rgba(0, 0, 0, 0.12);
+    --shadow-float-premium: 0 40px 80px -20px rgba(0, 0, 0, 0.25);
     
-    /* Smooth premium animations */
-    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-spring: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
-    --transition-bounce: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    --transition-elastic: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    /* Sophisticated animations */
+    --transition-luxury: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
+    --transition-premium: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+    --transition-elegant: all 0.8s cubic-bezier(0.19, 1, 0.22, 1);
+    --transition-royal: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
     
-    /* Premium glow effects */
-    --glow-primary: 0 0 60px hsl(var(--primary) / 0.6);
-    --glow-secondary: 0 0 60px hsl(var(--secondary) / 0.5);
-    --glow-accent: 0 0 60px hsl(var(--accent) / 0.6);
+    /* Luxury glow effects */
+    --glow-gold: 0 0 50px hsl(42 95% 65% / 0.6), 0 0 100px hsl(42 95% 65% / 0.3);
+    --glow-royal: 0 0 50px hsl(220 70% 15% / 0.5), 0 0 100px hsl(220 70% 15% / 0.2);
+    --glow-platinum: 0 0 40px hsl(210 20% 80% / 0.8), 0 0 80px hsl(210 20% 80% / 0.4);
 
     --radius: 0.5rem;
 
@@ -163,49 +168,70 @@ All colors MUST be HSL.
     animation-delay: 1200ms;
   }
   
-  /* Glassmorphism utilities */
-  .glass {
-    backdrop-filter: blur(16px);
-    background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+  /* Luxury glassmorphism */
+  .glass-luxury {
+    backdrop-filter: blur(20px) saturate(180%);
+    background: var(--gradient-glass-premium);
+    border: 1px solid rgba(255, 215, 0, 0.2);
   }
   
-  .glass-dark {
-    backdrop-filter: blur(16px);
-    background: rgba(0, 0, 0, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+  .glass-royal {
+    backdrop-filter: blur(25px) saturate(200%);
+    background: linear-gradient(135deg, rgba(34, 48, 83, 0.15), rgba(34, 48, 83, 0.05));
+    border: 1px solid rgba(255, 215, 0, 0.15);
   }
   
   /* Premium glow effects */
-  .glow-primary {
-    box-shadow: var(--glow-primary);
+  .glow-gold {
+    box-shadow: var(--glow-gold);
   }
   
-  .glow-secondary {
-    box-shadow: var(--glow-secondary);
+  .glow-royal {
+    box-shadow: var(--glow-royal);
   }
   
-  .glow-accent {
-    box-shadow: var(--glow-accent);
+  .glow-platinum {
+    box-shadow: var(--glow-platinum);
   }
   
-  /* Mesh gradient background */
-  .mesh-gradient {
-    background: var(--gradient-mesh);
+  /* Luxury mesh gradient */
+  .mesh-luxury {
+    background: var(--gradient-mesh-luxury);
   }
   
-  /* Premium text gradients */
-  .text-gradient-primary {
+  /* Premium text effects */
+  .text-gold {
+    background: var(--gradient-gold);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .text-royal {
     background: var(--gradient-primary);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
   
-  .text-gradient-secondary {
-    background: var(--gradient-secondary);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+  /* Luxury materials */
+  .leather-texture {
+    background-image: 
+      radial-gradient(circle at 1px 1px, rgba(34, 48, 83, 0.15) 1px, transparent 0);
+    background-size: 20px 20px;
+  }
+  
+  .metallic-border {
+    border-image: linear-gradient(45deg, hsl(42 95% 65%), hsl(45 85% 75%), hsl(42 95% 65%)) 1;
+  }
+  
+  /* Premium hover effects */
+  .hover-luxury {
+    transition: var(--transition-luxury);
+  }
+  
+  .hover-luxury:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: var(--shadow-luxury);
   }
 }

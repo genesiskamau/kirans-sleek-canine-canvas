@@ -32,88 +32,98 @@ const Navigation = () => {
   };
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-700 ${
       isScrolled 
-        ? 'glass backdrop-blur-2xl border-b border-white/10 shadow-glass' 
+        ? 'glass-luxury backdrop-blur-3xl border-b metallic-border shadow-royal' 
         : 'bg-transparent'
     }`}>
       <div className="container mx-auto px-6">
-        <div className="flex items-center justify-between h-20">
-          {/* Logo with modern treatment */}
-          <div className="flex items-center space-x-3 group">
-            <div className={`rounded-xl p-2 transition-all duration-500 ${
-              isScrolled ? 'bg-gradient-primary shadow-primary' : 'glass border border-white/20'
+        <div className="flex items-center justify-between h-24">
+          {/* Premium logo treatment */}
+          <div className="flex items-center space-x-4 group">
+            <div className={`rounded-2xl p-3 transition-all duration-700 ${
+              isScrolled 
+                ? 'bg-gradient-gold shadow-gold border metallic-border' 
+                : 'glass-luxury border metallic-border'
             }`}>
               <img 
                 src="/lovable-uploads/3eb3333d-5f52-4ded-87dd-83a308207920.png" 
                 alt="Kirangi Dogs Logo" 
-                className="w-8 h-8 animate-float-gentle group-hover:scale-110 transition-all duration-300"
+                className="w-10 h-10 animate-luxury-float group-hover:scale-110 transition-all duration-500"
               />
             </div>
-            <span className={`font-bold text-lg transition-all duration-300 ${
-              isScrolled ? 'text-foreground' : 'text-white'
-            }`}>
-              Kirangi
-            </span>
+            <div className="flex flex-col">
+              <span className={`font-luxury font-bold text-xl transition-all duration-500 ${
+                isScrolled ? 'text-primary' : 'text-white'
+              }`}>
+                KIRANGI
+              </span>
+              <span className={`font-premium text-xs tracking-widest transition-all duration-500 ${
+                isScrolled ? 'text-muted-foreground' : 'text-white/70'
+              }`}>
+                PREMIUM DOGS
+              </span>
+            </div>
           </div>
 
-          {/* Desktop Navigation with modern styling */}
-          <div className="hidden md:flex items-center space-x-2">
+          {/* Premium navigation */}
+          <div className="hidden md:flex items-center space-x-1">
             {navItems.map((item, index) => (
               <button
                 key={item.label}
                 onClick={() => scrollToSection(item.href)}
-                className={`relative px-4 py-2 font-medium transition-all duration-300 rounded-xl group ${
+                className={`relative px-6 py-3 font-premium font-semibold tracking-wide transition-all duration-500 rounded-xl group hover-luxury ${
                   isScrolled 
-                    ? 'text-foreground hover:text-primary hover:bg-primary/10' 
-                    : 'text-white hover:text-white/90 hover:bg-white/10'
+                    ? 'text-foreground hover:text-primary' 
+                    : 'text-white hover:text-gold'
                 }`}
               >
-                <span className="relative z-10">{item.label}</span>
-                <div className="absolute inset-0 rounded-xl bg-gradient-primary opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
+                <span className="relative z-10 text-sm">{item.label.toUpperCase()}</span>
+                <div className="absolute inset-0 rounded-xl bg-gradient-gold opacity-0 group-hover:opacity-20 transition-all duration-500"></div>
+                <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-0 h-0.5 bg-gradient-gold group-hover:w-full transition-all duration-500"></div>
               </button>
             ))}
-            <div className="ml-4">
+            <div className="ml-8">
               <Button 
                 size="sm" 
-                className="bg-gradient-primary hover:scale-105 text-white rounded-xl px-6 py-2 shadow-primary hover:shadow-2xl transition-all duration-300 border border-white/20"
+                className="bg-gradient-gold hover:scale-105 text-primary rounded-2xl px-8 py-3 shadow-gold hover:shadow-2xl transition-all duration-500 border metallic-border font-premium font-bold tracking-wide hover-luxury"
               >
                 <Phone className="w-4 h-4 mr-2" />
-                Call Us
+                CALL NOW
               </Button>
             </div>
           </div>
 
-          {/* Mobile Menu Button with modern styling */}
+          {/* Premium mobile menu button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className={`md:hidden p-3 rounded-xl transition-all duration-300 ${
+            className={`md:hidden p-4 rounded-2xl transition-all duration-500 hover-luxury ${
               isScrolled 
-                ? 'bg-gradient-primary text-white shadow-primary' 
-                : 'glass text-white backdrop-blur-xl border border-white/20'
+                ? 'bg-gradient-gold text-primary shadow-gold border metallic-border' 
+                : 'glass-luxury text-white backdrop-blur-2xl border metallic-border'
             }`}
           >
-            {isMobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+            {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
 
-        {/* Mobile Menu with glassmorphism */}
+        {/* Premium mobile menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden absolute top-full left-6 right-6 mt-2 glass backdrop-blur-2xl border border-white/20 rounded-2xl shadow-glass animate-fade-in-up">
-            <div className="p-6 space-y-2">
+          <div className="md:hidden absolute top-full left-6 right-6 mt-4 glass-luxury backdrop-blur-3xl border-2 metallic-border rounded-3xl shadow-royal animate-elegant-scale leather-texture">
+            <div className="p-8 space-y-4">
               {navItems.map((item) => (
                 <button
                   key={item.label}
                   onClick={() => scrollToSection(item.href)}
-                  className="block w-full px-4 py-3 text-left font-medium text-white hover:bg-white/10 rounded-xl transition-all duration-200 hover:scale-105"
+                  className="block w-full px-6 py-4 text-left font-premium font-semibold text-white hover:bg-white/10 rounded-xl transition-all duration-500 hover-luxury tracking-wide"
                 >
-                  {item.label}
+                  {item.label.toUpperCase()}
                 </button>
               ))}
-              <div className="pt-4 border-t border-white/20">
-                <Button className="w-full bg-gradient-primary hover:scale-105 text-white rounded-xl py-3 shadow-primary transition-all duration-300">
-                  <Phone className="w-4 h-4 mr-2" />
-                  +254-785-535-569
+              <div className="pt-6 border-t border-gold/30">
+                <Button className="w-full bg-gradient-gold hover:scale-105 text-primary rounded-2xl py-4 shadow-gold transition-all duration-500 font-premium font-bold tracking-wide hover-luxury">
+                  <Phone className="w-5 h-5 mr-3" />
+                  CALL +254-785-535-569
                 </Button>
               </div>
             </div>
