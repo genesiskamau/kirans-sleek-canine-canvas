@@ -65,12 +65,17 @@ export default {
 			},
 			backgroundImage: {
 				'gradient-primary': 'var(--gradient-primary)',
-				'gradient-warm': 'var(--gradient-warm)',
-				'gradient-hero': 'var(--gradient-hero)'
+				'gradient-secondary': 'var(--gradient-secondary)',
+				'gradient-hero': 'var(--gradient-hero)',
+				'gradient-glass': 'var(--gradient-glass)',
+				'gradient-mesh': 'var(--gradient-mesh)'
 			},
 			boxShadow: {
-				'warm': 'var(--shadow-warm)',
-				'card': 'var(--shadow-card)'
+				'primary': 'var(--shadow-primary)',
+				'secondary': 'var(--shadow-secondary)',
+				'accent': 'var(--shadow-accent)',
+				'glass': 'var(--shadow-glass)',
+				'float': 'var(--shadow-float)'
 			},
 			fontFamily: {
 				'serif': ['Playfair Display', 'serif'],
@@ -203,14 +208,36 @@ export default {
 						boxShadow: '0 0 40px hsl(var(--primary) / 0.6), 0 0 60px hsl(var(--primary) / 0.4)'
 					}
 				},
-				'shimmer': {
+				'morph': {
+					'0%, 100%': { 
+						borderRadius: '60% 40% 30% 70% / 60% 30% 70% 40%',
+						transform: 'rotate(0deg)'
+					},
+					'50%': { 
+						borderRadius: '30% 60% 70% 40% / 50% 60% 30% 60%',
+						transform: 'rotate(180deg)'
+					}
+				},
+				'float-gentle': {
+					'0%, 100%': { 
+						transform: 'translateY(0px) rotate(0deg)'
+					},
+					'50%': { 
+						transform: 'translateY(-20px) rotate(3deg)'
+					}
+				},
+				'slide-in-blur': {
 					'0%': {
-						backgroundPosition: '-200px 0'
+						transform: 'translateX(-100px)',
+						filter: 'blur(10px)',
+						opacity: '0'
 					},
 					'100%': {
-						backgroundPosition: 'calc(200px + 100%) 0'
+						transform: 'translateX(0)',
+						filter: 'blur(0px)',
+						opacity: '1'
 					}
-				}
+				},
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
@@ -228,7 +255,10 @@ export default {
 				'glow-pulse': 'glow-pulse 2s ease-in-out infinite',
 				'shimmer': 'shimmer 2s linear infinite',
 				'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-				'bounce-slow': 'bounce 2s infinite'
+				'bounce-slow': 'bounce 2s infinite',
+				'morph': 'morph 8s ease-in-out infinite',
+				'float-gentle': 'float-gentle 6s ease-in-out infinite',
+				'slide-in-blur': 'slide-in-blur 0.6s ease-out forwards'
 			}
 		}
 	},
