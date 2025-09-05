@@ -28,7 +28,7 @@ const HeroSection = () => {
         <div className="animate-elegant-scale">
           {/* Premium logo presentation */}
           <div className="mb-16 relative">
-            <div className="glass-luxury rounded-3xl p-12 mx-auto w-fit backdrop-blur-3xl border-2 metallic-border shadow-royal animate-luxury-float leather-texture">
+            <div className="glass-luxury rounded-2xl p-12 mx-auto w-fit backdrop-blur-3xl border-2 metallic-border shadow-royal animate-luxury-float leather-texture">
               <div className="relative">
                 <img 
                   src="/lovable-uploads/3eb3333d-5f52-4ded-87dd-83a308207920.png" 
@@ -66,7 +66,7 @@ const HeroSection = () => {
           <div className="flex flex-col sm:flex-row gap-8 justify-center items-center mb-20 animate-fade-in-up animation-delay-900">
             <Button 
               size="lg" 
-              className="group bg-gradient-gold hover:scale-110 text-primary px-12 py-8 text-xl font-bold rounded-2xl shadow-gold hover:shadow-2xl transition-all duration-700 hover:glow-gold border-2 metallic-border font-premium tracking-wide hover-luxury"
+              className="group bg-gradient-gold hover:scale-110 text-primary px-12 py-8 text-xl font-bold rounded-xl shadow-gold hover:shadow-2xl transition-all duration-700 hover:glow-gold border-2 metallic-border font-premium tracking-wide hover-luxury"
             >
               <Phone className="w-6 h-6 mr-4 group-hover:animate-bounce" />
               CALL +254-785-535-569
@@ -75,7 +75,7 @@ const HeroSection = () => {
             <Button 
               variant="outline" 
               size="lg"
-              className="glass-luxury group border-2 metallic-border text-white hover:bg-white/10 px-12 py-8 text-xl font-bold rounded-2xl backdrop-blur-2xl hover:scale-110 transition-all duration-700 hover:shadow-platinum font-premium tracking-wide hover-luxury"
+              className="glass-luxury group border-2 metallic-border text-white hover:bg-white/10 px-12 py-8 text-xl font-bold rounded-xl backdrop-blur-2xl hover:scale-110 transition-all duration-700 hover:shadow-platinum font-premium tracking-wide hover-luxury"
             >
               <Mail className="w-6 h-6 mr-4 group-hover:animate-bounce" />
               INQUIRE NOW
@@ -83,7 +83,7 @@ const HeroSection = () => {
           </div>
           
           {/* Premium certification badge */}
-          <div className="glass-luxury rounded-2xl px-8 py-4 mx-auto w-fit backdrop-blur-2xl border metallic-border shadow-platinum">
+          <div className="glass-luxury rounded-xl px-8 py-4 mx-auto w-fit backdrop-blur-2xl border metallic-border shadow-platinum">
             <div className="flex items-center space-x-3">
               <div className="w-3 h-3 bg-gradient-gold rounded-full animate-royal-pulse"></div>
               <p className="text-lg text-white font-premium font-medium tracking-wide">
@@ -97,8 +97,8 @@ const HeroSection = () => {
       
       {/* Luxury scroll indicator */}
       <div className="absolute bottom-12 left-1/2 transform -translate-x-1/2 animate-luxury-float cursor-pointer group hover:scale-125 transition-all duration-700">
-        <div className="glass-luxury rounded-2xl p-6 backdrop-blur-2xl border metallic-border group-hover:glow-gold shadow-platinum">
-          <div className="w-8 h-12 border-2 border-gold rounded-2xl relative">
+        <div className="glass-luxury rounded-xl p-6 backdrop-blur-2xl border metallic-border group-hover:glow-gold shadow-platinum">
+          <div className="w-8 h-12 border-2 border-gold rounded-lg relative">
             <div className="w-2 h-4 bg-gradient-gold rounded-full absolute top-3 left-1/2 transform -translate-x-1/2 animate-bounce"></div>
           </div>
         </div>
