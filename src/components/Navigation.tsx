@@ -109,18 +109,18 @@ const Navigation = () => {
 
         {/* Premium mobile menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden absolute top-full left-6 right-6 mt-4 bg-background/95 backdrop-blur-3xl border-2 metallic-border rounded-2xl shadow-royal animate-elegant-scale z-50">
+          <div className="md:hidden absolute top-full left-6 right-6 mt-4 bg-card/95 backdrop-blur-3xl border-2 metallic-border rounded-2xl shadow-royal animate-elegant-scale z-50">
             <div className="p-8 space-y-4">
               {navItems.map((item) => (
                 <button
                   key={item.label}
                   onClick={() => scrollToSection(item.href)}
-                  className="block w-full px-6 py-4 text-left font-premium font-semibold text-white hover:bg-white/10 rounded-lg transition-all duration-500 hover-luxury tracking-wide"
+                  className="block w-full px-6 py-4 text-left font-premium font-semibold text-foreground hover:bg-accent/20 rounded-lg transition-all duration-500 hover-luxury tracking-wide"
                 >
                   {item.label.toUpperCase()}
                 </button>
               ))}
-              <div className="pt-6 border-t border-gold/30">
+              <div className="pt-6 border-t border-border/30">
                 <Button className="w-full bg-gradient-gold hover:scale-105 text-primary rounded-xl py-4 shadow-gold transition-all duration-500 font-premium font-bold tracking-wide hover-luxury">
                   <Phone className="w-5 h-5 mr-3" />
                   CALL +254-785-535-569
