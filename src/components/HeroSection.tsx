@@ -90,14 +90,6 @@ const HeroSection = () => {
         </div>
       </div>
       
-      {/* Luxury scroll indicator */}
-      <div className="absolute bottom-12 left-1/2 transform -translate-x-1/2 animate-luxury-float cursor-pointer group hover:scale-125 transition-all duration-700">
-        <div className="glass-luxury rounded-xl p-6 backdrop-blur-2xl border metallic-border group-hover:glow-gold shadow-platinum">
-          <div className="w-8 h-12 border-2 border-gold rounded-lg relative">
-            <div className="w-2 h-4 bg-gradient-gold rounded-full absolute top-3 left-1/2 transform -translate-x-1/2 animate-bounce"></div>
-          </div>
-        </div>
-      </div>
     </section>
   );
 };
