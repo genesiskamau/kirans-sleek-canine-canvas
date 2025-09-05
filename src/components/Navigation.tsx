@@ -109,7 +109,7 @@ const Navigation = () => {
 
         {/* Premium mobile menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden absolute top-full left-6 right-6 mt-4 glass-luxury backdrop-blur-3xl border-2 metallic-border rounded-2xl shadow-royal animate-elegant-scale leather-texture">
+          <div className="md:hidden absolute top-full left-6 right-6 mt-4 bg-background/95 backdrop-blur-3xl border-2 metallic-border rounded-2xl shadow-royal animate-elegant-scale z-50">
             <div className="p-8 space-y-4">
               {navItems.map((item) => (
                 <button
