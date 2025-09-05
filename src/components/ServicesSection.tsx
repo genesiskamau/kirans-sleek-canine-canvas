@@ -1,11 +1,11 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Heart, GraduationCap, Shield, ArrowRight } from "lucide-react";
+import { Crown, Target, Zap, ArrowRight } from "lucide-react";
 
 const ServicesSection = () => {
   const services = [
     {
-      icon: Heart,
+      icon: Crown,
       title: "Premium Breeding",
       description: "We do selective breeding of Black Russian Terriers and German Shepherds from world-class sires and dams. Every puppy comes with full registration and health guarantees.",
       features: [
@@ -17,7 +17,7 @@ const ServicesSection = () => {
       color: "bg-primary"
     },
     {
-      icon: GraduationCap,
+      icon: Target,
       title: "Kirangi Dog Academy",
       description: "Professional training services covering functional obedience, protection work, dog sports, and scent work. Our experienced trainers work with dogs of all ages.",
       features: [
@@ -29,7 +29,7 @@ const ServicesSection = () => {
       color: "bg-accent"
     },
     {
-      icon: Shield,
+      icon: Zap,
       title: "K-9 Security Services",
       description: "Our well-trained protection dogs are always ready for deployment to events for security coverage. Professional, reliable, and highly effective.",
       features: [
@@ -59,14 +59,17 @@ const ServicesSection = () => {
           {services.map((service, index) => (
             <Card 
               key={index} 
-              className="group bg-card border-0 shadow-card hover:shadow-warm transition-all duration-700 transform hover:-translate-y-6 hover:rotate-1 overflow-hidden animate-fade-in-up hover:animate-glow-pulse"
-              style={{ animationDelay: `${index * 200}ms` }}
+              className="group bg-card border-0 shadow-card hover:shadow-warm transition-all duration-500 transform hover:scale-105 overflow-hidden animate-scale-in opacity-0"
+              style={{ 
+                animationDelay: `${index * 300}ms`,
+                animationFillMode: 'forwards'
+              }}
             >
               <CardHeader className="relative">
-                <div className={`absolute top-0 left-0 right-0 h-1 ${service.color} transform scale-x-0 group-hover:scale-x-100 transition-transform duration-700 ease-out`}></div>
+                <div className={`absolute top-0 left-0 right-0 h-2 ${service.color} transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 ease-out`}></div>
                 <div className="flex items-center space-x-4 mb-4">
-                  <div className={`p-3 rounded-full ${service.color.replace('bg-', 'bg-')} text-white transform group-hover:scale-110 group-hover:rotate-12 transition-all duration-500`}>
-                    <service.icon className="w-6 h-6 group-hover:animate-bounce-gentle" />
+                  <div className={`p-4 rounded-lg ${service.color.replace('bg-', 'bg-')} text-white transform group-hover:scale-125 group-hover:-rotate-6 transition-all duration-700 shadow-lg group-hover:shadow-xl`}>
+                    <service.icon className="w-8 h-8 group-hover:animate-pulse" />
                   </div>
                   <CardTitle className="font-serif text-2xl text-foreground">
                     {service.title}
