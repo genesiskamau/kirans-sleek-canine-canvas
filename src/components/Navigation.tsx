@@ -32,97 +32,91 @@ const Navigation = () => {
   };
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-700 ${
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled 
-        ? 'glass-luxury backdrop-blur-3xl border-b metallic-border shadow-royal' 
+        ? 'bg-white/95 backdrop-blur-sm border-b border-gray-200 shadow-sm' 
         : 'bg-transparent'
     }`}>
       <div className="container mx-auto px-6">
-        <div className="flex items-center justify-between h-24">
-          {/* Premium logo treatment */}
-          <div className="flex items-center space-x-4 group">
-            <div className={`rounded-2xl p-3 transition-all duration-700 ${
+        <div className="flex items-center justify-between h-20">
+          {/* Logo */}
+          <div className="flex items-center space-x-3">
+            <div className={`rounded-xl p-2 transition-all duration-300 ${
               isScrolled 
-                ? 'bg-gradient-gold shadow-gold border metallic-border' 
-                : 'glass-luxury border metallic-border'
+                ? 'bg-yellow-400' 
+                : 'bg-white/20 backdrop-blur-sm border border-white/30'
             }`}>
               <img 
                 src="/lovable-uploads/3eb3333d-5f52-4ded-87dd-83a308207920.png" 
                 alt="Kirangi Dogs Logo" 
-                className="w-10 h-10 animate-luxury-float group-hover:scale-110 transition-all duration-500"
+                className="w-8 h-8"
               />
             </div>
             <div className="flex flex-col">
-              <span className={`font-luxury font-bold text-xl transition-all duration-500 ${
-                isScrolled ? 'text-primary' : 'text-white'
+              <span className={`font-bold text-lg transition-all duration-300 ${
+                isScrolled ? 'text-gray-900' : 'text-white'
               }`}>
                 KIRANGI
               </span>
-              <span className={`font-premium text-xs tracking-widest transition-all duration-500 ${
-                isScrolled ? 'text-muted-foreground' : 'text-white/70'
+              <span className={`text-xs tracking-wider transition-all duration-300 ${
+                isScrolled ? 'text-gray-600' : 'text-white/70'
               }`}>
                 PREMIUM DOGS
               </span>
             </div>
           </div>
 
-          {/* Premium navigation */}
-          <div className="hidden md:flex items-center space-x-1">
-            {navItems.map((item, index) => (
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex items-center space-x-8">
+            {navItems.map((item) => (
               <button
                 key={item.label}
                 onClick={() => scrollToSection(item.href)}
-                className={`relative px-6 py-3 font-premium font-semibold tracking-wide transition-all duration-500 rounded-xl group hover-luxury ${
-                  isScrolled 
-                    ? 'text-foreground hover:text-primary' 
-                    : 'text-white hover:text-gold'
+                className={`font-semibold transition-all duration-300 hover:text-yellow-400 ${
+                  isScrolled ? 'text-gray-900' : 'text-white'
                 }`}
               >
-                <span className="relative z-10 text-sm">{item.label.toUpperCase()}</span>
-                <div className="absolute inset-0 rounded-xl bg-gradient-gold opacity-0 group-hover:opacity-20 transition-all duration-500"></div>
-                <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-0 h-0.5 bg-gradient-gold group-hover:w-full transition-all duration-500"></div>
+                {item.label}
               </button>
             ))}
-            <div className="ml-8">
-              <Button 
-                size="sm" 
-                className="bg-gradient-gold hover:scale-105 text-primary rounded-2xl px-8 py-3 shadow-gold hover:shadow-2xl transition-all duration-500 border metallic-border font-premium font-bold tracking-wide hover-luxury"
-              >
-                <Phone className="w-4 h-4 mr-2" />
-                CALL NOW
-              </Button>
-            </div>
+            <Button 
+              size="sm" 
+              className="bg-yellow-400 hover:bg-yellow-500 text-black rounded-lg px-6 py-2"
+            >
+              <Phone className="w-4 h-4 mr-2" />
+              CALL NOW
+            </Button>
           </div>
 
-          {/* Premium mobile menu button */}
+          {/* Mobile menu button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className={`md:hidden p-4 rounded-2xl transition-all duration-500 hover-luxury ${
+            className={`md:hidden p-3 rounded-lg transition-all duration-300 ${
               isScrolled 
-                ? 'bg-gradient-gold text-primary shadow-gold border metallic-border' 
-                : 'glass-luxury text-white backdrop-blur-2xl border metallic-border'
+                ? 'bg-yellow-400 text-black' 
+                : 'bg-white/20 text-white backdrop-blur-sm border border-white/30'
             }`}
           >
-            {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {isMobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
           </button>
         </div>
 
-        {/* Premium mobile menu */}
+        {/* Mobile menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden absolute top-full left-6 right-6 mt-4 glass-luxury backdrop-blur-3xl border-2 metallic-border rounded-3xl shadow-royal animate-elegant-scale leather-texture">
-            <div className="p-8 space-y-4">
+          <div className="md:hidden absolute top-full left-4 right-4 mt-2 bg-white rounded-2xl shadow-xl border">
+            <div className="p-6 space-y-4">
               {navItems.map((item) => (
                 <button
                   key={item.label}
                   onClick={() => scrollToSection(item.href)}
-                  className="block w-full px-6 py-4 text-left font-premium font-semibold text-white hover:bg-white/10 rounded-xl transition-all duration-500 hover-luxury tracking-wide"
+                  className="block w-full px-4 py-3 text-left font-semibold text-gray-900 hover:bg-gray-50 rounded-lg transition-colors"
                 >
-                  {item.label.toUpperCase()}
+                  {item.label}
                 </button>
               ))}
-              <div className="pt-6 border-t border-gold/30">
-                <Button className="w-full bg-gradient-gold hover:scale-105 text-primary rounded-2xl py-4 shadow-gold transition-all duration-500 font-premium font-bold tracking-wide hover-luxury">
-                  <Phone className="w-5 h-5 mr-3" />
+              <div className="pt-4 border-t">
+                <Button className="w-full bg-yellow-400 hover:bg-yellow-500 text-black rounded-lg py-3">
+                  <Phone className="w-4 h-4 mr-2" />
                   CALL +254-785-535-569
                 </Button>
               </div>
