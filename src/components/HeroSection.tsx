@@ -82,7 +82,7 @@ const HeroSection = () => {
             <div className="flex items-center space-x-3">
               <div className="w-3 h-3 bg-gradient-gold rounded-full animate-royal-pulse"></div>
               <p className="text-lg text-white font-premium font-medium tracking-wide">
-                REGISTERED WITH THE KENNEL CLUB OF KENYA
+                REGISTERED WITH EAST AFRICA KENNEL CLUB
               </p>
               <div className="w-3 h-3 bg-gradient-gold rounded-full animate-royal-pulse animation-delay-500"></div>
             </div>

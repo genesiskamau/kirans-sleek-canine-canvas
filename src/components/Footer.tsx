@@ -11,7 +11,7 @@ const Footer = () => {
               Premium dog breeding and training services in Kenya. We breed the best, train the best!
             </p>
             <p className="text-sm opacity-75">
-              Dogs Registered with The Kennel Club of Kenya
+              Dogs Registered with East Africa Kennel Club
             </p>
           </div>
           

@@ -7,7 +7,7 @@ const AboutSection = () => {
     {
       icon: Award,
       title: "Registered Dogs",
-      description: "Dogs Registered with The Kennel Club of Kenya"
+      description: "Dogs Registered with East Africa Kennel Club"
     },
     {
       icon: Heart,
@@ -65,7 +65,7 @@ const AboutSection = () => {
               <Badge variant="secondary" className="px-4 py-2">Black Russian Terriers</Badge>
               <Badge variant="secondary" className="px-4 py-2">German Shepherds</Badge>
               <Badge variant="secondary" className="px-4 py-2">Working Lines</Badge>
-              <Badge variant="secondary" className="px-4 py-2">Kenya Registered</Badge>
+              <Badge variant="secondary" className="px-4 py-2">East Africa Kennel Club</Badge>
             </div>
             <blockquote className="font-serif text-2xl text-primary font-semibold italic">
               "We simply breed the best, and train the best!"
