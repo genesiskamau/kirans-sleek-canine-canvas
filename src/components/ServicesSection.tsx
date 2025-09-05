@@ -87,14 +87,6 @@ const ServicesSection = () => {
                     </li>
                   ))}
                 </ul>
-                
-                <Button 
-                  variant="outline" 
-                  className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-500 group-hover:shadow-glow transform group-hover:scale-105"
-                >
-                  Learn More
-                  <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-2 group-hover:scale-110 transition-all duration-500" />
-                </Button>
               </CardContent>
             </Card>
           ))}
