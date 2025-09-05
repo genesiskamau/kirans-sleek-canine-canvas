@@ -27,17 +27,12 @@ const HeroSection = () => {
       <div className="relative z-10 container mx-auto px-6 text-center">
         <div className="animate-elegant-scale">
           {/* Premium logo presentation */}
-          <div className="mb-16 relative">
-            <div className="glass-luxury rounded-2xl p-12 mx-auto w-fit backdrop-blur-3xl border-2 metallic-border shadow-royal animate-luxury-float leather-texture">
-              <div className="relative">
-                <img 
-                  src="/lovable-uploads/3eb3333d-5f52-4ded-87dd-83a308207920.png" 
-                  alt="Kirangi Dogs Logo" 
-                  className="w-32 h-32 mx-auto drop-shadow-2xl hover:scale-110 transition-all duration-700 hover:rotate-6 animate-royal-pulse"
-                />
-                <div className="absolute inset-0 bg-gradient-gold opacity-20 rounded-full blur-xl animate-golden-shimmer"></div>
-              </div>
-            </div>
+          <div className="space-y-8 mb-16">
+            <img 
+              src="/lovable-uploads/3eb3333d-5f52-4ded-87dd-83a308207920.png" 
+              alt="Kirangi Dogs Logo" 
+              className="w-32 h-32 mx-auto drop-shadow-2xl hover:scale-110 transition-all duration-700 hover:rotate-6 animate-royal-pulse"
+            />
           </div>
           
           {/* Luxury typography */}
@@ -66,7 +61,7 @@ const HeroSection = () => {
           <div className="flex flex-col sm:flex-row gap-8 justify-center items-center mb-20 animate-fade-in-up animation-delay-900">
             <Button 
               size="lg" 
-              className="group bg-gradient-gold hover:scale-110 text-primary px-12 py-8 text-xl font-bold rounded-xl shadow-gold hover:shadow-2xl transition-all duration-700 hover:glow-gold border-2 metallic-border font-premium tracking-wide hover-luxury"
+              className="group bg-gradient-gold hover:scale-110 text-primary px-12 py-8 text-xl font-bold shadow-gold hover:shadow-2xl transition-all duration-700 hover:glow-gold font-premium tracking-wide hover-luxury"
             >
               <Phone className="w-6 h-6 mr-4 group-hover:animate-bounce" />
               CALL +254-785-535-569
@@ -75,7 +70,7 @@ const HeroSection = () => {
             <Button 
               variant="outline" 
               size="lg"
-              className="glass-luxury group border-2 metallic-border text-white hover:bg-white/10 px-12 py-8 text-xl font-bold rounded-xl backdrop-blur-2xl hover:scale-110 transition-all duration-700 hover:shadow-platinum font-premium tracking-wide hover-luxury"
+              className="glass-luxury group text-white hover:bg-white/10 px-12 py-8 text-xl font-bold backdrop-blur-2xl hover:scale-110 transition-all duration-700 hover:shadow-platinum font-premium tracking-wide hover-luxury"
             >
               <Mail className="w-6 h-6 mr-4 group-hover:animate-bounce" />
               INQUIRE NOW

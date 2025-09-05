@@ -41,17 +41,11 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-24">
           {/* Premium logo treatment */}
           <div className="flex items-center space-x-4 group">
-            <div className={`rounded-xl p-3 transition-all duration-700 ${
-              isScrolled 
-                ? 'bg-gradient-gold shadow-gold border metallic-border' 
-                : 'glass-luxury border metallic-border'
-            }`}>
-              <img 
-                src="/lovable-uploads/3eb3333d-5f52-4ded-87dd-83a308207920.png" 
-                alt="Kirangi Dogs Logo" 
-                className="w-10 h-10 animate-luxury-float group-hover:scale-110 transition-all duration-500"
-              />
-            </div>
+            <img 
+              src="/lovable-uploads/3eb3333d-5f52-4ded-87dd-83a308207920.png" 
+              alt="Kirangi Dogs Logo" 
+              className="w-10 h-10 animate-luxury-float group-hover:scale-110 transition-all duration-500"
+            />
             <div className="flex flex-col">
               <span className={`font-luxury font-bold text-xl transition-all duration-500 ${
                 isScrolled ? 'text-primary' : 'text-white'
@@ -86,7 +80,7 @@ const Navigation = () => {
             <div className="ml-8">
               <Button 
                 size="sm" 
-                className="bg-gradient-gold hover:scale-105 text-primary rounded-xl px-8 py-3 shadow-gold hover:shadow-2xl transition-all duration-500 border metallic-border font-premium font-bold tracking-wide hover-luxury"
+                className="bg-gradient-gold hover:scale-105 text-primary px-8 py-3 shadow-gold hover:shadow-2xl transition-all duration-500 font-premium font-bold tracking-wide hover-luxury"
               >
                 <Phone className="w-4 h-4 mr-2" />
                 CALL NOW
@@ -97,10 +91,10 @@ const Navigation = () => {
           {/* Premium mobile menu button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className={`md:hidden p-4 rounded-xl transition-all duration-500 hover-luxury ${
+            className={`md:hidden p-4 transition-all duration-500 hover-luxury ${
               isScrolled 
-                ? 'bg-gradient-gold text-primary shadow-gold border metallic-border' 
-                : 'glass-luxury text-white backdrop-blur-2xl border metallic-border'
+                ? 'bg-gradient-gold text-primary shadow-gold' 
+                : 'glass-luxury text-white backdrop-blur-2xl'
             }`}
           >
             {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -121,7 +115,7 @@ const Navigation = () => {
                 </button>
               ))}
               <div className="pt-6 border-t border-border/30">
-                <Button className="w-full bg-gradient-gold hover:scale-105 text-primary rounded-xl py-4 shadow-gold transition-all duration-500 font-premium font-bold tracking-wide hover-luxury">
+                <Button className="w-full bg-gradient-gold hover:scale-105 text-primary py-4 shadow-gold transition-all duration-500 font-premium font-bold tracking-wide hover-luxury">
                   <Phone className="w-5 h-5 mr-3" />
                   CALL +254-785-535-569
                 </Button>
