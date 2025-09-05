@@ -71,8 +71,8 @@ const ContactSection = () => {
     {
       icon: MapPin,
       title: "Location",
-      primary: "Kenya",
-      secondary: "Serving nationwide",
+      primary: "Embu, Kenya",
+      secondary: "Visit by appointment only",
       action: null
     },
     {
@@ -88,76 +88,82 @@ const ContactSection = () => {
     <section id="contact" className="py-20 bg-gradient-warm">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-6">
-            Get In Touch
-          </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Ready to find your perfect companion? We're here to help you every step of the way. 
-            Contact us today to learn more about our available puppies and services.
+          <div className="flex justify-center items-center gap-6 mb-8">
+            <div className="w-16 h-0.5 bg-gradient-to-r from-transparent to-primary"></div>
+            <h2 className="font-serif text-4xl md:text-5xl font-bold text-foreground">
+              Connect With Us
+            </h2>
+            <div className="w-16 h-0.5 bg-gradient-to-l from-transparent to-primary"></div>
+          </div>
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+            Begin your journey to finding the perfect canine companion. Our expert team is ready to guide you 
+            through our breeding programs, available puppies, and specialized training services.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 mb-16">
+        <div className="grid lg:grid-cols-5 gap-12 mb-16">
           {/* Contact Information */}
-          <div className="space-y-6">
-            <h3 className="font-serif text-2xl font-semibold text-foreground mb-8">
-              Let's Connect
-            </h3>
+          <div className="lg:col-span-2 space-y-6">
+            <div className="bg-gradient-to-br from-primary/5 to-primary/10 rounded-2xl p-6 border border-primary/20">
+              <h3 className="font-serif text-2xl font-semibold text-foreground mb-2 text-center">
+                Reach Out Today
+              </h3>
+              <p className="text-muted-foreground text-center mb-6">Multiple ways to connect with our team</p>
             
-            {contactInfo.map((info, index) => (
-              <Card 
-                key={index} 
-                className={`bg-card border-0 shadow-card hover:shadow-warm transition-all duration-300 transform hover:-translate-y-1 ${
-                  info.action ? 'cursor-pointer' : ''
-                }`}
-                onClick={() => info.action && window.open(info.action)}
-              >
-                <CardContent className="p-6">
-                  <div className="flex items-start space-x-4">
-                    <div className="p-3 bg-primary rounded-full">
-                      <info.icon className="w-5 h-5 text-primary-foreground" />
+              {contactInfo.map((info, index) => (
+                <div 
+                  key={index} 
+                  className={`group p-4 bg-card/50 rounded-xl border border-primary/10 hover:border-primary/30 transition-all duration-300 transform hover:-translate-y-1 ${
+                    info.action ? 'cursor-pointer hover:bg-primary/5' : ''
+                  }`}
+                  onClick={() => info.action && window.open(info.action)}
+                >
+                  <div className="flex items-center space-x-3">
+                    <div className="p-2 bg-primary/10 rounded-lg group-hover:bg-primary/20 transition-colors">
+                      <info.icon className="w-4 h-4 text-primary" />
                     </div>
-                    <div className="flex-1">
-                      <h4 className="font-semibold text-foreground mb-1">
+                    <div className="flex-1 min-w-0">
+                      <h4 className="font-medium text-foreground text-sm">
                         {info.title}
                       </h4>
-                      <p className="font-medium text-primary mb-1">
+                      <p className="font-semibold text-primary text-sm truncate">
                         {info.primary}
                       </p>
-                      <p className="text-sm text-muted-foreground">
+                      <p className="text-xs text-muted-foreground">
                         {info.secondary}
                       </p>
                     </div>
                   </div>
-                </CardContent>
-              </Card>
-            ))}
+                </div>
+              ))}
+            </div>
 
+            
             {/* Quick Actions */}
-            <div className="space-y-4 pt-6">
+            <div className="space-y-3 mt-6">
               <Button 
-                size="lg" 
-                className="w-full bg-primary hover:bg-primary/90 text-primary-foreground rounded-full text-lg font-semibold shadow-warm"
+                size="sm" 
+                className="w-full bg-primary hover:bg-primary/90 text-primary-foreground rounded-full font-semibold shadow-warm text-sm"
                 onClick={() => window.open('tel:+254785535569')}
               >
-                <Phone className="w-5 h-5 mr-3" />
-                Call Now: +254-785-535-569
+                <Phone className="w-4 h-4 mr-2" />
+                Call Now
               </Button>
               
               <Button 
                 variant="outline" 
-                size="lg"
-                className="w-full border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground rounded-full text-lg font-semibold"
+                size="sm"
+                className="w-full border border-primary text-primary hover:bg-primary hover:text-primary-foreground rounded-full font-semibold text-sm"
                 onClick={() => window.open('https://wa.me/254785535569', '_blank')}
               >
-                <MessageCircle className="w-5 h-5 mr-3" />
-                WhatsApp Us
+                <MessageCircle className="w-4 h-4 mr-2" />
+                WhatsApp
               </Button>
             </div>
           </div>
 
           {/* Contact Form */}
-          <div>
+          <div className="lg:col-span-3">
             <Card className="bg-card border-0 shadow-card">
               <CardHeader>
                 <CardTitle className="font-serif text-2xl text-foreground">
@@ -239,31 +245,6 @@ const ContactSection = () => {
           </div>
         </div>
 
-        {/* Newsletter Subscription */}
-        <div className="text-center">
-          <Card className="bg-primary text-primary-foreground border-0 shadow-warm max-w-2xl mx-auto">
-            <CardContent className="p-8">
-              <h3 className="font-serif text-2xl font-semibold mb-4">
-                Stay Updated
-              </h3>
-              <p className="mb-6 opacity-90">
-                Subscribe to receive updates about available puppies, training tips, and kennel news.
-              </p>
-              <div className="flex gap-4 max-w-md mx-auto">
-                <Input
-                  placeholder="Enter your email"
-                  className="bg-white/10 border-white/20 text-white placeholder:text-white/70 rounded-full"
-                />
-                <Button 
-                  variant="outline" 
-                  className="bg-white text-primary hover:bg-white/90 border-white rounded-full px-6"
-                >
-                  Subscribe
-                </Button>
-              </div>
-            </CardContent>
-          </Card>
-        </div>
       </div>
     </section>
   );

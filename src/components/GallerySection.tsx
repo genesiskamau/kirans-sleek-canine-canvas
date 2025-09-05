@@ -113,12 +113,15 @@ const GallerySection = () => {
     <section id="gallery" className="py-20 bg-background">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-6">
-            Our Gallery
-          </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-8">
-            Explore our collection of champion dogs, adorable puppies, and competition achievements. 
-            Each photo tells a story of excellence and dedication to breeding the finest dogs in Kenya.
+          <div className="inline-block mb-6">
+            <h2 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-2 bg-gradient-to-r from-foreground via-primary to-foreground bg-clip-text text-transparent animate-pulse">
+              Showcase of Excellence
+            </h2>
+            <div className="w-32 h-1 bg-gradient-to-r from-transparent via-primary to-transparent mx-auto animate-pulse"></div>
+          </div>
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto mb-8 leading-relaxed">
+            Journey through our visual chronicles of canine mastery. From championship triumphs to heartwarming puppy moments, 
+            witness the legacy we've built through years of passionate dedication to breeding excellence.
           </p>
 
           {/* Category Filter */}
@@ -140,31 +143,41 @@ const GallerySection = () => {
           </div>
         </div>
 
-        {/* Gallery Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        {/* Gallery Grid with Masonry Layout */}
+        <div className="columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-6 space-y-6">
           {filteredImages.map((item, index) => (
-            <Card 
+            <div
               key={item.id}
-              className="group cursor-pointer overflow-hidden border-0 shadow-card hover:shadow-warm transition-all duration-500 transform hover:-translate-y-2 bg-card"
-              onClick={() => openLightbox(item.src, index)}
+              className="break-inside-avoid mb-6"
+              style={{ animationDelay: `${index * 100}ms` }}
             >
-              <div className="relative overflow-hidden">
-                <img 
-                  src={item.src} 
-                  alt={item.alt}
-                  className="w-full h-64 object-cover transition-transform duration-700 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <div className="absolute bottom-4 left-4 right-4">
-                    <Badge variant="secondary" className="mb-2">
-                      {item.category}
-                    </Badge>
-                    <h3 className="text-white font-semibold text-sm">{item.title}</h3>
-                    <p className="text-white/80 text-xs">{item.description}</p>
+              <Card 
+                className="group cursor-pointer overflow-hidden border-0 shadow-card hover:shadow-warm transition-all duration-700 transform hover:-translate-y-3 hover:rotate-1 bg-card animate-fade-in"
+                onClick={() => openLightbox(item.src, index)}
+              >
+                <div className="relative overflow-hidden">
+                  <img 
+                    src={item.src} 
+                    alt={item.alt}
+                    className="w-full object-cover transition-all duration-1000 group-hover:scale-125 group-hover:rotate-2"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500">
+                    <div className="absolute bottom-4 left-4 right-4 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                      <Badge variant="secondary" className="mb-2 backdrop-blur-sm bg-white/90">
+                        {item.category}
+                      </Badge>
+                      <h3 className="text-white font-bold text-base mb-1 drop-shadow-lg">{item.title}</h3>
+                      <p className="text-white/90 text-sm leading-relaxed drop-shadow-md">{item.description}</p>
+                    </div>
+                  </div>
+                  <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-all duration-500 transform scale-75 group-hover:scale-100">
+                    <div className="p-2 bg-white/20 backdrop-blur-sm rounded-full">
+                      <Award className="w-4 h-4 text-white" />
+                    </div>
                   </div>
                 </div>
-              </div>
-            </Card>
+              </Card>
+            </div>
           ))}
         </div>
 

@@ -1,7 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Heart, Star, Phone } from "lucide-react";
+import { Heart, Star, Phone, Shield, Award } from "lucide-react";
 const PuppiesSection = () => {
   const availablePuppies = [
     {
@@ -44,7 +44,7 @@ const PuppiesSection = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-6">
-            Available Puppies
+            Premium Pups Ready for Loving Homes
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Our current selection of exceptional puppies from champion bloodlines. 
@@ -133,24 +133,45 @@ const PuppiesSection = () => {
         </div>
 
         <div className="text-center">
-          <div className="bg-primary/5 rounded-3xl p-8 mb-8 border border-primary/10">
-            <h3 className="font-serif text-2xl font-semibold text-foreground mb-4">
-              Puppy Guarantee & Support
-            </h3>
-            <div className="grid md:grid-cols-2 gap-6 text-left">
-              <div>
-                <h4 className="font-semibold text-foreground mb-2">Health Guarantee</h4>
-                <p className="text-muted-foreground text-sm">
-                  All puppies come with comprehensive health guarantees and have been 
-                  thoroughly screened for genetic disorders.
-                </p>
+          <div className="relative overflow-hidden bg-gradient-to-br from-primary/10 via-primary/5 to-card rounded-3xl p-10 mb-8 border-2 border-primary/20 shadow-2xl">
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-primary/5 to-transparent animate-pulse"></div>
+            <div className="relative z-10">
+              <div className="flex justify-center mb-6">
+                <div className="p-4 bg-primary rounded-full shadow-lg">
+                  <Shield className="w-8 h-8 text-primary-foreground" />
+                </div>
               </div>
-              <div>
-                <h4 className="font-semibold text-foreground mb-2">Lifetime Support</h4>
-                <p className="text-muted-foreground text-sm">
-                  We provide ongoing support and guidance throughout your dog's life, 
-                  including training advice and health consultations.
-                </p>
+              <h3 className="font-serif text-3xl font-bold text-foreground mb-6 bg-gradient-to-r from-foreground to-primary bg-clip-text text-transparent">
+                Our Promise to You
+              </h3>
+              <div className="grid md:grid-cols-3 gap-8 text-center">
+                <div className="group hover:transform hover:scale-105 transition-all duration-300">
+                  <div className="p-3 bg-primary/10 rounded-full w-fit mx-auto mb-4 group-hover:bg-primary/20 transition-colors">
+                    <Heart className="w-6 h-6 text-primary" />
+                  </div>
+                  <h4 className="font-bold text-foreground mb-2">Health Certified</h4>
+                  <p className="text-muted-foreground text-sm leading-relaxed">
+                    Complete health screening with lifetime genetic guarantee
+                  </p>
+                </div>
+                <div className="group hover:transform hover:scale-105 transition-all duration-300">
+                  <div className="p-3 bg-primary/10 rounded-full w-fit mx-auto mb-4 group-hover:bg-primary/20 transition-colors">
+                    <Star className="w-6 h-6 text-primary" />
+                  </div>
+                  <h4 className="font-bold text-foreground mb-2">Expert Guidance</h4>
+                  <p className="text-muted-foreground text-sm leading-relaxed">
+                    24/7 support from training to nutrition throughout your dog's life
+                  </p>
+                </div>
+                <div className="group hover:transform hover:scale-105 transition-all duration-300">
+                  <div className="p-3 bg-primary/10 rounded-full w-fit mx-auto mb-4 group-hover:bg-primary/20 transition-colors">
+                    <Award className="w-6 h-6 text-primary" />
+                  </div>
+                  <h4 className="font-bold text-foreground mb-2">Champion Lineage</h4>
+                  <p className="text-muted-foreground text-sm leading-relaxed">
+                    Documented pedigree from internationally recognized bloodlines
+                  </p>
+                </div>
               </div>
             </div>
           </div>

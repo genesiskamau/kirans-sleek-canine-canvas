@@ -42,18 +42,18 @@ const HeroSection = () => {
                 KIRANGI
               </span>
               <span className="text-white block text-4xl md:text-6xl font-light mt-4 tracking-widest animate-elegant-scale animation-delay-300">
-                PREMIUM DOGS
+                ELITE CANINES
               </span>
             </h1>
             
             <div className="w-24 h-0.5 bg-gradient-gold mx-auto animate-golden-shimmer"></div>
             
             <p className="text-xl md:text-2xl max-w-3xl mx-auto leading-relaxed text-white/95 animate-fade-in-up animation-delay-600 font-premium font-light">
-              Curators of canine excellence through the finest breeding of 
+              Master breeders specializing in champion-grade 
               <span className="text-gold font-semibold"> Black Russian Terriers </span> 
               and 
               <span className="text-gold font-semibold"> German Shepherds </span>
-              in Kenya
+              from world-class bloodlines
             </p>
           </div>
           
