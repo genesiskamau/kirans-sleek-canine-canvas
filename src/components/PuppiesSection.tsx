@@ -123,6 +123,7 @@ const PuppiesSection = () => {
                       : 'bg-muted text-muted-foreground cursor-not-allowed'
                   }`}
                   disabled={!puppy.available}
+                  onClick={() => puppy.available && window.open('https://wa.me/254785535569?text=Hi, I am interested in reserving ' + puppy.name + ' - ' + puppy.breed, '_blank')}
                 >
                   <Phone className="w-4 h-4 mr-2" />
                   {puppy.available ? 'Reserve Now' : 'Reserved'}
