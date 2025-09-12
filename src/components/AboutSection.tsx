@@ -48,18 +48,6 @@ const AboutSection = () => {
           <div className="grid lg:grid-cols-2 gap-20 items-center mb-20">
             {/* Story Content */}
             <div className="text-left animate-slide-in-left">
-              <div className="flex items-center mb-8 group">
-                <h3 className="font-luxury text-5xl md:text-6xl font-bold text-foreground group-hover:text-primary transition-colors duration-700">
-                  Heritage
-                </h3>
-                <div className="mx-8 text-8xl font-light text-primary opacity-40 animate-royal-pulse">
-                  <span className="font-signature">✦</span>
-                </div>
-                <h3 className="font-luxury text-5xl md:text-6xl font-bold text-foreground group-hover:text-primary transition-colors duration-700">
-                  Excellence
-                </h3>
-              </div>
-              
               {/* Enhanced story text with calligraphy accents */}
               <div className="space-y-8">
                 <div className="relative">
