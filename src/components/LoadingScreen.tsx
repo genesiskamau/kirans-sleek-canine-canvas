@@ -76,7 +76,7 @@ const LoadingScreen = ({ onComplete }: LoadingScreenProps) => {
                  style={{ animationDuration: '2s', animationDirection: 'reverse' }} />
             
             {/* Logo */}
-            <div className="relative w-32 h-32 bg-white/10 backdrop-blur-md rounded-full p-6 group-hover:scale-110 transition-transform duration-500">
+            <div className="relative w-32 h-32 rounded-full p-6 group-hover:scale-110 transition-transform duration-500">
               <img 
                 src="/lovable-uploads/e809515a-f089-4ecc-8f2c-98fc7069cd50.png" 
                 alt="Kirangi Dogs Logo" 
