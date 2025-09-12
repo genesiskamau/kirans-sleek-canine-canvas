@@ -110,75 +110,132 @@ const GallerySection = () => {
   };
 
   return (
-    <section id="gallery" className="py-20 bg-background">
-      <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
-          <div className="inline-block mb-6">
-            <h2 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-2 bg-gradient-to-r from-foreground via-primary to-foreground bg-clip-text text-transparent animate-pulse">
-              Showcase of Excellence
-            </h2>
-            <div className="w-32 h-1 bg-gradient-to-r from-transparent via-primary to-transparent mx-auto animate-pulse"></div>
-          </div>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto mb-8 leading-relaxed">
-            Journey through our visual chronicles of canine mastery. From championship triumphs to heartwarming puppy moments, 
-            witness the legacy we've built through years of passionate dedication to breeding excellence.
-          </p>
+    <section id="gallery" className="py-32 bg-gradient-to-br from-background via-background/95 to-background/90 relative overflow-hidden">
+      {/* Decorative Background Elements */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute top-20 left-10 w-96 h-96 bg-gradient-to-br from-primary/30 to-transparent rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-20 right-10 w-80 h-80 bg-gradient-to-tl from-accent/20 to-transparent rounded-full blur-3xl animate-pulse delay-1000"></div>
+      </div>
 
-          {/* Category Filter */}
-          <div className="flex flex-wrap justify-center gap-4 mb-12">
+      <div className="container mx-auto px-6 relative z-10">
+        {/* Elegant Header with Calligraphy */}
+        <div className="text-center mb-20 animate-fade-in">
+          <div className="relative inline-block">
+            {/* Ornate decorative frame */}
+            <div className="absolute -inset-8 bg-gradient-to-r from-transparent via-primary/10 to-transparent blur-xl"></div>
+            <div className="relative bg-gradient-to-br from-background/80 via-background/90 to-background/80 backdrop-blur-xl rounded-3xl border border-primary/20 shadow-[0_0_50px_-12px_rgba(var(--primary-rgb),0.25)] p-12 mb-8">
+              <div className="flex items-center justify-center mb-6">
+                <div className="text-6xl font-signature text-primary/60 animate-royal-pulse mr-4">✦</div>
+                <h2 className="font-dancing text-6xl md:text-8xl font-bold bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
+                  Visual
+                </h2>
+                <div className="text-6xl font-signature text-primary/60 animate-royal-pulse mx-6">❋</div>
+                <h2 className="font-vibes text-6xl md:text-8xl font-bold bg-gradient-to-r from-accent via-primary to-accent bg-clip-text text-transparent">
+                  Journey
+                </h2>
+                <div className="text-6xl font-signature text-primary/60 animate-royal-pulse ml-4">✦</div>
+              </div>
+              
+              <div className="flex items-center justify-center mb-8">
+                <div className="h-px bg-gradient-to-r from-transparent via-primary/50 to-transparent flex-1"></div>
+                <div className="text-4xl font-signature text-primary/70 mx-8 animate-royal-pulse">◊</div>
+                <div className="h-px bg-gradient-to-r from-transparent via-primary/50 to-transparent flex-1"></div>
+              </div>
+
+              <p className="font-tangerine text-2xl md:text-3xl text-muted-foreground/90 max-w-4xl mx-auto leading-relaxed italic">
+                "Through the lens of passion, witness our chronicles of canine mastery — from championship triumphs to tender puppy moments, each frame tells the story of our dedication to breeding excellence"
+              </p>
+            </div>
+          </div>
+
+          {/* Elegant Category Filter */}
+          <div className="flex flex-wrap justify-center gap-6 mb-16">
             {categories.map((category) => {
               const IconComponent = category.icon;
+              const isActive = activeCategory === category.id;
               return (
-                <Button
+                <button
                   key={category.id}
-                  variant={activeCategory === category.id ? "default" : "outline"}
                   onClick={() => setActiveCategory(category.id)}
-                  className="group transition-all duration-300 hover:scale-105"
+                  className={`group relative px-8 py-4 rounded-full backdrop-blur-xl border transition-all duration-500 hover:scale-110 ${
+                    isActive 
+                      ? 'bg-gradient-to-r from-primary/20 to-accent/20 border-primary/40 shadow-[0_0_30px_-8px_rgba(var(--primary-rgb),0.4)]' 
+                      : 'bg-background/60 border-border/40 hover:border-primary/30'
+                  }`}
                 >
-                  <IconComponent className="w-4 h-4 mr-2" />
-                  {category.label}
-                </Button>
+                  <div className="flex items-center space-x-3">
+                    <IconComponent className={`w-5 h-5 transition-colors ${isActive ? 'text-primary' : 'text-muted-foreground group-hover:text-primary'}`} />
+                    <span className={`font-amatic text-xl font-bold transition-colors ${isActive ? 'text-primary' : 'text-foreground group-hover:text-primary'}`}>
+                      {category.label}
+                    </span>
+                  </div>
+                  {isActive && (
+                    <div className="absolute inset-0 bg-gradient-to-r from-primary/10 to-accent/10 rounded-full animate-pulse"></div>
+                  )}
+                </button>
               );
             })}
           </div>
         </div>
 
-        {/* Gallery Grid with Masonry Layout */}
-        <div className="columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-6 space-y-6">
-          {filteredImages.map((item, index) => (
-            <div
-              key={item.id}
-              className="break-inside-avoid mb-6"
-              style={{ animationDelay: `${index * 100}ms` }}
-            >
-              <Card 
-                className="group cursor-pointer overflow-hidden border-0 shadow-card hover:shadow-warm transition-all duration-700 transform hover:-translate-y-3 hover:rotate-1 bg-card animate-fade-in"
+        {/* Hexagonal Gallery Layout */}
+        <div className="relative">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 max-w-7xl mx-auto">
+            {filteredImages.map((item, index) => (
+              <div
+                key={item.id}
+                className="group cursor-pointer animate-fade-in"
+                style={{ 
+                  animationDelay: `${index * 150}ms`,
+                  transform: `rotate(${index % 2 === 0 ? '2deg' : '-2deg'})` 
+                }}
                 onClick={() => openLightbox(item.src, index)}
               >
-                <div className="relative overflow-hidden">
-                  <img 
-                    src={item.src} 
-                    alt={item.alt}
-                    className="w-full object-cover transition-all duration-1000 group-hover:scale-125 group-hover:rotate-2"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500">
-                    <div className="absolute bottom-4 left-4 right-4 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                      <Badge variant="secondary" className="mb-2 backdrop-blur-sm bg-white/90">
-                        {item.category}
-                      </Badge>
-                      <h3 className="text-white font-bold text-base mb-1 drop-shadow-lg">{item.title}</h3>
-                      <p className="text-white/90 text-sm leading-relaxed drop-shadow-md">{item.description}</p>
+                {/* Floating Card with Elegant Design */}
+                <div className="relative transform transition-all duration-700 hover:scale-105 hover:rotate-0 hover:-translate-y-8">
+                  {/* Glow Effect */}
+                  <div className="absolute -inset-4 bg-gradient-to-r from-primary/20 via-accent/20 to-primary/20 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+                  
+                  {/* Main Card */}
+                  <div className="relative bg-gradient-to-br from-card/95 to-card/90 backdrop-blur-xl rounded-3xl border border-border/40 overflow-hidden shadow-[0_8px_32px_-8px_rgba(0,0,0,0.3)] group-hover:shadow-[0_20px_60px_-8px_rgba(var(--primary-rgb),0.3)] transition-all duration-700">
+                    {/* Image Container */}
+                    <div className="relative h-64 overflow-hidden">
+                      <img 
+                        src={item.src} 
+                        alt={item.alt}
+                        className="w-full h-full object-cover transition-all duration-1000 group-hover:scale-125"
+                      />
+                      
+                      {/* Elegant Overlay */}
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500">
+                        <div className="absolute bottom-6 left-6 right-6">
+                          <div className="flex items-center justify-between mb-3">
+                            <Badge variant="secondary" className="backdrop-blur-sm bg-white/90 font-amatic text-sm font-bold px-3 py-1">
+                              {item.category}
+                            </Badge>
+                            <div className="p-2 bg-white/20 backdrop-blur-sm rounded-full">
+                              <Award className="w-4 h-4 text-white" />
+                            </div>
+                          </div>
+                          <h3 className="font-luxury text-white font-bold text-lg mb-2 drop-shadow-lg">{item.title}</h3>
+                          <p className="font-tangerine text-white/90 text-lg leading-relaxed drop-shadow-md italic">{item.description}</p>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                  <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-all duration-500 transform scale-75 group-hover:scale-100">
-                    <div className="p-2 bg-white/20 backdrop-blur-sm rounded-full">
-                      <Award className="w-4 h-4 text-white" />
+
+                    {/* Bottom Accent */}
+                    <div className="p-6 bg-gradient-to-r from-background/90 to-background/80">
+                      <div className="flex items-center justify-center">
+                        <div className="h-px bg-gradient-to-r from-transparent via-primary/40 to-transparent flex-1"></div>
+                        <div className="text-2xl font-signature text-primary/60 mx-4">◊</div>
+                        <div className="h-px bg-gradient-to-r from-transparent via-primary/40 to-transparent flex-1"></div>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </Card>
-            </div>
-          ))}
+              </div>
+            ))}
+          </div>
         </div>
 
         {/* Lightbox */}
