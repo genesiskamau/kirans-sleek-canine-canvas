@@ -41,11 +41,13 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-24">
           {/* Premium logo treatment */}
           <div className="flex items-center space-x-4 group">
-            <img 
-              src="/lovable-uploads/e809515a-f089-4ecc-8f2c-98fc7069cd50.png" 
-              alt="Kirangi Dogs Logo" 
-              className="w-10 h-10 animate-luxury-float group-hover:scale-110 transition-all duration-500"
-            />
+            <div className="w-8 h-8 rounded-full bg-white/10 backdrop-blur-sm p-1.5 shadow-lg">
+              <img 
+                src="/lovable-uploads/e809515a-f089-4ecc-8f2c-98fc7069cd50.png" 
+                alt="Kirangi Dogs Logo" 
+                className="w-full h-full object-contain animate-luxury-float group-hover:scale-110 transition-all duration-500"
+              />
+            </div>
             <div className="flex flex-col">
               <span className={`font-luxury font-bold text-xl transition-all duration-500 ${
                 isScrolled ? 'text-primary' : 'text-white'
