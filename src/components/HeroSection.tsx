@@ -20,7 +20,7 @@ const HeroSection = () => {
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url(/lovable-uploads/hero-dog.jpg)` }}
       >
-        <div className="absolute inset-0 bg-gradient-royal opacity-40"></div>
+        <div className="absolute inset-0 bg-gradient-royal opacity-70"></div>
       </div>
       
       {/* Luxury content */}
