@@ -18,9 +18,9 @@ const HeroSection = () => {
       {/* Premium background image with royal overlay */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(/lovable-uploads/90988332-3cc9-4e2e-8d88-35f92bda476e.png)` }}
+        style={{ backgroundImage: `url(/lovable-uploads/hero-dog.jpg)` }}
       >
-        <div className="absolute inset-0 bg-gradient-royal"></div>
+        <div className="absolute inset-0 bg-gradient-royal opacity-40"></div>
       </div>
       
       {/* Luxury content */}
@@ -49,7 +49,7 @@ const HeroSection = () => {
                 KIRANGI
               </span>
               <span className="text-white block text-4xl md:text-6xl font-light mt-4 tracking-widest animate-elegant-scale animation-delay-300">
-                ELITE CANINES
+                DOGS
               </span>
             </h1>
             

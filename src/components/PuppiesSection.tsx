@@ -6,35 +6,35 @@ const PuppiesSection = () => {
   const availablePuppies = [
     {
       id: 1,
-      name: "Max",
+      name: "Chuma",
       breed: "German Shepherd",
       age: "8 weeks",
       gender: "Male",
       price: "Contact for pricing",
       features: ["Champion bloodline", "Health tested", "Vaccinated", "Microchipped"],
-      image: "/lovable-uploads/76d917e7-6e5a-47de-adc5-d6da990f5df4.png",
+      image: "/lovable-uploads/chuma.jpg",
       available: true
     },
     {
       id: 2,
-      name: "Luna",
+      name: "Kito",
       breed: "German Shepherd",
       age: "10 weeks",
-      gender: "Female",
+      gender: "Male",
       price: "Contact for pricing",
       features: ["Show quality", "Health guarantee", "Early training", "Socialized"],
-      image: "/lovable-uploads/321ee2e8-4ea3-4b01-ac2b-941b4a91b537.png",
+      image: "/lovable-uploads/kito.jpg",
       available: true
     },
     {
       id: 3,
-      name: "Zeus",
+      name: "Safi",
       breed: "German Shepherd",
       age: "12 weeks",
       gender: "Male",
       price: "Contact for pricing",
       features: ["Working line", "Hip tested parents", "Protective instinct", "Family friendly"],
-      image: "/lovable-uploads/f6b5736c-8dbb-4b4a-96d2-ea5129c44125.png",
+      image: "/lovable-uploads/safi.jpg",
       available: true
     }
   ];
