@@ -29,7 +29,7 @@ const HeroSection = () => {
           {/* Premium logo presentation */}
           <div className="space-y-8 mb-16">
             <img 
-              src="/lovable-uploads/3eb3333d-5f52-4ded-87dd-83a308207920.png" 
+              src="/lovable-uploads/e809515a-f089-4ecc-8f2c-98fc7069cd50.png" 
               alt="Kirangi Dogs Logo" 
               className="w-32 h-32 mx-auto drop-shadow-2xl hover:scale-110 transition-all duration-700 hover:rotate-6 animate-royal-pulse"
             />

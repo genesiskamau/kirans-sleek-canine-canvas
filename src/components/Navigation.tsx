@@ -42,7 +42,7 @@ const Navigation = () => {
           {/* Premium logo treatment */}
           <div className="flex items-center space-x-4 group">
             <img 
-              src="/lovable-uploads/3eb3333d-5f52-4ded-87dd-83a308207920.png" 
+              src="/lovable-uploads/e809515a-f089-4ecc-8f2c-98fc7069cd50.png" 
               alt="Kirangi Dogs Logo" 
               className="w-10 h-10 animate-luxury-float group-hover:scale-110 transition-all duration-500"
             />

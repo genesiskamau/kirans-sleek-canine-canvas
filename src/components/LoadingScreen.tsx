@@ -78,7 +78,7 @@ const LoadingScreen = ({ onComplete }: LoadingScreenProps) => {
             {/* Logo */}
             <div className="relative w-32 h-32 bg-white/10 backdrop-blur-md rounded-full p-6 group-hover:scale-110 transition-transform duration-500">
               <img 
-                src="/lovable-uploads/3eb3333d-5f52-4ded-87dd-83a308207920.png" 
+                src="/lovable-uploads/e809515a-f089-4ecc-8f2c-98fc7069cd50.png" 
                 alt="Kirangi Dogs Logo" 
                 className="w-full h-full object-contain animate-glow-pulse"
               />
