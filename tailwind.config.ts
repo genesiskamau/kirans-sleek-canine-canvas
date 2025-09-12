@@ -84,7 +84,11 @@ export default {
 				'serif': ['Playfair Display', 'serif'],
 				'sans': ['Inter', 'system-ui', 'sans-serif'],
 				'luxury': ['Cormorant Garamond', 'serif'],
-				'premium': ['Montserrat', 'sans-serif']
+				'premium': ['Montserrat', 'sans-serif'],
+				'script': ['Dancing Script', 'cursive'],
+				'signature': ['Great Vibes', 'cursive'],
+				'handwritten': ['Tangerine', 'cursive'],
+				'casual': ['Amatic SC', 'cursive']
 			},
 			borderRadius: {
 				lg: 'var(--radius)',

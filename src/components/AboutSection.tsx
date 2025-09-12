@@ -22,42 +22,108 @@ const AboutSection = () => {
   ];
 
   return (
-    <section id="about" className="py-20 bg-gradient-warm">
-      <div className="container mx-auto px-6">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-16 items-center mb-16">
-            <div className="text-left">
-              <div className="flex items-center mb-6">
-                <h2 className="font-serif text-4xl md:text-5xl font-bold text-foreground">
+    <section id="about" className="py-32 bg-gradient-to-br from-background via-muted/30 to-card/50 relative overflow-hidden">
+      {/* Luxury background elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute top-20 left-20 w-96 h-96 bg-gradient-gold rounded-full opacity-5 blur-3xl animate-luxury-float"></div>
+        <div className="absolute bottom-20 right-20 w-64 h-64 bg-gradient-primary rounded-full opacity-10 animate-luxury-float animation-delay-1000 blur-2xl"></div>
+      </div>
+
+      <div className="container mx-auto px-6 relative z-10">
+        <div className="max-w-7xl mx-auto">
+          {/* Premium Section Header */}
+          <div className="text-center mb-24 animate-fade-in-up">
+            <div className="flex items-center justify-center mb-8">
+              <div className="w-24 h-0.5 bg-gradient-gold"></div>
+              <h2 className="font-signature text-7xl md:text-8xl text-primary mx-8 drop-shadow-lg transform rotate-2">
+                Our Story
+              </h2>
+              <div className="w-24 h-0.5 bg-gradient-gold"></div>
+            </div>
+            <p className="font-handwritten text-3xl text-primary/70 -rotate-1 transform">
+              where passion meets pedigree
+            </p>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-20 items-center mb-20">
+            {/* Story Content */}
+            <div className="text-left animate-slide-in-left">
+              <div className="flex items-center mb-8 group">
+                <h3 className="font-luxury text-5xl md:text-6xl font-bold text-foreground group-hover:text-primary transition-colors duration-700">
                   Heritage
-                </h2>
-                <div className="mx-6 text-6xl font-light text-primary opacity-30">
-                  <span className="font-serif italic">✦</span>
+                </h3>
+                <div className="mx-8 text-8xl font-light text-primary opacity-40 animate-royal-pulse">
+                  <span className="font-signature">✦</span>
                 </div>
-                <h2 className="font-serif text-4xl md:text-5xl font-bold text-foreground">
+                <h3 className="font-luxury text-5xl md:text-6xl font-bold text-foreground group-hover:text-primary transition-colors duration-700">
                   Excellence
-                </h2>
+                </h3>
               </div>
-              <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-                At Kirangi Dogs Kennel, we craft legacies through exceptional breeding programs. 
-                Our dedication to preserving and enhancing the finest traits of Black Russian Terriers 
-                and German Shepherds has established us as Kenya's premier canine specialists.
-              </p>
-              <div className="flex items-center gap-4">
-                <Star className="w-5 h-5 text-primary" />
-                <span className="text-primary font-semibold">Est. 2020 • Award-Winning Bloodlines</span>
+              
+              {/* Enhanced story text with calligraphy accents */}
+              <div className="space-y-8">
+                <div className="relative">
+                  <span className="font-script text-4xl text-primary/60 absolute -top-4 -left-6 rotate-12">"</span>
+                  <p className="text-xl text-muted-foreground leading-relaxed font-luxury">
+                    At <span className="font-signature text-3xl text-primary mx-2">Kirangi Dogs Kennel</span>, 
+                    we craft legacies through exceptional breeding programs that honor the noble spirit of our canine companions.
+                  </p>
+                </div>
+                
+                <p className="text-lg text-muted-foreground leading-relaxed font-premium">
+                  Our dedication to preserving and enhancing the finest traits of 
+                  <span className="font-handwritten text-2xl text-primary mx-2">Black Russian Terriers</span> and 
+                  <span className="font-handwritten text-2xl text-primary mx-2">German Shepherds</span> 
+                  has established us as Kenya's premier canine specialists.
+                </p>
+                
+                <div className="glass-luxury rounded-2xl p-8 backdrop-blur-xl border metallic-border">
+                  <blockquote className="font-script text-4xl text-primary font-medium text-center leading-relaxed">
+                    "Excellence isn't just our standard—
+                    <span className="font-signature text-5xl block mt-2 text-gold">it's our passion!"</span>
+                  </blockquote>
+                </div>
+              </div>
+              
+              <div className="flex items-center gap-6 mt-8">
+                <Star className="w-6 h-6 text-primary animate-royal-pulse" />
+                <span className="text-primary font-luxury font-semibold text-lg tracking-wide">
+                  Est. 2020 • Award-Winning Bloodlines
+                </span>
+                <div className="font-signature text-3xl text-gold">✦</div>
               </div>
             </div>
-            <div className="relative">
-              <div className="bg-primary/5 rounded-3xl p-8 border border-primary/10">
-                <blockquote className="font-serif text-2xl text-primary font-semibold italic text-center">
-                  "Excellence isn't just our standard—it's our passion!"
-                </blockquote>
-                <div className="mt-6 flex flex-wrap justify-center gap-3">
-                  <Badge variant="secondary" className="px-4 py-2">Black Russian Terriers</Badge>
-                  <Badge variant="secondary" className="px-4 py-2">German Shepherds</Badge>
-                  <Badge variant="secondary" className="px-4 py-2">Working Lines</Badge>
-                  <Badge variant="secondary" className="px-4 py-2">East Africa Kennel Club</Badge>
+            
+            {/* Enhanced visual element */}
+            <div className="relative animate-slide-in-right">
+              <div className="glass-luxury rounded-[2rem] p-12 backdrop-blur-3xl border-2 metallic-border shadow-royal relative overflow-hidden">
+                {/* Floating decorative elements */}
+                <div className="absolute top-4 right-4 font-signature text-6xl text-gold/20 animate-luxury-float">✦</div>
+                <div className="absolute bottom-4 left-4 font-signature text-4xl text-primary/20 animate-luxury-float animation-delay-500">❋</div>
+                
+                <div className="text-center">
+                  <div className="font-handwritten text-5xl text-primary mb-8 transform -rotate-2">
+                    Premium Breeds
+                  </div>
+                  
+                  <div className="flex flex-wrap justify-center gap-4 mb-8">
+                    <Badge variant="secondary" className="px-6 py-3 text-lg font-luxury bg-gradient-gold text-primary hover:scale-105 transition-transform duration-300">
+                      Black Russian Terriers
+                    </Badge>
+                    <Badge variant="secondary" className="px-6 py-3 text-lg font-luxury bg-gradient-platinum text-foreground hover:scale-105 transition-transform duration-300">
+                      German Shepherds
+                    </Badge>
+                    <Badge variant="secondary" className="px-6 py-3 text-lg font-luxury bg-gradient-royal text-white hover:scale-105 transition-transform duration-300">
+                      Working Lines
+                    </Badge>
+                    <Badge variant="secondary" className="px-6 py-3 text-lg font-luxury bg-gradient-primary text-white hover:scale-105 transition-transform duration-300">
+                      East Africa Kennel Club
+                    </Badge>
+                  </div>
+                  
+                  <div className="font-script text-2xl text-muted-foreground italic">
+                    Where champions are born & legends are made
+                  </div>
                 </div>
               </div>
             </div>
