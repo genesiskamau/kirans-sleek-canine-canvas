@@ -125,20 +125,16 @@ const GallerySection = () => {
             <div className="absolute -inset-8 bg-gradient-to-r from-transparent via-primary/10 to-transparent blur-xl"></div>
             <div className="relative bg-gradient-to-br from-background/80 via-background/90 to-background/80 backdrop-blur-xl rounded-3xl border border-primary/20 shadow-[0_0_50px_-12px_rgba(var(--primary-rgb),0.25)] p-12 mb-8">
               <div className="flex items-center justify-center mb-6">
-                <div className="text-6xl font-signature text-primary/60 animate-royal-pulse mr-4">✦</div>
-                <h2 className="font-dancing text-6xl md:text-8xl font-bold bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
+                <h2 className="font-dancing text-6xl md:text-8xl font-bold bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent mr-8">
                   Visual
                 </h2>
-                <div className="text-6xl font-signature text-primary/60 animate-royal-pulse mx-6">❋</div>
                 <h2 className="font-vibes text-6xl md:text-8xl font-bold bg-gradient-to-r from-accent via-primary to-accent bg-clip-text text-transparent">
                   Journey
                 </h2>
-                <div className="text-6xl font-signature text-primary/60 animate-royal-pulse ml-4">✦</div>
               </div>
               
               <div className="flex items-center justify-center mb-8">
                 <div className="h-px bg-gradient-to-r from-transparent via-primary/50 to-transparent flex-1"></div>
-                <div className="text-4xl font-signature text-primary/70 mx-8 animate-royal-pulse">◊</div>
                 <div className="h-px bg-gradient-to-r from-transparent via-primary/50 to-transparent flex-1"></div>
               </div>
 
