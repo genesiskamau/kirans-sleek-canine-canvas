@@ -24,7 +24,7 @@ const HeroSection = () => {
       </div>
       
       {/* Luxury content */}
-      <div className="relative z-10 container mx-auto px-6 text-center">
+      <div className="relative z-10 container mx-auto px-6 text-center pt-32">
         <div className="animate-elegant-scale">
           {/* Premium logo presentation */}
           <div className="space-y-8 mb-16">
