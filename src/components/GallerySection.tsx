@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { X, ChevronLeft, ChevronRight, Award, Users, Dog } from "lucide-react";
+import { X, ChevronLeft, ChevronRight, Sparkles, Users, Camera, Crown, Diamond, Star, Zap, Wand2 } from "lucide-react";
 
 const GallerySection = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
@@ -76,10 +76,10 @@ const GallerySection = () => {
   ];
 
   const categories = [
-    { id: "all", label: "All Photos", icon: Dog },
-    { id: "breeding", label: "Our Dogs", icon: Award },
-    { id: "puppies", label: "Puppies", icon: Users },
-    { id: "competitions", label: "Competitions", icon: Award }
+    { id: "all", label: "All Dimensions", icon: Sparkles },
+    { id: "breeding", label: "Divine Beings", icon: Crown },
+    { id: "puppies", label: "Celestial Pups", icon: Star },
+    { id: "competitions", label: "Cosmic Victories", icon: Diamond }
   ];
 
   const [activeCategory, setActiveCategory] = useState("all");
@@ -110,22 +110,33 @@ const GallerySection = () => {
   };
 
   return (
-    <section id="gallery" className="py-20 bg-background">
+    <section id="gallery" className="py-20 bg-background particles mesh-divine silk-texture">
       <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
-          <div className="inline-block mb-6">
-            <h2 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-2 bg-gradient-to-r from-foreground via-primary to-foreground bg-clip-text text-transparent animate-pulse">
-              Showcase of Excellence
-            </h2>
-            <div className="w-32 h-1 bg-gradient-to-r from-transparent via-primary to-transparent mx-auto animate-pulse"></div>
+        <div className="text-center mb-16 relative">
+          <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-12">
+            <Crown className="w-16 h-16 text-cosmic animate-glow-pulse morph-divine" />
           </div>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto mb-8 leading-relaxed">
-            Journey through our visual chronicles of canine mastery. From championship triumphs to heartwarming puppy moments, 
-            witness the legacy we've built through years of passionate dedication to breeding excellence.
+          <div className="inline-block mb-8">
+            <h2 className="font-luxury text-4xl md:text-5xl font-bold text-cosmic mb-4 hover-float relative">
+              <Sparkles className="inline w-10 h-10 mr-4 text-gold animate-bounce-gentle" />
+              Celestial Chronicles
+              <Diamond className="inline w-10 h-10 ml-4 text-cosmic animate-glow-pulse" />
+            </h2>
+            <div className="w-64 h-2 bg-gradient-to-r from-transparent via-cosmic to-transparent mx-auto glow-cosmic morph-divine"></div>
+          </div>
+          <p className="text-lg text-muted-foreground max-w-4xl mx-auto mb-12 leading-relaxed relative">
+            <span className="absolute -top-4 -left-8">
+              <Star className="w-6 h-6 text-gold animate-bounce-gentle" />
+            </span>
+            Transcend through our ethereal galleries of divine magnificence. From interdimensional championship conquests to soul-stirring celestial puppy manifestations, 
+            witness the cosmic legacy we've forged through eons of passionate dedication to breeding transcendence.
+            <span className="absolute -bottom-4 -right-8">
+              <Zap className="w-6 h-6 text-cosmic animate-glow-pulse" />
+            </span>
           </p>
 
-          {/* Category Filter */}
-          <div className="flex flex-wrap justify-center gap-4 mb-12">
+          {/* Divine Category Filter */}
+          <div className="flex flex-wrap justify-center gap-6 mb-16">
             {categories.map((category) => {
               const IconComponent = category.icon;
               return (
@@ -133,10 +144,16 @@ const GallerySection = () => {
                   key={category.id}
                   variant={activeCategory === category.id ? "default" : "outline"}
                   onClick={() => setActiveCategory(category.id)}
-                  className="group transition-all duration-300 hover:scale-105"
+                  className={`group transition-all duration-1000 hover-divine rounded-2xl px-8 py-4 text-lg font-bold glass-premium glow-cosmic relative overflow-hidden ${
+                    activeCategory === category.id 
+                      ? 'cosmic-border bg-gradient-to-r from-cosmic via-purple-500 to-cyan-400 text-white' 
+                      : 'glass-divine text-cosmic hover:text-diamond'
+                  }`}
                 >
-                  <IconComponent className="w-4 h-4 mr-2" />
-                  {category.label}
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1500"></div>
+                  <IconComponent className="w-5 h-5 mr-3 relative z-10 group-hover:animate-glow-pulse" />
+                  <span className="relative z-10">{category.label}</span>
+                  <Sparkles className="w-4 h-4 ml-3 relative z-10 opacity-0 group-hover:opacity-100 animate-bounce-gentle transition-opacity duration-500" />
                 </Button>
               );
             })}
@@ -172,7 +189,7 @@ const GallerySection = () => {
                   </div>
                   <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-all duration-500 transform scale-75 group-hover:scale-100">
                     <div className="p-2 bg-white/20 backdrop-blur-sm rounded-full">
-                      <Award className="w-4 h-4 text-white" />
+                      <Sparkles className="w-4 h-4 text-white" />
                     </div>
                   </div>
                 </div>
