@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Sparkles, Menu, X, Phone, Crown, Diamond, Star } from "lucide-react";
+import { PawPrint, Menu, X, Phone } from "lucide-react";
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -32,65 +32,58 @@ const Navigation = () => {
   };
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-1000 ${
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-700 ${
       isScrolled 
-        ? 'glass-divine backdrop-blur-3xl cosmic-border glow-divine' 
+        ? 'glass-luxury backdrop-blur-3xl border-b metallic-border shadow-royal' 
         : 'bg-transparent'
     }`}>
       <div className="container mx-auto px-6">
-        <div className="flex items-center justify-between h-28">
-          {/* Divine logo treatment */}
-          <div className="flex items-center space-x-4 group hover-divine">
-            <div className="relative">
-              <img 
-                src="/lovable-uploads/3eb3333d-5f52-4ded-87dd-83a308207920.png" 
-                alt="Kirangi Dogs Logo" 
-                className="w-14 h-14 animate-luxury-float group-hover:scale-125 transition-all duration-700 relative z-10"
-              />
-              <Crown className="absolute -top-1 -right-1 w-5 h-5 text-gold animate-bounce-gentle" />
-              <Sparkles className="absolute -bottom-1 -left-1 w-4 h-4 text-cosmic animate-glow-pulse" />
-            </div>
+        <div className="flex items-center justify-between h-24">
+          {/* Premium logo treatment */}
+          <div className="flex items-center space-x-4 group">
+            <img 
+              src="/lovable-uploads/3eb3333d-5f52-4ded-87dd-83a308207920.png" 
+              alt="Kirangi Dogs Logo" 
+              className="w-10 h-10 animate-luxury-float group-hover:scale-110 transition-all duration-500"
+            />
             <div className="flex flex-col">
-              <span className={`font-luxury font-bold text-2xl transition-all duration-500 hover-float ${
-                isScrolled ? 'text-cosmic' : 'text-diamond'
+              <span className={`font-luxury font-bold text-xl transition-all duration-500 ${
+                isScrolled ? 'text-primary' : 'text-white'
               }`}>
-                ✦ KIRANGI ✦
+                KIRANGI
               </span>
-              <span className={`font-premium text-xs tracking-[0.3em] transition-all duration-500 ${
-                isScrolled ? 'text-muted-foreground' : 'text-diamond/80'
+              <span className={`font-premium text-xs tracking-widest transition-all duration-500 ${
+                isScrolled ? 'text-muted-foreground' : 'text-white/70'
               }`}>
-                DIVINE CANINES
+                PREMIUM DOGS
               </span>
             </div>
           </div>
 
-          {/* Divine navigation */}
-          <div className="hidden md:flex items-center space-x-2">
+          {/* Premium navigation */}
+          <div className="hidden md:flex items-center space-x-1">
             {navItems.map((item, index) => (
               <button
                 key={item.label}
                 onClick={() => scrollToSection(item.href)}
-                className={`relative px-8 py-4 font-premium font-bold tracking-wider transition-all duration-700 rounded-2xl group hover-divine glass-premium ${
+                className={`relative px-6 py-3 font-premium font-semibold tracking-wide transition-all duration-500 rounded-lg group hover-luxury ${
                   isScrolled 
-                    ? 'text-foreground hover:text-cosmic glow-cosmic' 
-                    : 'text-diamond hover:text-gold glow-divine'
+                    ? 'text-foreground hover:text-primary' 
+                    : 'text-white hover:text-gold'
                 }`}
               >
                 <span className="relative z-10 text-sm">{item.label.toUpperCase()}</span>
-                <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-cosmic via-purple-500 to-cyan-400 opacity-0 group-hover:opacity-30 transition-all duration-1000 morph-divine"></div>
-                <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-0 h-1 bg-gradient-to-r from-gold via-cosmic to-cyan-400 group-hover:w-full transition-all duration-1000 glow-cosmic"></div>
-                <Sparkles className="absolute -top-1 -right-1 w-3 h-3 text-gold opacity-0 group-hover:opacity-100 animate-bounce-gentle transition-opacity duration-500" />
+                <div className="absolute inset-0 rounded-lg bg-gradient-gold opacity-0 group-hover:opacity-20 transition-all duration-500"></div>
+                <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-0 h-0.5 bg-gradient-gold group-hover:w-full transition-all duration-500"></div>
               </button>
             ))}
             <div className="ml-8">
               <Button 
                 size="sm" 
-                className="cosmic-border bg-gradient-to-r from-gold via-yellow-400 to-gold hover-divine text-primary px-10 py-4 glow-divine transition-all duration-1000 font-premium font-bold tracking-wider relative overflow-hidden group"
+                className="bg-gradient-gold hover:scale-105 text-primary px-8 py-3 shadow-gold hover:shadow-2xl transition-all duration-500 font-premium font-bold tracking-wide hover-luxury"
               >
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1500"></div>
-                <Phone className="w-5 h-5 mr-3 relative z-10" />
-                <span className="relative z-10">DIVINE CALL</span>
-                <Crown className="w-4 h-4 ml-3 relative z-10 animate-glow-pulse" />
+                <Phone className="w-4 h-4 mr-2" />
+                CALL NOW
               </Button>
             </div>
           </div>

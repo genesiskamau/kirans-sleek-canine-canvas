@@ -1,95 +1,63 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Zap, Users, Crown, Star, Diamond, Sparkles, Award } from "lucide-react";
+import { Target, Users, Trophy, Star } from "lucide-react";
 
 const AboutSection = () => {
   const highlights = [
     {
-      icon: Crown,
-      title: "Royal Bloodlines",
-      description: "Divine champion pedigree dogs from celestial lineages registered with East Africa Kennel Club",
-      gradient: "from-gold to-yellow-400"
+      icon: Trophy,
+      title: "Elite Bloodlines",
+      description: "Champion pedigree dogs registered with East Africa Kennel Club"
     },
     {
-      icon: Diamond,
-      title: "Genetic Mastery",
-      description: "Transcendent genetic testing and health screenings beyond mortal standards",
-      gradient: "from-blue-400 to-cyan-300"
+      icon: Target,
+      title: "Health Excellence",
+      description: "Rigorous genetic testing and health screenings"
     },
     {
-      icon: Zap,
-      title: "Cosmic Breeding",
-      description: "Otherworldly breeding techniques from interdimensional lineages",
-      gradient: "from-purple-500 to-pink-400"
+      icon: Users,
+      title: "Expert Breeding",
+      description: "Professional breeding from world-renowned lineages"
     }
   ];
 
   return (
-    <section id="about" className="py-20 bg-gradient-warm particles silk-texture">
+    <section id="about" className="py-20 bg-gradient-warm">
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-16 items-center mb-16">
-            <div className="text-left relative">
-              <div className="flex items-center mb-6 hover-float">
-                <h2 className="font-luxury text-4xl md:text-5xl font-bold text-cosmic">
-                  Divine
+            <div className="text-left">
+              <div className="flex items-center mb-6">
+                <h2 className="font-serif text-4xl md:text-5xl font-bold text-foreground">
+                  Heritage
                 </h2>
-                <div className="mx-6 text-8xl font-light relative">
-                  <span className="text-gold animate-glow-pulse morph-divine">◊</span>
-                  <Sparkles className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-2 w-6 h-6 text-diamond animate-bounce-gentle" />
+                <div className="mx-6 text-6xl font-light text-primary opacity-30">
+                  <span className="font-serif italic">✦</span>
                 </div>
-                <h2 className="font-luxury text-4xl md:text-5xl font-bold text-cosmic">
-                  Legacy
+                <h2 className="font-serif text-4xl md:text-5xl font-bold text-foreground">
+                  Excellence
                 </h2>
               </div>
-              <p className="text-lg text-muted-foreground leading-relaxed mb-8 relative group">
-                <span className="absolute -top-2 -left-4">
-                  <Crown className="w-5 h-5 text-gold animate-bounce-gentle" />
-                </span>
-                At Kirangi Celestial Sanctuary, we transcend mortal breeding to forge divine canine deities. 
-                Our cosmic dedication to elevating the ethereal essence of Black Russian Terriers 
-                and German Shepherds has crowned us as Earth's supreme celestial canine architects.
-                <span className="absolute -bottom-2 -right-4">
-                  <Diamond className="w-5 h-5 text-cosmic animate-glow-pulse" />
-                </span>
+              <p className="text-lg text-muted-foreground leading-relaxed mb-8">
+                At Kirangi Dogs Kennel, we craft legacies through exceptional breeding programs. 
+                Our dedication to preserving and enhancing the finest traits of Black Russian Terriers 
+                and German Shepherds has established us as Kenya's premier canine specialists.
               </p>
-              <div className="flex items-center gap-4 hover-cosmic">
-                <div className="flex gap-1">
-                  <Star className="w-5 h-5 text-gold fill-gold animate-glow-pulse" />
-                  <Star className="w-5 h-5 text-gold fill-gold animate-glow-pulse animation-delay-100" />
-                  <Star className="w-5 h-5 text-gold fill-gold animate-glow-pulse animation-delay-200" />
-                  <Star className="w-5 h-5 text-gold fill-gold animate-glow-pulse animation-delay-300" />
-                  <Star className="w-5 h-5 text-gold fill-gold animate-glow-pulse animation-delay-500" />
-                </div>
-                <span className="text-cosmic font-bold text-lg">Est. 2020 ✦ Transcendent Bloodlines</span>
-                <Zap className="w-5 h-5 text-cosmic animate-bounce-gentle" />
+              <div className="flex items-center gap-4">
+                <Star className="w-5 h-5 text-primary" />
+                <span className="text-primary font-semibold">Est. 2020 • Award-Winning Bloodlines</span>
               </div>
             </div>
-            <div className="relative hover-divine">
-              <div className="glass-divine rounded-3xl p-10 cosmic-border glow-divine relative overflow-hidden">
-                <div className="absolute inset-0 particles"></div>
-                <blockquote className="font-luxury text-3xl text-cosmic font-bold italic text-center relative z-10 hover-float">
-                  <Sparkles className="inline w-8 h-8 mr-3 animate-glow-pulse" />
-                  "Divinity isn't our aspiration—it's our essence!"
-                  <Crown className="inline w-8 h-8 ml-3 animate-bounce-gentle" />
+            <div className="relative">
+              <div className="bg-primary/5 rounded-3xl p-8 border border-primary/10">
+                <blockquote className="font-serif text-2xl text-primary font-semibold italic text-center">
+                  "Excellence isn't just our standard—it's our passion!"
                 </blockquote>
-                <div className="mt-8 flex flex-wrap justify-center gap-4 relative z-10">
-                  <Badge variant="secondary" className="px-6 py-3 text-sm font-bold glass-premium hover-cosmic glow-cosmic">
-                    <Diamond className="w-4 h-4 mr-2" />
-                    Celestial Russian Terriers
-                  </Badge>
-                  <Badge variant="secondary" className="px-6 py-3 text-sm font-bold glass-premium hover-cosmic glow-divine">
-                    <Crown className="w-4 h-4 mr-2" />
-                    Divine German Shepherds
-                  </Badge>
-                  <Badge variant="secondary" className="px-6 py-3 text-sm font-bold glass-premium hover-cosmic glow-gold">
-                    <Zap className="w-4 h-4 mr-2" />
-                    Ethereal Bloodlines
-                  </Badge>
-                  <Badge variant="secondary" className="px-6 py-3 text-sm font-bold glass-premium hover-cosmic glow-platinum">
-                    <Award className="w-4 h-4 mr-2" />
-                    Cosmic Kennel Authority
-                  </Badge>
+                <div className="mt-6 flex flex-wrap justify-center gap-3">
+                  <Badge variant="secondary" className="px-4 py-2">Black Russian Terriers</Badge>
+                  <Badge variant="secondary" className="px-4 py-2">German Shepherds</Badge>
+                  <Badge variant="secondary" className="px-4 py-2">Working Lines</Badge>
+                  <Badge variant="secondary" className="px-4 py-2">East Africa Kennel Club</Badge>
                 </div>
               </div>
             </div>
@@ -97,28 +65,22 @@ const AboutSection = () => {
           
           <div className="grid md:grid-cols-3 gap-8">
             {highlights.map((highlight, index) => (
-              <Card key={index} className="group glass-divine border-0 glow-divine hover-divine transition-all duration-1000 overflow-hidden relative particles">
-                <div className={`absolute inset-0 bg-gradient-to-br ${highlight.gradient} opacity-5 group-hover:opacity-15 transition-opacity duration-1000 morph-divine`}></div>
-                <div className="absolute inset-0 mesh-divine opacity-20 group-hover:opacity-40 transition-opacity duration-1000"></div>
-                <CardContent className="p-10 text-center relative z-10">
-                  <div className="flex justify-center mb-8">
-                    <div className={`p-6 bg-gradient-to-br ${highlight.gradient} rounded-3xl group-hover:scale-125 group-hover:rotate-12 transition-all duration-1000 glow-cosmic shadow-2xl relative overflow-hidden`}>
-                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1500"></div>
-                      <highlight.icon className="w-10 h-10 text-white relative z-10 group-hover:animate-glow-pulse" />
-                      <Sparkles className="absolute -top-1 -right-1 w-4 h-4 text-white animate-bounce-gentle" />
+              <Card key={index} className="group bg-gradient-to-br from-card via-card to-card/50 border-0 shadow-card hover:shadow-warm transition-all duration-500 transform hover:-translate-y-3 hover:rotate-1 overflow-hidden relative">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <CardContent className="p-8 text-center relative z-10">
+                  <div className="flex justify-center mb-6">
+                    <div className="p-4 bg-gradient-to-br from-primary/20 to-primary/10 rounded-2xl group-hover:scale-110 transition-transform duration-500 shadow-lg">
+                      <highlight.icon className="w-8 h-8 text-primary group-hover:rotate-12 transition-transform duration-500" />
                     </div>
                   </div>
-                  <h3 className="font-luxury text-2xl font-bold text-cosmic mb-4 group-hover:text-cosmic transition-colors duration-500 hover-float">
+                  <h3 className="font-serif text-xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors duration-300">
                     {highlight.title}
                   </h3>
-                  <p className="text-muted-foreground leading-relaxed text-lg group-hover:text-foreground transition-colors duration-500">
+                  <p className="text-muted-foreground leading-relaxed">
                     {highlight.description}
                   </p>
                 </CardContent>
-                <div className={`absolute bottom-0 left-0 right-0 h-2 bg-gradient-to-r ${highlight.gradient} transform scale-x-0 group-hover:scale-x-100 transition-transform duration-1000 glow-cosmic`}></div>
-                <div className="absolute top-0 right-0 opacity-0 group-hover:opacity-100 transition-opacity duration-1000">
-                  <Crown className="w-6 h-6 text-gold m-4 animate-bounce-gentle" />
-                </div>
+                <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-primary/20 via-primary to-primary/20 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
               </Card>
             ))}
           </div>
