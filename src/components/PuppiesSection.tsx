@@ -8,7 +8,7 @@ const PuppiesSection = () => {
       id: 1,
       name: "Chuma",
       breed: "German Shepherd",
-      age: "8 weeks",
+      age: "7 months",
       gender: "Male",
       price: "Contact for pricing",
       features: ["Champion bloodline", "Health tested", "Vaccinated", "Microchipped"],
@@ -19,7 +19,7 @@ const PuppiesSection = () => {
       id: 2,
       name: "Kito",
       breed: "German Shepherd",
-      age: "10 weeks",
+      age: "7 months",
       gender: "Male",
       price: "Contact for pricing",
       features: ["Show quality", "Health guarantee", "Early training", "Socialized"],
@@ -30,7 +30,7 @@ const PuppiesSection = () => {
       id: 3,
       name: "Safi",
       breed: "German Shepherd",
-      age: "12 weeks",
+      age: "7 months",
       gender: "Male",
       price: "Contact for pricing",
       features: ["Working line", "Hip tested parents", "Protective instinct", "Family friendly"],
@@ -123,7 +123,7 @@ const PuppiesSection = () => {
                       : 'bg-muted text-muted-foreground cursor-not-allowed'
                   }`}
                   disabled={!puppy.available}
-                  onClick={() => puppy.available && window.open('https://wa.me/254785535569?text=Hi, I am interested in reserving ' + puppy.name + ' - ' + puppy.breed, '_blank')}
+                  onClick={() => puppy.available && window.open('tel:+254785535569', '_self')}
                 >
                   <Phone className="w-4 h-4 mr-2" />
                   {puppy.available ? 'Reserve Now' : 'Reserved'}
