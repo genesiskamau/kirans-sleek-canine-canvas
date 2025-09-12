@@ -28,11 +28,18 @@ const HeroSection = () => {
         <div className="animate-elegant-scale">
           {/* Premium logo presentation */}
           <div className="space-y-8 mb-16">
-            <img 
-              src="/lovable-uploads/e809515a-f089-4ecc-8f2c-98fc7069cd50.png" 
-              alt="Kirangi Dogs Logo" 
-              className="w-32 h-32 mx-auto drop-shadow-2xl hover:scale-110 transition-all duration-700 hover:rotate-6 animate-royal-pulse"
-            />
+            <div className="relative group mx-auto w-fit">
+              {/* Circular background with glass effect */}
+              <div className="w-40 h-40 glass-luxury backdrop-blur-3xl rounded-full p-4 border-2 metallic-border shadow-royal mx-auto group-hover:scale-105 transition-all duration-700">
+                <img 
+                  src="/lovable-uploads/e809515a-f089-4ecc-8f2c-98fc7069cd50.png" 
+                  alt="Kirangi Dogs Logo" 
+                  className="w-full h-full object-contain drop-shadow-2xl group-hover:rotate-6 animate-royal-pulse"
+                />
+              </div>
+              {/* Luxury glow effect */}
+              <div className="absolute inset-0 w-40 h-40 bg-gradient-gold rounded-full opacity-20 blur-xl animate-royal-pulse mx-auto"></div>
+            </div>
           </div>
           
           {/* Luxury typography */}
