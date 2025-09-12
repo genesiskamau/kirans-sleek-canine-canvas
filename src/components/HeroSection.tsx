@@ -30,7 +30,7 @@ const HeroSection = () => {
           <div className="space-y-8 mb-16">
             <div className="relative group mx-auto w-fit">
               {/* Circular background with glass effect */}
-              <div className="w-40 h-40 glass-luxury backdrop-blur-3xl rounded-full overflow-hidden p-4 border-2 metallic-border shadow-royal mx-auto group-hover:scale-105 transition-all duration-700">
+              <div className="w-40 h-40 glass-luxury backdrop-blur-3xl rounded-full overflow-hidden p-4 border-2 border-yellow-400/30 shadow-royal mx-auto group-hover:scale-105 transition-all duration-700">
                 <img 
                   src="/lovable-uploads/e809515a-f089-4ecc-8f2c-98fc7069cd50.png" 
                   alt="Kirangi Dogs Logo" 
