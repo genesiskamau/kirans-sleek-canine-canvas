@@ -12,50 +12,50 @@ const GallerySection = () => {
     {
       id: 1,
       src: "/lovable-uploads/0d1e1051-e6d3-42c1-9102-f592d9acc724.png",
-      alt: "German Shepherd Adult",
+      alt: "Makena of Kirangi",
       category: "breeding",
-      title: "Champion German Shepherd",
-      description: "Adult German Shepherd from our breeding program"
+      title: "Makena of Kirangi",
+      description: "Elegant German Shepherd from our champion bloodline"
     },
     {
       id: 2,
       src: "/lovable-uploads/0d2a9967-a9a7-4700-8573-2df3d6445a0f.png",
-      alt: "German Shepherd Adult Standing",
+      alt: "Remi Wetu Of Kirangi",
       category: "breeding",
-      title: "Show Quality German Shepherd",
-      description: "Beautiful example of our German Shepherd bloodline"
+      title: "Remi Wetu Of Kirangi",
+      description: "Show quality German Shepherd with exceptional conformation"
     },
     {
       id: 3,
       src: "/lovable-uploads/d2d80c55-ee34-4615-be86-9ceea921ae80.png",
-      alt: "Black Russian Terrier Adult",
+      alt: "Anja Of Kirangi",
       category: "breeding",
-      title: "Champion Black Russian Terrier",
+      title: "Anja Of Kirangi",
       description: "Magnificent Black Russian Terrier from our kennel"
     },
     {
       id: 4,
       src: "/lovable-uploads/f8d5f6f0-572c-44ea-930b-cc5738778cef.png",
-      alt: "Training Competition",
-      category: "competitions",
-      title: "Dog Training Competition",
-      description: "Our dogs excelling in competitive training events"
+      alt: "Periclesz oF Kirangi",
+      category: "breeding",
+      title: "Periclesz oF Kirangi",
+      description: "Champion dog excelling in competitive training"
     },
     {
       id: 5,
       src: "/lovable-uploads/b5b5cffe-0477-45d1-9d18-128381fbf7f8.png",
-      alt: "Award Ceremony",
+      alt: "Ndegwa",
       category: "competitions",
-      title: "Nanyuki Dog Show Winners",
-      description: "Celebrating our achievements at the Nanyuki Dog Show"
+      title: "Ndegwa",
+      description: "Award winning dog at the Nanyuki Dog Show"
     },
     {
       id: 6,
       src: "/lovable-uploads/114f791e-cafd-43fb-9ba1-13f201fc641d.png",
-      alt: "Award Winners",
+      alt: "Salsa Of Kirangi",
       category: "competitions",
-      title: "Competition Champions",
-      description: "Our team celebrating another successful competition"
+      title: "Salsa Of Kirangi",
+      description: "Champion celebrating competition success"
     },
     {
       id: 7,
