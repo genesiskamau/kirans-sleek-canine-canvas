@@ -58,6 +58,78 @@ const GallerySection = () => {
       description: "Champion celebrating competition success"
     },
     {
+      id: 18,
+      src: "/lovable-uploads/mount-kenya-expo-1.jpg",
+      alt: "Mount Kenya Dog Expo 2024",
+      category: "competitions",
+      title: "Mount Kenya Dog Expo 2024",
+      description: "Border Collie showcasing agility and training excellence"
+    },
+    {
+      id: 19,
+      src: "/lovable-uploads/mount-kenya-expo-2.jpg",
+      alt: "Mount Kenya Dog Expo 2024",
+      category: "competitions",
+      title: "Mount Kenya Dog Expo 2024", 
+      description: "Agility training demonstration with multiple dogs"
+    },
+    {
+      id: 20,
+      src: "/lovable-uploads/mount-kenya-expo-3.jpg",
+      alt: "Mount Kenya Dog Expo 2024",
+      category: "competitions",
+      title: "Mount Kenya Dog Expo 2024",
+      description: "Scent detection training exercise"
+    },
+    {
+      id: 21,
+      src: "/lovable-uploads/mount-kenya-expo-4.jpg",
+      alt: "Mount Kenya Dog Expo 2024",
+      category: "competitions",
+      title: "Mount Kenya Dog Expo 2024",
+      description: "Black Russian Terrier obedience training session"
+    },
+    {
+      id: 22,
+      src: "/lovable-uploads/mount-kenya-expo-5.jpg",
+      alt: "Mount Kenya Dog Expo 2024", 
+      category: "competitions",
+      title: "Mount Kenya Dog Expo 2024",
+      description: "Professional dog handler demonstrating training techniques"
+    },
+    {
+      id: 23,
+      src: "/lovable-uploads/mount-kenya-expo-6.jpg",
+      alt: "Mount Kenya Dog Expo 2024",
+      category: "competitions",
+      title: "Mount Kenya Dog Expo 2024",
+      description: "Active training session with Black Russian Terrier"
+    },
+    {
+      id: 24,
+      src: "/lovable-uploads/mount-kenya-expo-7.jpg",
+      alt: "Mount Kenya Dog Expo 2024",
+      category: "competitions",
+      title: "Mount Kenya Dog Expo 2024",
+      description: "Award ceremony - prize presentation at the expo"
+    },
+    {
+      id: 25,
+      src: "/lovable-uploads/mount-kenya-expo-8.jpg",
+      alt: "Mount Kenya Dog Expo 2024",
+      category: "competitions",
+      title: "Mount Kenya Dog Expo 2024",
+      description: "Certificate presentation with Black Russian Terrier winner"
+    },
+    {
+      id: 26,
+      src: "/lovable-uploads/mount-kenya-expo-9.jpg",
+      alt: "Mount Kenya Dog Expo 2024",
+      category: "competitions",
+      title: "Mount Kenya Dog Expo 2024",
+      description: "Winning moment - English Springer Spaniel at the expo"
+    },
+    {
       id: 9,
       src: "/lovable-uploads/lulu-1.jpg",
       alt: "Lulu of Kirangi Dogs",
