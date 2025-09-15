@@ -216,6 +216,30 @@ const GallerySection = () => {
       category: "puppies",
       title: "Puppy Portrait",
       description: "Beautiful German Shepherd puppy from our latest litter"
+    },
+    {
+      id: 27,
+      src: "/lovable-uploads/chuma.jpg",
+      alt: "Chuma",
+      category: "puppies",
+      title: "Chuma",
+      description: "7-month-old German Shepherd male - Champion bloodline"
+    },
+    {
+      id: 28,
+      src: "/lovable-uploads/kito.jpg",
+      alt: "Kito",
+      category: "puppies",
+      title: "Kito",
+      description: "7-month-old German Shepherd male - Show quality"
+    },
+    {
+      id: 29,
+      src: "/lovable-uploads/safi.jpg",
+      alt: "Safi",
+      category: "puppies",
+      title: "Safi",
+      description: "7-month-old German Shepherd male - Working line"
     }
   ];
 
