@@ -57,9 +57,9 @@ const HeroSection = () => {
             
             <p className="text-xl md:text-2xl max-w-3xl mx-auto leading-relaxed text-white/95 animate-fade-in-up animation-delay-600 font-premium font-light">
               Master breeders specializing in champion-grade 
-              <span className="text-gold font-semibold"> Black Russian Terriers </span> 
-              and 
-              <span className="text-gold font-semibold"> German Shepherds </span>
+              <span className="text-gold font-semibold"> Black Russian Terriers</span>, 
+              <span className="text-gold font-semibold"> German Shepherds</span>, 
+              and <span className="text-gold font-semibold"> English Springer Spaniels </span>
               from world-class bloodlines
             </p>
           </div>
@@ -89,7 +89,7 @@ const HeroSection = () => {
             <div className="flex items-center space-x-3">
               <div className="w-3 h-3 bg-gradient-gold rounded-full animate-royal-pulse"></div>
               <p className="text-lg text-white font-premium font-medium tracking-wide">
-                REGISTERED BY EAST AFRICA KENNEL CLUB
+                DOGS REGISTERED BY EAST AFRICA KENNEL CLUB
               </p>
               <div className="w-3 h-3 bg-gradient-gold rounded-full animate-royal-pulse animation-delay-500"></div>
             </div>

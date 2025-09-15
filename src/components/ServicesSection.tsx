@@ -7,10 +7,10 @@ const ServicesSection = () => {
     {
       icon: Crown,
       title: "Premium Breeding",
-      description: "We do selective breeding of Black Russian Terriers and German Shepherds from world-class sires and dams. Every puppy comes with full registration and health guarantees.",
+      description: "We do selective breeding of Black Russian Terriers, German Shepherds, and English Springer Spaniels from world-class sires and dams. Every puppy comes with full registration and health guarantees.",
       features: [
-        "Genetic health screening",
-        "Dogs registered with East Africa Kennel Club",
+        "Health screening protocols",
+        "Dogs registered with East Africa Kennel Club", 
         "World-class bloodlines",
         "Health guarantees"
       ],
@@ -99,6 +99,7 @@ const ServicesSection = () => {
           <Button 
             size="lg" 
             className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 rounded-full text-lg font-semibold shadow-warm"
+            onClick={() => window.open('https://wa.me/254785535569', '_blank')}
           >
             Get a Custom Quote
           </Button>

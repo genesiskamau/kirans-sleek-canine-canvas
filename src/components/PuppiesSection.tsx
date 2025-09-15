@@ -11,7 +11,7 @@ const PuppiesSection = () => {
       age: "7 months",
       gender: "Male",
       price: "Contact for pricing",
-      features: ["Champion bloodline", "Health tested", "Vaccinated", "Microchipped"],
+      features: ["Champion bloodline", "Health tested", "Vaccinated", "Protection dogs in training"],
       image: "/lovable-uploads/chuma.jpg",
       available: true
     },
@@ -33,7 +33,7 @@ const PuppiesSection = () => {
       age: "7 months",
       gender: "Male",
       price: "Contact for pricing",
-      features: ["Working line", "Hip tested parents", "Protective instinct", "Family friendly"],
+      features: ["Working line", "Protection dogs in training", "Protective instinct", "Family friendly"],
       image: "/lovable-uploads/safi.jpg",
       available: true
     }
@@ -152,7 +152,7 @@ const PuppiesSection = () => {
                   </div>
                   <h4 className="font-bold text-foreground mb-2">Health Certified</h4>
                   <p className="text-muted-foreground text-sm leading-relaxed">
-                    Complete health screening with lifetime genetic guarantee
+                    Complete health screening with lifetime health guarantee
                   </p>
                 </div>
                 <div className="group hover:transform hover:scale-105 transition-all duration-300">

@@ -11,8 +11,8 @@ const AboutSection = () => {
     },
     {
       icon: Target,
-      title: "Health Excellence",
-      description: "Rigorous genetic testing and health screenings"
+      title: "Health Excellence", 
+      description: "Comprehensive health protocols and veterinary care"
     },
     {
       icon: Users,
@@ -60,8 +60,9 @@ const AboutSection = () => {
                 
                 <p className="text-lg text-muted-foreground leading-relaxed font-premium">
                   Our dedication to preserving and enhancing the finest traits of 
-                  <span className="font-handwritten text-2xl text-primary mx-2">Black Russian Terriers</span> and 
-                  <span className="font-handwritten text-2xl text-primary mx-2">German Shepherds</span> 
+                  <span className="font-handwritten text-2xl text-primary mx-2">Black Russian Terriers</span>, 
+                  <span className="font-handwritten text-2xl text-primary mx-2">German Shepherds</span>, 
+                  and <span className="font-handwritten text-2xl text-primary mx-2">English Springer Spaniels</span> 
                   has established us as Kenya's premier canine specialists.
                 </p>
                 
@@ -73,13 +74,6 @@ const AboutSection = () => {
                 </div>
               </div>
               
-              <div className="flex items-center gap-6 mt-8">
-                <Star className="w-6 h-6 text-primary animate-royal-pulse" />
-                <span className="text-primary font-luxury font-semibold text-lg tracking-wide">
-                  Est. 2020 • Award-Winning Bloodlines
-                </span>
-                <div className="font-signature text-3xl text-gold">✦</div>
-              </div>
             </div>
             
             {/* Enhanced visual element */}
@@ -101,6 +95,9 @@ const AboutSection = () => {
                     <Badge variant="secondary" className="px-6 py-3 text-lg font-luxury bg-gradient-platinum text-foreground hover:scale-105 transition-transform duration-300">
                       German Shepherds
                     </Badge>
+                    <Badge variant="secondary" className="px-6 py-3 text-lg font-luxury bg-gradient-accent text-white hover:scale-105 transition-transform duration-300">
+                      English Springer Spaniels
+                    </Badge>
                     <Badge variant="secondary" className="px-6 py-3 text-lg font-luxury bg-gradient-royal text-white hover:scale-105 transition-transform duration-300">
                       Working Lines
                     </Badge>
@@ -110,7 +107,7 @@ const AboutSection = () => {
                   </div>
                   
                   <div className="font-script text-2xl text-muted-foreground italic">
-                    Where champions are born & legends are made
+                    where legends are born & made one paw at a time
                   </div>
                 </div>
               </div>

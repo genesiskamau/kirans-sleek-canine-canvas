@@ -53,9 +53,49 @@ const GallerySection = () => {
       id: 6,
       src: "/lovable-uploads/114f791e-cafd-43fb-9ba1-13f201fc641d.png",
       alt: "Salsa Of Kirangi",
-      category: "competitions",
+      category: "competitions", 
       title: "Salsa Of Kirangi",
       description: "Champion celebrating competition success"
+    },
+    {
+      id: 9,
+      src: "/lovable-uploads/lulu-1.jpg",
+      alt: "Lulu of Kirangi Dogs",
+      category: "springer",
+      title: "Lulu of Kirangi Dogs",
+      description: "One of our Detection Dogs - English Springer Spaniel"
+    },
+    {
+      id: 10,
+      src: "/lovable-uploads/lulu-2.jpg", 
+      alt: "Lulu of Kirangi Dogs",
+      category: "springer",
+      title: "Lulu of Kirangi Dogs",
+      description: "Professional detection work - English Springer Spaniel"
+    },
+    {
+      id: 11,
+      src: "/lovable-uploads/lulu-3.jpg",
+      alt: "Lulu of Kirangi Dogs", 
+      category: "springer",
+      title: "Lulu of Kirangi Dogs",
+      description: "Expert scent detection training"
+    },
+    {
+      id: 12,
+      src: "/lovable-uploads/lulu-4.jpg",
+      alt: "Lulu of Kirangi Dogs",
+      category: "springer",
+      title: "Lulu of Kirangi Dogs", 
+      description: "Active detection dog in training"
+    },
+    {
+      id: 13,
+      src: "/lovable-uploads/lulu-5.jpg",
+      alt: "Lulu of Kirangi Dogs",
+      category: "springer",
+      title: "Lulu of Kirangi Dogs",
+      description: "English Springer Spaniel detection specialist"
     },
     {
       id: 7,
@@ -79,7 +119,8 @@ const GallerySection = () => {
     { id: "all", label: "All Photos", icon: Dog },
     { id: "breeding", label: "Our Dogs", icon: Award },
     { id: "puppies", label: "Puppies", icon: Users },
-    { id: "competitions", label: "Competitions", icon: Award }
+    { id: "competitions", label: "Competitions", icon: Award },
+    { id: "springer", label: "English Springer Spaniel", icon: Dog }
   ];
 
   const [activeCategory, setActiveCategory] = useState("all");
