@@ -98,6 +98,38 @@ const GallerySection = () => {
       description: "English Springer Spaniel detection specialist"
     },
     {
+      id: 14,
+      src: "/lovable-uploads/rock-1.jpg",
+      alt: "Rock of Kirangi",
+      category: "protection",
+      title: "Rock of Kirangi",
+      description: "Elite protection dog - Sable German Shepherd male"
+    },
+    {
+      id: 15,
+      src: "/lovable-uploads/rock-2.jpg",
+      alt: "Rock of Kirangi",
+      category: "protection",
+      title: "Rock of Kirangi",
+      description: "Professional protection training session"
+    },
+    {
+      id: 16,
+      src: "/lovable-uploads/rock-3.jpg",
+      alt: "Rock of Kirangi",
+      category: "protection",
+      title: "Rock of Kirangi",
+      description: "Elite sable German Shepherd in action"
+    },
+    {
+      id: 17,
+      src: "/lovable-uploads/rock-4.jpg",
+      alt: "Rock of Kirangi",
+      category: "protection",
+      title: "Rock of Kirangi",
+      description: "Expert protection dog showing discipline"
+    },
+    {
       id: 7,
       src: "/lovable-uploads/76d917e7-6e5a-47de-adc5-d6da990f5df4.png",
       alt: "German Shepherd Puppy",
@@ -120,7 +152,8 @@ const GallerySection = () => {
     { id: "breeding", label: "Our Dogs", icon: Award },
     { id: "puppies", label: "Puppies", icon: Users },
     { id: "competitions", label: "Competitions", icon: Award },
-    { id: "springer", label: "English Springer Spaniel", icon: Dog }
+    { id: "springer", label: "English Springer Spaniel", icon: Dog },
+    { id: "protection", label: "Elite Protection Dogs", icon: Award }
   ];
 
   const [activeCategory, setActiveCategory] = useState("all");
