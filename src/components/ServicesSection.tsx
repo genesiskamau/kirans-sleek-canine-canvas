@@ -7,11 +7,11 @@ const ServicesSection = () => {
     {
       icon: Crown,
       title: "Premium Breeding",
-      description: "We do selective breeding of Black Russian Terriers, German Shepherds, and English Springer Spaniels from world-class sires and dams. Every puppy comes with full registration and health guarantees.",
+      description: "We do selective breeding of Black Russian Terriers, German Shepherds, and English Springer Spaniels from world-class sires and dams. Every puppy comes with full registration and pedigree documentation.",
       features: [
         "Dogs registered with East Africa Kennel Club", 
         "World-class bloodlines",
-        "Health guarantees"
+        "Full registration"
       ],
       color: "bg-primary"
     },

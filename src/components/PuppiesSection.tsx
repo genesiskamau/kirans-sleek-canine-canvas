@@ -11,7 +11,7 @@ const PuppiesSection = () => {
       age: "7 months",
       gender: "Male",
       price: "Contact for pricing",
-      features: ["Champion bloodline", "Health tested", "Vaccinated", "Protection dogs in training"],
+      features: ["Champion bloodline", "Fully vaccinated", "Protection dogs in training", "Registered"],
       image: "/lovable-uploads/chuma.jpg",
       available: true
     },
@@ -22,7 +22,7 @@ const PuppiesSection = () => {
       age: "7 months",
       gender: "Male",
       price: "Contact for pricing",
-      features: ["Show quality", "Health guarantee", "Early training", "Socialized"],
+      features: ["Show quality", "Early training", "Socialized", "Registered"],
       image: "/lovable-uploads/kito.jpg",
       available: true
     },
@@ -48,7 +48,7 @@ const PuppiesSection = () => {
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Our current selection of exceptional puppies from champion bloodlines. 
-            Each puppy comes with health guarantees and full registration.
+            Each puppy comes with full registration and pedigree documentation.
           </p>
         </div>
 
@@ -150,9 +150,9 @@ const PuppiesSection = () => {
                   <div className="p-3 bg-primary/10 rounded-full w-fit mx-auto mb-4 group-hover:bg-primary/20 transition-colors">
                     <Heart className="w-6 h-6 text-primary" />
                   </div>
-                  <h4 className="font-bold text-foreground mb-2">Health Certified</h4>
+                  <h4 className="font-bold text-foreground mb-2">Quality Certified</h4>
                   <p className="text-muted-foreground text-sm leading-relaxed">
-                    Complete health screening with lifetime health guarantee
+                    Lifetime quality guarantee for complete peace of mind
                   </p>
                 </div>
                 <div className="group hover:transform hover:scale-105 transition-all duration-300">

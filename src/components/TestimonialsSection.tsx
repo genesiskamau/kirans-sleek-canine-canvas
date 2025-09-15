@@ -7,7 +7,7 @@ const TestimonialsSection = () => {
       id: 1,
       name: "Sarah Kimani",
       location: "Nairobi, Kenya",
-      text: "We got our Black Russian Terrier from Kirangi Dogs two years ago. The professionalism and care they showed throughout the process was exceptional. Our dog is healthy, well-trained, and an amazing family companion.",
+      text: "We got our Black Russian Terrier from Kirangi Dogs two years ago. The professionalism and care they showed throughout the process was exceptional. Our dog is well-trained and an amazing family companion.",
       rating: 5,
       dogName: "Maximus"
     },
@@ -23,7 +23,7 @@ const TestimonialsSection = () => {
       id: 3,
       name: "Grace Wanjiku",
       location: "Kisumu, Kenya",
-      text: "Professional, knowledgeable, and truly caring. The team at Kirangi Dogs helped us find the perfect puppy for our family. The health guarantees and ongoing support have been invaluable.",
+      text: "Professional, knowledgeable, and truly caring. The team at Kirangi Dogs helped us find the perfect puppy for our family. The ongoing support and quality assurance have been invaluable.",
       rating: 5,
       dogName: "Rex"
     }

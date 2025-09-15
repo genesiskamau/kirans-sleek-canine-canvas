@@ -11,8 +11,8 @@ const AboutSection = () => {
     },
     {
       icon: Target,
-      title: "Health Excellence", 
-      description: "Comprehensive health protocols and veterinary care"
+      title: "Excellence Standards", 
+      description: "Comprehensive care protocols and veterinary support"
     },
     {
       icon: Users,
