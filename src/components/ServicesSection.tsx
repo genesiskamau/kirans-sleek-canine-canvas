@@ -9,7 +9,6 @@ const ServicesSection = () => {
       title: "Premium Breeding",
       description: "We do selective breeding of Black Russian Terriers, German Shepherds, and English Springer Spaniels from world-class sires and dams. Every puppy comes with full registration and health guarantees.",
       features: [
-        "Health screening protocols",
         "Dogs registered with East Africa Kennel Club", 
         "World-class bloodlines",
         "Health guarantees"
@@ -24,7 +23,8 @@ const ServicesSection = () => {
         "Functional obedience",
         "Protection training",
         "Dog sports preparation",
-        "Scent work training"
+        "Scent work training",
+        "Medical assistance dogs"
       ],
       color: "bg-accent"
     },
