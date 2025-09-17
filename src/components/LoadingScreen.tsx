@@ -14,19 +14,19 @@ const LoadingScreen = ({ onComplete }: LoadingScreenProps) => {
       setProgress(prev => {
         if (prev >= 100) {
           clearInterval(progressTimer);
-          setTimeout(onComplete, 1000);
+          setTimeout(onComplete, 300);
           return 100;
         }
         
         // Update phase based on progress
-        const newProgress = prev + 1.5;
+        const newProgress = prev + 8;
         if (newProgress > 25 && currentPhase === 0) setCurrentPhase(1);
         if (newProgress > 50 && currentPhase === 1) setCurrentPhase(2);
         if (newProgress > 75 && currentPhase === 2) setCurrentPhase(3);
         
         return newProgress;
       });
-    }, 60);
+    }, 30);
 
     return () => clearInterval(progressTimer);
   }, [onComplete, currentPhase]);
@@ -103,14 +103,6 @@ const LoadingScreen = ({ onComplete }: LoadingScreenProps) => {
 
         {/* Progress Section */}
         <div className="w-80 max-w-sm mx-auto">
-          {/* Phase Indicator */}
-          <div className="flex items-center justify-center mb-6 animate-fade-in-up animation-delay-600">
-            <CurrentIcon className={`w-6 h-6 mr-3 animate-pulse ${phases[currentPhase]?.color || 'text-white'}`} />
-            <span className="text-white/90 text-lg font-medium">
-              {phases[currentPhase]?.text || 'Loading...'}
-            </span>
-          </div>
-
           {/* Modern Progress Bar */}
           <div className="relative mb-6 animate-fade-in-up animation-delay-800">
             <div className="w-full h-2 bg-white/10 rounded-full overflow-hidden backdrop-blur-sm">
