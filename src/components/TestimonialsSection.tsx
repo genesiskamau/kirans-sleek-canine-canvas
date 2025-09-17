@@ -92,7 +92,7 @@ const TestimonialsSection = () => {
               Join Our Happy Family
             </h3>
             <p className="text-muted-foreground mb-6">
-              Over 150+ families across Kenya have trusted us with their canine companions. 
+              Over 150+ families across East Africa have trusted us with their canine companions. 
               Experience the Kirangi Dogs difference for yourself.
             </p>
             <div className="flex justify-center items-center space-x-8 text-sm text-muted-foreground">
