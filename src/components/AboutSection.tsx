@@ -12,7 +12,7 @@ const AboutSection = () => {
     {
       icon: Target,
       title: "Excellence Standards", 
-      description: "Comprehensive care protocols and veterinary support"
+      description: "Comprehensive care protocols and after sale services"
     },
     {
       icon: Users,

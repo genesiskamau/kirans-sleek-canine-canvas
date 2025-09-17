@@ -11,7 +11,7 @@ const PuppiesSection = () => {
       age: "7 months",
       gender: "Male",
       price: "Contact for pricing",
-      features: ["Champion bloodline", "Fully vaccinated", "Protection dogs in training", "Registered"],
+      features: ["Champion bloodline", "Fully vaccinated", "Protection dogs in training"],
       image: "/lovable-uploads/chuma.jpg",
       available: true
     },
@@ -22,7 +22,7 @@ const PuppiesSection = () => {
       age: "7 months",
       gender: "Male",
       price: "Contact for pricing",
-      features: ["Show quality", "Early training", "Socialized", "Registered"],
+      features: ["Show quality", "Early training", "Socialized"],
       image: "/lovable-uploads/kito.jpg",
       available: true
     },
@@ -47,8 +47,7 @@ const PuppiesSection = () => {
             Premium Pups Ready for Loving Homes
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Our current selection of exceptional puppies from champion bloodlines. 
-            Each puppy comes with full registration and pedigree documentation.
+            Our current selection of exceptional puppies from champion bloodlines.
           </p>
         </div>
 

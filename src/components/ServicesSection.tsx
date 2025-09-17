@@ -35,7 +35,6 @@ const ServicesSection = () => {
       features: [
         "Event security",
         "Personal protection",
-        "Trained professionals",
         "Immediate deployment"
       ],
       color: "bg-secondary"
