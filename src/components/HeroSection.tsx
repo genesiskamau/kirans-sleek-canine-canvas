@@ -58,11 +58,11 @@ const HeroSection = () => {
             <div className="w-24 h-0.5 bg-gradient-gold mx-auto animate-golden-shimmer"></div>
             
             <p className="text-xl md:text-2xl max-w-3xl mx-auto leading-relaxed text-white/95 animate-fade-in-up animation-delay-600 font-premium font-light">
-              Kenya's #1 dog breeder, trainer & kennel specializing in champion-grade 
+              Master breeders specializing in champion-grade 
               <span className="text-gold font-semibold"> Black Russian Terriers</span>, 
               <span className="text-gold font-semibold"> German Shepherds</span>, 
               and <span className="text-gold font-semibold"> English Springer Spaniels </span>
-              with professional training services across Kenya
+              from world-class bloodlines
             </p>
           </div>
           

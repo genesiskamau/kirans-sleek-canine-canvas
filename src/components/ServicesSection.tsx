@@ -6,45 +6,36 @@ const ServicesSection = () => {
   const services = [
     {
       icon: Crown,
-      title: "Premium Dog Breeding Kenya",
-      description: "Kenya's best dog breeder specializing in selective breeding of Black Russian Terriers, German Shepherds, and English Springer Spaniels from world-class sires and dams. Every puppy comes with full registration and pedigree documentation from Kenya's premier kennel.",
+      title: "Premium Breeding",
+      description: "We do selective breeding of Black Russian Terriers, German Shepherds, and English Springer Spaniels from world-class sires and dams. Every puppy comes with full registration and pedigree documentation.",
       features: [
-        "Kenya's #1 registered dog breeder with East Africa Kennel Club", 
-        "World-class champion bloodlines",
-        "Full pedigree registration",
-        "Premium dog breeding services Kenya"
+        "Dogs registered with East Africa Kennel Club", 
+        "World-class bloodlines",
+        "Full registration"
       ],
       color: "bg-primary"
     },
     {
       icon: Target,
-      title: "Professional Dog Training Kenya - Kirangi Dog Academy",
-      description: "Kenya's premier dog training academy offering professional dog training services in Nairobi, Mombasa, Kisumu and across Kenya. Our expert dog trainers provide comprehensive training covering obedience, protection work, dog sports, and specialized training.",
+      title: "Kirangi Dog Academy",
+      description: "Professional training services covering functional obedience, protection work, dog sports, and scent work. Our experienced trainers work with dogs of all ages.",
       features: [
-        "Professional dog training Kenya",
-        "Obedience training Nairobi",
-        "Protection dog training",
-        "Dog sports training Kenya",
-        "Scent work and detection training",
-        "Service and therapy dog training",
-        "Puppy training programs",
-        "Adult dog behavioral training"
+        "Functional obedience",
+        "Protection training",
+        "Dog sports preparation",
+        "Scent work training",
+        "Medical assistance dogs"
       ],
       color: "bg-accent"
     },
     {
       icon: Zap,
-      title: "K9 Security Services Kenya",
-      description: "Kenya's leading K9 security services providing professional protection dogs and security solutions across Kenya. Our well-trained protection dogs are ready for deployment for events, personal protection, and commercial security coverage in Nairobi, Mombasa, Kisumu and throughout Kenya.",
+      title: "K-9 Security Services",
+      description: "Our well-trained protection dogs are always ready for deployment to events for security coverage. Professional, reliable, and highly effective.",
       features: [
-        "Professional K9 security Kenya",
-        "Event security services",
-        "Personal protection dogs",
-        "Commercial security dogs",
-        "Residential security dogs",
-        "Estate security services",
-        "Immediate deployment Kenya-wide",
-        "24/7 security dog services"
+        "Event security",
+        "Personal protection",
+        "Immediate deployment"
       ],
       color: "bg-secondary"
     }
@@ -55,10 +46,11 @@ const ServicesSection = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-6">
-            Kenya's Best Dog Breeding, Training & Kennel Services
+            Professional Dog Services in Kenya
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Kenya's #1 dog breeder and trainer offering premium dog breeding, professional dog training, kennel services, and K9 security solutions across Kenya, Nairobi, Mombasa, Kisumu and East Africa.
+            From breeding exceptional dogs to professional training and security services, 
+            we offer comprehensive solutions for all your canine needs across East Africa.
           </p>
         </div>
 
