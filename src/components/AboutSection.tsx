@@ -54,16 +54,16 @@ const AboutSection = () => {
                   <span className="font-script text-4xl text-primary/60 absolute -top-4 -left-6 rotate-12">"</span>
                   <p className="text-xl text-muted-foreground leading-relaxed font-luxury">
                     At <span className="font-signature text-3xl text-primary mx-2">Kirangi Dogs Kennel</span>, 
-                    we craft legacies through exceptional breeding programs that honor the noble spirit of our canine companions.
+                    Kenya's premier dog breeder and training center, we craft legacies through exceptional breeding programs and professional dog training services that honor the noble spirit of our canine companions.
                   </p>
                 </div>
                 
                 <p className="text-lg text-muted-foreground leading-relaxed font-premium">
-                  Our dedication to preserving and enhancing the finest traits of 
+                  Our dedication to dog breeding in Kenya and professional dog training services, preserving and enhancing the finest traits of 
                   <span className="font-handwritten text-2xl text-primary mx-2">Black Russian Terriers</span>, 
                   <span className="font-handwritten text-2xl text-primary mx-2">German Shepherds</span>, 
                   and <span className="font-handwritten text-2xl text-primary mx-2">English Springer Spaniels</span> 
-                  has established us as Kenya's premier canine specialists.
+                  has established us as Kenya's #1 dog breeder, trainer, and premier kennel serving Nairobi, Mombasa, Kisumu and all of Kenya.
                 </p>
                 
                 <div className="glass-luxury rounded-2xl p-8 backdrop-blur-xl border metallic-border">
