@@ -19,6 +19,8 @@ const HeroSection = () => {
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url(/lovable-uploads/hero-dog.jpg)` }}
+        role="img"
+        aria-label="Professional trained German Shepherd and Black Russian Terrier dogs from Kirangi Dogs Kennel in Kenya"
       >
         <div className="absolute inset-0 bg-gradient-royal opacity-70"></div>
       </div>
@@ -33,7 +35,7 @@ const HeroSection = () => {
               <div className="w-40 h-40 glass-luxury backdrop-blur-3xl rounded-full overflow-hidden p-4 border-2 border-yellow-400/30 shadow-royal mx-auto group-hover:scale-105 transition-all duration-700">
                 <img 
                   src="/lovable-uploads/e809515a-f089-4ecc-8f2c-98fc7069cd50.png" 
-                  alt="Kirangi Dogs Logo" 
+                  alt="Kirangi Dogs Kennel Logo - Premium Dog Breeder Kenya specializing in Black Russian Terriers, German Shepherds and English Springer Spaniels" 
                   className="w-full h-full object-contain drop-shadow-2xl rounded-full group-hover:rotate-6 animate-royal-pulse"
                 />
               </div>

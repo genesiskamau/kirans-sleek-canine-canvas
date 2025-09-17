@@ -46,11 +46,11 @@ const ServicesSection = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-6">
-            Our Services
+            Professional Dog Services in Kenya
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             From breeding exceptional dogs to professional training and security services, 
-            we offer comprehensive solutions for all your canine needs.
+            we offer comprehensive solutions for all your canine needs across East Africa.
           </p>
         </div>
 

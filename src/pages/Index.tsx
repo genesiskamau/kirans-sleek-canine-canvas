@@ -6,6 +6,7 @@ import ServicesSection from "@/components/ServicesSection";
 import PuppiesSection from "@/components/PuppiesSection";
 import GallerySection from "@/components/GallerySection";
 import TestimonialsSection from "@/components/TestimonialsSection";
+import FAQSection from "@/components/FAQSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import LoadingScreen from "@/components/LoadingScreen";
@@ -45,6 +46,9 @@ const Index = () => {
               <TestimonialsSection />
             </div>
             <div className="animate-fade-in-up animation-delay-1200">
+              <FAQSection />
+            </div>
+            <div className="animate-fade-in-up animation-delay-1400">
               <ContactSection />
             </div>
           </main>

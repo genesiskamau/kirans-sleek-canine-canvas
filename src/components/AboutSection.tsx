@@ -36,7 +36,7 @@ const AboutSection = () => {
             <div className="flex items-center justify-center mb-8">
               <div className="w-24 h-0.5 bg-gradient-gold"></div>
               <h2 className="font-signature text-7xl md:text-8xl text-primary mx-8 drop-shadow-lg transform rotate-2">
-                Our Story
+                About Us
               </h2>
               <div className="w-24 h-0.5 bg-gradient-gold"></div>
             </div>
