@@ -3,6 +3,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { X, ChevronLeft, ChevronRight, Award, Users, Dog } from "lucide-react";
+import ImageStructuredData from "./ImageStructuredData";
 
 const GallerySection = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
@@ -281,6 +282,7 @@ const GallerySection = () => {
 
   return (
     <section id="gallery" className="py-32 bg-gradient-to-br from-background via-background/95 to-background/90 relative overflow-hidden">
+      <ImageStructuredData images={galleryItems} />
       {/* Decorative Background Elements */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-20 left-10 w-96 h-96 bg-gradient-to-br from-primary/30 to-transparent rounded-full blur-3xl animate-pulse"></div>
@@ -368,7 +370,11 @@ const GallerySection = () => {
                     <div className="relative h-64 overflow-hidden">
                       <img 
                         src={item.src} 
-                        alt={item.alt}
+                        alt={`${item.alt} - ${item.description} - Kirangi Dogs Kenya`}
+                        title={`${item.title} - Premium dog breeding and training Kenya`}
+                        loading="lazy"
+                        width="400"
+                        height="300"
                         className="w-full h-full object-cover transition-all duration-1000 group-hover:scale-125"
                       />
                       
