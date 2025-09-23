@@ -6,11 +6,25 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule . /index.html [L]
 
-# Set proper cache headers for static assets
-<FilesMatch "\.(css|js|png|jpg|jpeg|gif|svg|woff|woff2|ttf|eot|ico)$">
+# Set proper cache headers for static assets - More granular caching
+<FilesMatch "\.(css|js|woff|woff2|ttf|eot)$">
     ExpiresActive On
     ExpiresDefault "access plus 1 year"
     Header set Cache-Control "public, immutable"
+</FilesMatch>
+
+# Cache images for 6 months 
+<FilesMatch "\.(png|jpg|jpeg|gif|svg|webp|avif|ico)$">
+    ExpiresActive On
+    ExpiresDefault "access plus 6 months"
+    Header set Cache-Control "public, max-age=15552000"
+</FilesMatch>
+
+# Cache HTML files for 1 hour
+<FilesMatch "\.(html|htm)$">
+    ExpiresActive On
+    ExpiresDefault "access plus 1 hour"
+    Header set Cache-Control "public, max-age=3600, must-revalidate"
 </FilesMatch>
 
 # Security headers for better indexing trust

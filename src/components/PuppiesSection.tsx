@@ -60,11 +60,21 @@ const PuppiesSection = () => {
               }`}
             >
               <div className="relative">
-                <img 
-                  src={puppy.image} 
-                  alt={puppy.name}
-                  className="w-full h-64 object-cover"
-                />
+                <picture>
+                  <source 
+                    srcSet={puppy.image.replace('.jpg', '.webp')} 
+                    type="image/webp"
+                  />
+                  <img 
+                    src={puppy.image} 
+                    alt={`${puppy.name} - ${puppy.breed} puppy available for adoption from Kirangi Dogs Kenya`}
+                    className="w-full h-64 object-cover"
+                    width="385"
+                    height="256"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </picture>
                 <div className="absolute top-4 left-4">
                   <Badge 
                     variant={puppy.available ? "default" : "secondary"}

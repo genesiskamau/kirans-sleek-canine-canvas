@@ -15,15 +15,21 @@ const HeroSection = () => {
         <div className="absolute top-1/2 right-1/4 w-48 h-48 bg-gradient-platinum rounded-full opacity-20 animate-luxury-float animation-delay-500 blur-xl"></div>
       </div>
       
-      {/* Premium background image with royal overlay */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(/lovable-uploads/hero-dog.jpg)` }}
-        role="img"
-        aria-label="Professional trained German Shepherd and Black Russian Terrier dogs from Kirangi Dogs Kennel in Kenya"
-      >
+      {/* Optimized background image with WebP support */}
+      <picture className="absolute inset-0">
+        <source 
+          srcSet="/lovable-uploads/hero-dog.webp" 
+          type="image/webp"
+        />
+        <img 
+          src="/lovable-uploads/hero-dog.jpg"
+          alt="Professional trained German Shepherd and Black Russian Terrier dogs from Kirangi Dogs Kennel in Kenya"
+          className="absolute inset-0 w-full h-full object-cover"
+          loading="eager"
+          fetchPriority="high"
+        />
         <div className="absolute inset-0 bg-gradient-royal opacity-70"></div>
-      </div>
+      </picture>
       
       {/* Luxury content */}
       <div className="relative z-10 container mx-auto px-6 text-center pt-48 md:pt-56">
@@ -33,11 +39,20 @@ const HeroSection = () => {
             <div className="relative group mx-auto w-fit">
               {/* Circular background with glass effect */}
               <div className="w-40 h-40 glass-luxury backdrop-blur-3xl rounded-full overflow-hidden p-4 border-2 border-yellow-400/30 shadow-royal mx-auto group-hover:scale-105 transition-all duration-700">
-                <img 
-                  src="/lovable-uploads/e809515a-f089-4ecc-8f2c-98fc7069cd50.png" 
-                  alt="Kirangi Dogs Kennel Logo - Premium Dog Breeder Kenya specializing in Black Russian Terriers, German Shepherds and English Springer Spaniels" 
-                  className="w-full h-full object-contain drop-shadow-2xl rounded-full group-hover:rotate-6 animate-royal-pulse"
-                />
+                <picture>
+                  <source 
+                    srcSet="/lovable-uploads/e809515a-f089-4ecc-8f2c-98fc7069cd50.webp" 
+                    type="image/webp"
+                  />
+                  <img 
+                    src="/lovable-uploads/e809515a-f089-4ecc-8f2c-98fc7069cd50.png" 
+                    alt="Kirangi Dogs Kennel Logo - Premium Dog Breeder Kenya specializing in Black Russian Terriers, German Shepherds and English Springer Spaniels" 
+                    className="w-full h-full object-contain drop-shadow-2xl rounded-full group-hover:rotate-6 animate-royal-pulse"
+                    width="126"
+                    height="126"
+                    loading="eager"
+                  />
+                </picture>
               </div>
               {/* Luxury glow effect */}
               <div className="absolute inset-0 w-40 h-40 bg-gradient-gold rounded-full opacity-20 blur-xl animate-royal-pulse mx-auto"></div>

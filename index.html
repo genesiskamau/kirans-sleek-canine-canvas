@@ -30,8 +30,18 @@
     <link rel="alternate" hreflang="en" href="https://kirangidogs.com/" />
     <link rel="alternate" hreflang="x-default" href="https://kirangidogs.com/" />
     
+    <!-- Preconnect to external domains for faster loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    <link rel="preconnect" href="https://www.google-analytics.com">
+    
     <!-- Preload critical resources -->
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" as="style">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap"></noscript>
+    
+    <!-- Preload hero image for LCP optimization -->
+    <link rel="preload" href="/lovable-uploads/hero-dog.jpg" as="image" type="image/jpeg">
     
     <!-- Enhanced Open Graph Meta Tags -->
     <meta property="og:title" content="Premium Dog Breeder Kenya | Black Russian Terrier, German Shepherd | Kirangi Dogs" />
@@ -164,10 +174,9 @@
       gtag('config', 'G-L3SEHZE4VS');
     </script>
     
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&family=Cormorant+Garamond:wght@300;400;600;700&family=Montserrat:wght@300;400;500;600;700;800&family=Dancing+Script:wght@400;500;600;700&family=Great+Vibes&family=Tangerine:wght@400;700&family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Optimized Google Fonts with font-display: swap for better performance -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&family=Cormorant+Garamond:wght@300;400;600;700&family=Montserrat:wght@300;400;500;600;700;800&family=Dancing+Script:wght@400;500;600;700&family=Great+Vibes&family=Tangerine:wght@400;700&family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&family=Cormorant+Garamond:wght@300;400;600;700&family=Montserrat:wght@300;400;500;600;700;800&family=Dancing+Script:wght@400;500;600;700&family=Great+Vibes&family=Tangerine:wght@400;700&family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet"></noscript>
     
     <link rel="icon" type="image/x-icon" href="https://storage.googleapis.com/gpt-engineer-file-uploads/K1kZyxUHZ3hckVB87S2zctM5GUl2/uploads/1757664476567-Kirangi Dogs Logo.png">
 </head>
