@@ -8,11 +8,11 @@ const HeroSection = () => {
       {/* Luxury mesh background */}
       <div className="absolute inset-0 mesh-luxury opacity-40"></div>
       
-      {/* Sophisticated floating elements */}
+      {/* Sophisticated floating elements - mobile optimized */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-20 left-20 w-96 h-96 bg-gradient-gold rounded-full opacity-10 animate-luxury-float blur-3xl"></div>
-        <div className="absolute bottom-20 right-20 w-64 h-64 bg-gradient-primary rounded-full opacity-15 animate-luxury-float animation-delay-1000 blur-2xl"></div>
-        <div className="absolute top-1/2 right-1/4 w-48 h-48 bg-gradient-platinum rounded-full opacity-20 animate-luxury-float animation-delay-500 blur-xl"></div>
+        <div className="absolute top-10 sm:top-20 left-5 sm:left-20 w-48 h-48 sm:w-96 sm:h-96 bg-gradient-gold rounded-full opacity-10 animate-luxury-float blur-xl sm:blur-3xl motion-reduce:animate-none"></div>
+        <div className="absolute bottom-10 sm:bottom-20 right-5 sm:right-20 w-32 h-32 sm:w-64 sm:h-64 bg-gradient-primary rounded-full opacity-15 animate-luxury-float animation-delay-1000 blur-lg sm:blur-2xl motion-reduce:animate-none"></div>
+        <div className="absolute top-1/2 right-1/4 w-24 h-24 sm:w-48 sm:h-48 bg-gradient-platinum rounded-full opacity-20 animate-luxury-float animation-delay-500 blur-sm sm:blur-xl motion-reduce:animate-none"></div>
       </div>
       
       {/* Optimized background image */}
@@ -47,18 +47,18 @@ const HeroSection = () => {
           
           {/* Luxury typography */}
           <div className="space-y-8 mb-16">
-            <h1 className="font-luxury font-bold text-7xl md:text-9xl leading-none tracking-tight">
-              <span className="text-gold block animate-elegant-scale drop-shadow-2xl">
+            <h1 className="font-luxury font-bold text-4xl sm:text-6xl md:text-7xl xl:text-9xl leading-none tracking-tight">
+              <span className="text-gold block animate-elegant-scale drop-shadow-2xl motion-reduce:animate-none">
                 KIRANGI
               </span>
-              <span className="text-white block text-4xl md:text-6xl font-light mt-4 tracking-widest animate-elegant-scale animation-delay-300">
+              <span className="text-white block text-2xl sm:text-3xl md:text-4xl xl:text-6xl font-light mt-2 sm:mt-4 tracking-widest animate-elegant-scale animation-delay-300 motion-reduce:animate-none">
                 DOGS
               </span>
             </h1>
             
             <div className="w-24 h-0.5 bg-gradient-gold mx-auto animate-golden-shimmer"></div>
             
-            <p className="text-xl md:text-2xl max-w-3xl mx-auto leading-relaxed text-white/95 animate-fade-in-up animation-delay-600 font-premium font-light">
+            <p className="text-base sm:text-lg md:text-xl xl:text-2xl max-w-3xl mx-auto leading-relaxed text-white/95 animate-fade-in-up animation-delay-600 font-premium font-light motion-reduce:animate-none px-4">
               Master breeders specializing in champion-grade 
               <span className="text-gold font-semibold"> Black Russian Terriers</span>, 
               <span className="text-gold font-semibold"> German Shepherds</span>, 

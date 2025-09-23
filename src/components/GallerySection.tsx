@@ -296,11 +296,11 @@ const GallerySection = () => {
             {/* Ornate decorative frame */}
             <div className="absolute -inset-8 bg-gradient-to-r from-transparent via-primary/10 to-transparent blur-xl"></div>
             <div className="relative bg-gradient-to-br from-background/80 via-background/90 to-background/80 backdrop-blur-xl rounded-3xl border border-primary/20 shadow-[0_0_50px_-12px_rgba(var(--primary-rgb),0.25)] p-12 mb-8">
-              <div className="flex items-center justify-center mb-6">
-                <h2 className="font-dancing text-6xl md:text-8xl font-bold bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent mr-8">
+              <div className="flex flex-col sm:flex-row items-center justify-center mb-6 gap-2 sm:gap-8">
+                <h2 className="font-dancing text-3xl sm:text-4xl md:text-6xl xl:text-8xl font-bold bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
                   Visual
                 </h2>
-                <h2 className="font-vibes text-6xl md:text-8xl font-bold bg-gradient-to-r from-accent via-primary to-accent bg-clip-text text-transparent">
+                <h2 className="font-vibes text-3xl sm:text-4xl md:text-6xl xl:text-8xl font-bold bg-gradient-to-r from-accent via-primary to-accent bg-clip-text text-transparent">
                   Journey
                 </h2>
               </div>
@@ -310,7 +310,7 @@ const GallerySection = () => {
                 <div className="h-px bg-gradient-to-r from-transparent via-primary/50 to-transparent flex-1"></div>
               </div>
 
-              <p className="font-tangerine text-2xl md:text-3xl text-muted-foreground/90 max-w-4xl mx-auto leading-relaxed italic">
+              <p className="font-tangerine text-lg sm:text-xl md:text-2xl xl:text-3xl text-muted-foreground/90 max-w-4xl mx-auto leading-relaxed italic px-4">
                 "Through the lens of passion, witness our chronicles of canine mastery — from championship triumphs to tender puppy moments, each frame tells the story of our dedication to breeding excellence"
               </p>
             </div>

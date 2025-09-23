@@ -234,4 +234,35 @@ All colors MUST be HSL.
     transform: translateY(-8px) scale(1.02);
     box-shadow: var(--shadow-luxury);
   }
+
+  /* Mobile performance optimizations */
+  @media (max-width: 768px) {
+    .glass-luxury {
+      backdrop-filter: blur(10px) saturate(150%);
+    }
+    
+    .glass-royal {
+      backdrop-filter: blur(12px) saturate(160%);
+    }
+    
+    .hover-luxury:hover {
+      transform: translateY(-4px) scale(1.01);
+    }
+  }
+
+  /* Accessibility: Reduce motion for users who prefer it */
+  @media (prefers-reduced-motion: reduce) {
+    .hover-luxury,
+    .animate-fade-in,
+    .animate-elegant-scale,
+    .animate-royal-pulse,
+    .animate-luxury-float {
+      animation: none !important;
+      transition: none !important;
+    }
+    
+    .hover-luxury:hover {
+      transform: none;
+    }
+  }
 }
