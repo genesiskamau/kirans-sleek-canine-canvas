@@ -23,14 +23,8 @@ export default defineConfig(({ mode }) => ({
         },
       },
     },
-    // Enable compression and optimization
-    minify: 'terser',
-    terserOptions: {
-      compress: {
-        drop_console: true,
-        drop_debugger: true,
-      },
-    },
+    // Enable compression and optimization using esbuild (default, faster)
+    minify: true,
   },
   plugins: [
     react(),
