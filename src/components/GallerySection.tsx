@@ -368,22 +368,13 @@ const GallerySection = () => {
                   <div className="relative bg-gradient-to-br from-card/95 to-card/90 backdrop-blur-xl rounded-3xl border border-border/40 overflow-hidden shadow-[0_8px_32px_-8px_rgba(0,0,0,0.3)] group-hover:shadow-[0_20px_60px_-8px_rgba(var(--primary-rgb),0.3)] transition-all duration-700">
                     {/* Image Container */}
                     <div className="relative h-64 overflow-hidden">
-                      <picture>
-                        <source 
-                          srcSet={item.src.replace(/\.(jpg|png)$/i, '.webp')} 
-                          type="image/webp"
-                        />
-                        <img 
-                          src={item.src} 
-                          alt={`${item.alt} - ${item.description} - Kirangi Dogs Kenya`}
-                          title={`${item.title} - Premium dog breeding and training Kenya`}
-                          loading="lazy"
-                          decoding="async"
-                          width="400"
-                          height="300"
-                          className="w-full h-full object-cover transition-all duration-1000 group-hover:scale-125"
-                        />
-                      </picture>
+                      <img 
+                        src={item.src} 
+                        alt={`${item.alt} - ${item.description} - Kirangi Dogs Kenya`}
+                        title={`${item.title} - Premium dog breeding and training Kenya`}
+                        loading="lazy"
+                        className="w-full h-full object-cover transition-all duration-1000 group-hover:scale-125"
+                      />
                       
                       {/* Elegant Overlay */}
                       <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500">
