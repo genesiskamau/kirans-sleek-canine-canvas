@@ -68,33 +68,33 @@ const HeroSection = () => {
           </div>
           
           {/* Luxury action buttons */}
-          <div className="flex flex-col sm:flex-row gap-8 justify-center items-center mb-20 animate-fade-in-up animation-delay-900">
+          <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 justify-center items-center mb-20 animate-fade-in-up animation-delay-900 px-4">
             <Button 
               size="lg" 
-              className="group bg-gradient-gold hover:scale-110 text-primary px-12 py-8 text-xl font-bold shadow-gold hover:shadow-2xl transition-all duration-700 hover:glow-gold font-premium tracking-wide hover-luxury"
+              className="group bg-gradient-gold hover:scale-105 sm:hover:scale-110 text-primary px-4 sm:px-8 md:px-12 py-4 sm:py-6 md:py-8 text-sm sm:text-lg md:text-xl font-bold shadow-gold hover:shadow-2xl transition-all duration-700 hover:glow-gold font-premium tracking-wide hover-luxury w-full sm:w-auto"
             >
-              <Phone className="w-6 h-6 mr-4 group-hover:animate-bounce" />
-              CALL +254-785-535-569
+              <Phone className="w-4 h-4 sm:w-5 md:w-6 mr-2 sm:mr-4 group-hover:animate-bounce flex-shrink-0" />
+              <span className="truncate">CALL +254-785-535-569</span>
             </Button>
             
             <Button 
               variant="outline" 
               size="lg"
-              className="glass-luxury group text-white hover:bg-white/10 px-12 py-8 text-xl font-bold backdrop-blur-2xl hover:scale-110 transition-all duration-700 hover:shadow-platinum font-premium tracking-wide hover-luxury"
+              className="glass-luxury group text-white hover:bg-white/10 px-4 sm:px-8 md:px-12 py-4 sm:py-6 md:py-8 text-sm sm:text-lg md:text-xl font-bold backdrop-blur-2xl hover:scale-105 sm:hover:scale-110 transition-all duration-700 hover:shadow-platinum font-premium tracking-wide hover-luxury w-full sm:w-auto"
             >
-              <Mail className="w-6 h-6 mr-4 group-hover:animate-bounce" />
-              INQUIRE NOW
+              <Mail className="w-4 h-4 sm:w-5 md:w-6 mr-2 sm:mr-4 group-hover:animate-bounce flex-shrink-0" />
+              <span className="truncate">INQUIRE NOW</span>
             </Button>
           </div>
           
           {/* Premium certification badge */}
-          <div className="glass-luxury rounded-xl px-8 py-4 mx-auto w-fit backdrop-blur-2xl border metallic-border shadow-platinum">
-            <div className="flex items-center space-x-3">
-              <div className="w-3 h-3 bg-gradient-gold rounded-full animate-royal-pulse"></div>
-              <p className="text-lg text-white font-premium font-medium tracking-wide">
+          <div className="glass-luxury rounded-xl px-3 sm:px-6 md:px-8 py-3 sm:py-4 mx-auto w-fit max-w-[90vw] backdrop-blur-2xl border metallic-border shadow-platinum">
+            <div className="flex items-center space-x-2 sm:space-x-3">
+              <div className="w-2 h-2 sm:w-3 sm:h-3 bg-gradient-gold rounded-full animate-royal-pulse flex-shrink-0"></div>
+              <p className="text-xs sm:text-sm md:text-lg text-white font-premium font-medium tracking-wide text-center">
                 DOGS REGISTERED BY EAST AFRICA KENNEL CLUB
               </p>
-              <div className="w-3 h-3 bg-gradient-gold rounded-full animate-royal-pulse animation-delay-500"></div>
+              <div className="w-2 h-2 sm:w-3 sm:h-3 bg-gradient-gold rounded-full animate-royal-pulse animation-delay-500 flex-shrink-0"></div>
             </div>
           </div>
         </div>

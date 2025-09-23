@@ -133,8 +133,8 @@ const PuppiesSection = () => {
           ))}
         </div>
 
-        <div className="text-center">
-          <div className="relative overflow-hidden bg-gradient-to-br from-primary/10 via-primary/5 to-card rounded-3xl p-10 mb-8 border-2 border-primary/20 shadow-2xl">
+        <div className="text-center px-4">
+          <div className="relative overflow-hidden bg-gradient-to-br from-primary/10 via-primary/5 to-card rounded-3xl p-4 sm:p-6 md:p-10 mb-8 border-2 border-primary/20 shadow-2xl">
             <div className="absolute inset-0 bg-gradient-to-r from-transparent via-primary/5 to-transparent animate-pulse"></div>
             <div className="relative z-10">
               <div className="flex justify-center mb-6">
@@ -179,10 +179,10 @@ const PuppiesSection = () => {
 
           <Button 
             size="lg" 
-            className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 rounded-full text-lg font-semibold shadow-warm"
+            className="bg-primary hover:bg-primary/90 text-primary-foreground px-4 sm:px-6 md:px-8 py-3 sm:py-4 rounded-full text-sm sm:text-base md:text-lg font-semibold shadow-warm w-full sm:w-auto max-w-[90vw]"
           >
-            <Phone className="w-5 h-5 mr-2" />
-            Call to Reserve: +254-785-535-569
+            <Phone className="w-4 h-4 sm:w-5 md:w-5 mr-2 flex-shrink-0" />
+            <span className="truncate">Call to Reserve: +254-785-535-569</span>
           </Button>
         </div>
       </div>
