@@ -30,7 +30,7 @@ const ServicesSection = () => {
     },
     {
       icon: Zap,
-      title: "K-9 Security Services",
+      title: "Elite Protection dogs",
       description: "Our well-trained protection dogs are always ready for deployment to events for security coverage. Professional, reliable, and highly effective.",
       features: [
         "Event security",
