@@ -63,7 +63,7 @@ const AboutSection = () => {
                   <span className="font-handwritten text-2xl text-primary mx-2">Black Russian Terriers</span>, 
                   <span className="font-handwritten text-2xl text-primary mx-2">German Shepherds</span>, 
                   and <span className="font-handwritten text-2xl text-primary mx-2">English Springer Spaniels</span> 
-                  has established us as Kenya's premier canine specialists.
+                  has positioned us among the top breeding kennels in kenya.
                 </p>
                 
                 <div className="glass-luxury rounded-2xl p-8 backdrop-blur-xl border metallic-border">
