@@ -61,7 +61,7 @@ const HeroSection = () => {
             <p className="text-base sm:text-lg md:text-xl xl:text-2xl max-w-3xl mx-auto leading-relaxed text-white/95 animate-fade-in-up animation-delay-600 font-premium font-light motion-reduce:animate-none px-4">
               Breeders specialing in champion bloodlines of the
               <span className="text-gold font-semibold"> Black russian terrier</span>, 
-              <span className="text-gold font-semibold"> German shepherd</span>
+              <span className="text-gold font-semibold"> German shepherd</span> 
               and <span className="text-gold font-semibold"> English Springer spaniel</span>
             </p>
           </div>
