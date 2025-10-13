@@ -1,7 +1,8 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Heart, Star, Phone, Shield, Award } from "lucide-react";
+import { Heart, Star, Phone, Shield, Award, CalendarHeart } from "lucide-react";
+import { Link } from "react-router-dom";
 const PuppiesSection = () => {
   const availablePuppies = [
     {
@@ -42,13 +43,41 @@ const PuppiesSection = () => {
   return (
     <section id="puppies" className="py-20 bg-gradient-warm">
       <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
+        <div className="text-center mb-12">
           <h2 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-6">
             Premium Pups Ready for Loving Homes
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-8">
             Our current selection of exceptional puppies from champion bloodlines.
           </p>
+          
+          {/* Black Russian Terrier December Litter CTA */}
+          <div className="max-w-4xl mx-auto mb-12">
+            <div className="bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 border-2 border-teal-500/30 rounded-2xl p-8 shadow-2xl relative overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-r from-teal-500/5 via-emerald-500/5 to-teal-500/5 animate-pulse"></div>
+              <div className="relative z-10">
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-teal-500 to-emerald-500 rounded-full mb-4 animate-bounce">
+                  <CalendarHeart className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-3xl font-bold text-white mb-3">
+                  Black Russian Terrier Puppies Coming in December!
+                </h3>
+                <p className="text-slate-300 text-lg mb-6 max-w-2xl mx-auto">
+                  Reserve your spot now for our upcoming champion bloodline litter. 
+                  Limited availability - first come, first served.
+                </p>
+                <Link to="/puppy-form">
+                  <Button 
+                    size="lg"
+                    className="bg-gradient-to-r from-teal-500 to-emerald-500 hover:from-teal-600 hover:to-emerald-600 text-white px-8 py-6 text-lg font-semibold shadow-xl hover:shadow-2xl transition-all duration-300 rounded-full"
+                  >
+                    <CalendarHeart className="w-5 h-5 mr-3" />
+                    Reserve Your Black Russian Terrier Puppy
+                  </Button>
+                </Link>
+              </div>
+            </div>
+          </div>
         </div>
 
         <div className="grid lg:grid-cols-3 gap-8 mb-12">

@@ -9,3 +9,6 @@ max_rows = 1000
 
 [functions.send-contact-email]
 verify_jwt = false
+
+[functions.submit-puppy-booking]
+verify_jwt = false

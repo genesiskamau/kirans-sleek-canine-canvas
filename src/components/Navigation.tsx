@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { PawPrint, Menu, X, Phone } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -20,10 +21,14 @@ const Navigation = () => {
     { label: "Services", href: "#services" },
     { label: "Puppies", href: "#puppies" },
     { label: "Gallery", href: "#gallery" },
-    { label: "Contact", href: "#contact" }
+    { label: "Contact", href: "#contact" },
+    { label: "Reserve Puppy", href: "/puppy-form", isExternal: true }
   ];
 
-  const scrollToSection = (href: string) => {
+  const scrollToSection = (href: string, isExternal?: boolean) => {
+    if (isExternal) {
+      return; // Let the Link component handle external navigation
+    }
     const element = document.querySelector(href);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
@@ -63,19 +68,35 @@ const Navigation = () => {
           {/* Premium navigation */}
           <div className="hidden md:flex items-center space-x-1">
             {navItems.map((item, index) => (
-              <button
-                key={item.label}
-                onClick={() => scrollToSection(item.href)}
-                className={`relative px-6 py-3 font-premium font-semibold tracking-wide transition-all duration-500 rounded-lg group hover-luxury ${
-                  isScrolled 
-                    ? 'text-foreground hover:text-primary' 
-                    : 'text-white hover:text-gold'
-                }`}
-              >
-                <span className="relative z-10 text-sm">{item.label.toUpperCase()}</span>
-                <div className="absolute inset-0 rounded-lg bg-gradient-gold opacity-0 group-hover:opacity-20 transition-all duration-500"></div>
-                <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-0 h-0.5 bg-gradient-gold group-hover:w-full transition-all duration-500"></div>
-              </button>
+              item.isExternal ? (
+                <Link key={item.label} to={item.href}>
+                  <button
+                    className={`relative px-6 py-3 font-premium font-semibold tracking-wide transition-all duration-500 rounded-lg group hover-luxury ${
+                      isScrolled 
+                        ? 'text-foreground hover:text-primary' 
+                        : 'text-white hover:text-gold'
+                    }`}
+                  >
+                    <span className="relative z-10 text-sm">{item.label.toUpperCase()}</span>
+                    <div className="absolute inset-0 rounded-lg bg-gradient-gold opacity-0 group-hover:opacity-20 transition-all duration-500"></div>
+                    <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-0 h-0.5 bg-gradient-gold group-hover:w-full transition-all duration-500"></div>
+                  </button>
+                </Link>
+              ) : (
+                <button
+                  key={item.label}
+                  onClick={() => scrollToSection(item.href)}
+                  className={`relative px-6 py-3 font-premium font-semibold tracking-wide transition-all duration-500 rounded-lg group hover-luxury ${
+                    isScrolled 
+                      ? 'text-foreground hover:text-primary' 
+                      : 'text-white hover:text-gold'
+                  }`}
+                >
+                  <span className="relative z-10 text-sm">{item.label.toUpperCase()}</span>
+                  <div className="absolute inset-0 rounded-lg bg-gradient-gold opacity-0 group-hover:opacity-20 transition-all duration-500"></div>
+                  <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-0 h-0.5 bg-gradient-gold group-hover:w-full transition-all duration-500"></div>
+                </button>
+              )
             ))}
             <div className="ml-8">
               <Button 
@@ -106,13 +127,23 @@ const Navigation = () => {
           <div className="md:hidden absolute top-full left-6 right-6 mt-4 bg-card/95 backdrop-blur-3xl border-2 metallic-border rounded-2xl shadow-royal animate-elegant-scale z-50">
             <div className="p-8 space-y-4">
               {navItems.map((item) => (
-                <button
-                  key={item.label}
-                  onClick={() => scrollToSection(item.href)}
-                  className="block w-full px-6 py-4 text-left font-premium font-semibold text-foreground hover:bg-accent/20 rounded-lg transition-all duration-500 hover-luxury tracking-wide"
-                >
-                  {item.label.toUpperCase()}
-                </button>
+                item.isExternal ? (
+                  <Link key={item.label} to={item.href} onClick={() => setIsMobileMenuOpen(false)}>
+                    <button
+                      className="block w-full px-6 py-4 text-left font-premium font-semibold text-foreground hover:bg-accent/20 rounded-lg transition-all duration-500 hover-luxury tracking-wide"
+                    >
+                      {item.label.toUpperCase()}
+                    </button>
+                  </Link>
+                ) : (
+                  <button
+                    key={item.label}
+                    onClick={() => scrollToSection(item.href)}
+                    className="block w-full px-6 py-4 text-left font-premium font-semibold text-foreground hover:bg-accent/20 rounded-lg transition-all duration-500 hover-luxury tracking-wide"
+                  >
+                    {item.label.toUpperCase()}
+                  </button>
+                )
               ))}
               <div className="pt-6 border-t border-border/30">
                 <Button className="w-full bg-gradient-gold hover:scale-105 text-primary py-4 shadow-gold transition-all duration-500 font-premium font-bold tracking-wide hover-luxury">
