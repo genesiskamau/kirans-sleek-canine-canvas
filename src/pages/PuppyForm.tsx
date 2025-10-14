@@ -62,7 +62,15 @@ const PuppyForm = () => {
 
   if (isSubmitted) {
     return (
-      <div className="relative min-h-screen bg-gradient-to-br from-background via-muted to-card flex items-center justify-center px-4 overflow-hidden">
+      <div className="relative min-h-screen flex items-center justify-center px-4 overflow-hidden">
+        {/* Background image from hero section */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: `url(/lovable-uploads/hero-dog.jpg)` }}
+        >
+          <div className="absolute inset-0 bg-gradient-royal opacity-70"></div>
+        </div>
+        
         {/* Luxury mesh background */}
         <div className="absolute inset-0 mesh-luxury opacity-40"></div>
         
@@ -129,7 +137,15 @@ const PuppyForm = () => {
   }
 
   return (
-    <div className="relative min-h-screen bg-gradient-to-br from-background via-muted to-card py-12 px-4 overflow-hidden">
+    <div className="relative min-h-screen py-12 px-4 overflow-hidden">
+      {/* Background image from hero section */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(/lovable-uploads/hero-dog.jpg)` }}
+      >
+        <div className="absolute inset-0 bg-gradient-royal opacity-70"></div>
+      </div>
+      
       {/* Luxury mesh background */}
       <div className="absolute inset-0 mesh-luxury opacity-40"></div>
       
