@@ -1,0 +1,484 @@
+import React, { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { X, ChevronLeft, ChevronRight, Award, Users, Dog, ArrowLeft } from "lucide-react";
+import { Link } from "react-router-dom";
+import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
+import ImageStructuredData from "@/components/ImageStructuredData";
+import SEOBreadcrumb from "@/components/SEOBreadcrumb";
+
+const Gallery = () => {
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const galleryItems = [
+    {
+      id: 1,
+      src: "/lovable-uploads/0d1e1051-e6d3-42c1-9102-f592d9acc724.png",
+      alt: "Makena of Kirangi",
+      category: "breeding",
+      title: "Makena of Kirangi",
+      description: "Elegant German Shepherd from our champion bloodline"
+    },
+    {
+      id: 2,
+      src: "/lovable-uploads/0d2a9967-a9a7-4700-8573-2df3d6445a0f.png",
+      alt: "Remi Wetu Of Kirangi",
+      category: "breeding",
+      title: "Remi Wetu Of Kirangi",
+      description: "Show quality German Shepherd with exceptional conformation"
+    },
+    {
+      id: 3,
+      src: "/lovable-uploads/d2d80c55-ee34-4615-be86-9ceea921ae80.png",
+      alt: "Anja Of Kirangi",
+      category: "breeding",
+      title: "Anja Of Kirangi",
+      description: "Magnificent Black Russian Terrier from our kennel"
+    },
+    {
+      id: 4,
+      src: "/lovable-uploads/f8d5f6f0-572c-44ea-930b-cc5738778cef.png",
+      alt: "Periclesz oF Kirangi",
+      category: "breeding",
+      title: "Periclesz oF Kirangi",
+      description: "Champion dog excelling in competitive training"
+    },
+    {
+      id: 5,
+      src: "/lovable-uploads/b5b5cffe-0477-45d1-9d18-128381fbf7f8.png",
+      alt: "Ndegwa",
+      category: "competitions",
+      title: "Ndegwa",
+      description: "Award winning dog at the Nanyuki Dog Show"
+    },
+    {
+      id: 6,
+      src: "/lovable-uploads/114f791e-cafd-43fb-9ba1-13f201fc641d.png",
+      alt: "Salsa Of Kirangi",
+      category: "competitions", 
+      title: "Salsa Of Kirangi",
+      description: "Champion celebrating competition success"
+    },
+    {
+      id: 18,
+      src: "/lovable-uploads/mount-kenya-expo-1.jpg",
+      alt: "Mount Kenya Dog Expo 2024",
+      category: "competitions",
+      title: "Mount Kenya Dog Expo 2024",
+      description: "Border Collie showcasing agility and training excellence"
+    },
+    {
+      id: 19,
+      src: "/lovable-uploads/mount-kenya-expo-2.jpg",
+      alt: "Mount Kenya Dog Expo 2024",
+      category: "competitions",
+      title: "Mount Kenya Dog Expo 2024", 
+      description: "Agility training demonstration with multiple dogs"
+    },
+    {
+      id: 20,
+      src: "/lovable-uploads/mount-kenya-expo-3.jpg",
+      alt: "Mount Kenya Dog Expo 2024",
+      category: "competitions",
+      title: "Mount Kenya Dog Expo 2024",
+      description: "Scent detection training exercise"
+    },
+    {
+      id: 21,
+      src: "/lovable-uploads/mount-kenya-expo-4.jpg",
+      alt: "Mount Kenya Dog Expo 2024",
+      category: "competitions",
+      title: "Mount Kenya Dog Expo 2024",
+      description: "Black Russian Terrier obedience training session"
+    },
+    {
+      id: 22,
+      src: "/lovable-uploads/mount-kenya-expo-5.jpg",
+      alt: "Mount Kenya Dog Expo 2024", 
+      category: "competitions",
+      title: "Mount Kenya Dog Expo 2024",
+      description: "Professional dog handler demonstrating training techniques"
+    },
+    {
+      id: 23,
+      src: "/lovable-uploads/mount-kenya-expo-6.jpg",
+      alt: "Mount Kenya Dog Expo 2024",
+      category: "competitions",
+      title: "Mount Kenya Dog Expo 2024",
+      description: "Active training session with Black Russian Terrier"
+    },
+    {
+      id: 24,
+      src: "/lovable-uploads/mount-kenya-expo-7.jpg",
+      alt: "Mount Kenya Dog Expo 2024",
+      category: "competitions",
+      title: "Mount Kenya Dog Expo 2024",
+      description: "Award ceremony - prize presentation at the expo"
+    },
+    {
+      id: 25,
+      src: "/lovable-uploads/mount-kenya-expo-8.jpg",
+      alt: "Mount Kenya Dog Expo 2024",
+      category: "competitions",
+      title: "Mount Kenya Dog Expo 2024",
+      description: "Certificate presentation with Black Russian Terrier winner"
+    },
+    {
+      id: 26,
+      src: "/lovable-uploads/mount-kenya-expo-9.jpg",
+      alt: "Mount Kenya Dog Expo 2024",
+      category: "competitions",
+      title: "Mount Kenya Dog Expo 2024",
+      description: "Winning moment - English Springer Spaniel at the expo"
+    },
+    {
+      id: 9,
+      src: "/lovable-uploads/lulu-1.jpg",
+      alt: "Lulu of Kirangi Dogs",
+      category: "springer",
+      title: "Lulu of Kirangi Dogs",
+      description: "One of our Detection Dogs - English Springer Spaniel"
+    },
+    {
+      id: 10,
+      src: "/lovable-uploads/lulu-2.jpg", 
+      alt: "Lulu of Kirangi Dogs",
+      category: "springer",
+      title: "Lulu of Kirangi Dogs",
+      description: "Professional detection work - English Springer Spaniel"
+    },
+    {
+      id: 11,
+      src: "/lovable-uploads/lulu-3.jpg",
+      alt: "Lulu of Kirangi Dogs", 
+      category: "springer",
+      title: "Lulu of Kirangi Dogs",
+      description: "Expert scent detection training"
+    },
+    {
+      id: 12,
+      src: "/lovable-uploads/lulu-4.jpg",
+      alt: "Lulu of Kirangi Dogs",
+      category: "springer",
+      title: "Lulu of Kirangi Dogs", 
+      description: "Active detection dog in training"
+    },
+    {
+      id: 13,
+      src: "/lovable-uploads/lulu-5.jpg",
+      alt: "Lulu of Kirangi Dogs",
+      category: "springer",
+      title: "Lulu of Kirangi Dogs",
+      description: "English Springer Spaniel detection specialist"
+    },
+    {
+      id: 14,
+      src: "/lovable-uploads/rock-1.jpg",
+      alt: "Rock of Kirangi",
+      category: "protection",
+      title: "Rock of Kirangi",
+      description: "Elite protection dog - Sable German Shepherd male"
+    },
+    {
+      id: 15,
+      src: "/lovable-uploads/rock-2.jpg",
+      alt: "Rock of Kirangi",
+      category: "protection",
+      title: "Rock of Kirangi",
+      description: "Professional protection training session"
+    },
+    {
+      id: 16,
+      src: "/lovable-uploads/rock-3.jpg",
+      alt: "Rock of Kirangi",
+      category: "protection",
+      title: "Rock of Kirangi",
+      description: "Elite sable German Shepherd in action"
+    },
+    {
+      id: 17,
+      src: "/lovable-uploads/rock-4.jpg",
+      alt: "Rock of Kirangi",
+      category: "protection",
+      title: "Rock of Kirangi",
+      description: "Expert protection dog showing discipline"
+    },
+    {
+      id: 7,
+      src: "/lovable-uploads/76d917e7-6e5a-47de-adc5-d6da990f5df4.png",
+      alt: "German Shepherd Puppy",
+      category: "puppies",
+      title: "German Shepherd Puppy",
+      description: "Adorable German Shepherd puppy ready for loving home"
+    },
+    {
+      id: 8,
+      src: "/lovable-uploads/321ee2e8-4ea3-4b01-ac2b-941b4a91b537.png",
+      alt: "German Shepherd Puppy Portrait",
+      category: "puppies",
+      title: "Puppy Portrait",
+      description: "Beautiful German Shepherd puppy from our latest litter"
+    },
+    {
+      id: 27,
+      src: "/lovable-uploads/chuma.jpg",
+      alt: "Chuma",
+      category: "puppies",
+      title: "Chuma",
+      description: "7-month-old German Shepherd male - Champion bloodline"
+    },
+    {
+      id: 28,
+      src: "/lovable-uploads/kito.jpg",
+      alt: "Kito",
+      category: "puppies",
+      title: "Kito",
+      description: "7-month-old German Shepherd male - Show quality"
+    },
+    {
+      id: 29,
+      src: "/lovable-uploads/safi.jpg",
+      alt: "Safi",
+      category: "puppies",
+      title: "Safi",
+      description: "7-month-old German Shepherd male - Working line"
+    }
+  ];
+
+  const categories = [
+    { id: "all", label: "All Photos", icon: Dog },
+    { id: "breeding", label: "Our Dogs", icon: Award },
+    { id: "puppies", label: "Puppies", icon: Users },
+    { id: "competitions", label: "Competitions", icon: Award },
+    { id: "springer", label: "English Springer Spaniel", icon: Dog },
+    { id: "protection", label: "Elite Protection Dogs", icon: Award }
+  ];
+
+  const [activeCategory, setActiveCategory] = useState("all");
+
+  const filteredImages = activeCategory === "all" 
+    ? galleryItems 
+    : galleryItems.filter(item => item.category === activeCategory);
+
+  const openLightbox = (src: string, index: number) => {
+    setSelectedImage(src);
+    setCurrentIndex(index);
+  };
+
+  const closeLightbox = () => {
+    setSelectedImage(null);
+  };
+
+  const nextImage = () => {
+    const nextIndex = (currentIndex + 1) % filteredImages.length;
+    setCurrentIndex(nextIndex);
+    setSelectedImage(filteredImages[nextIndex].src);
+  };
+
+  const prevImage = () => {
+    const prevIndex = (currentIndex - 1 + filteredImages.length) % filteredImages.length;
+    setCurrentIndex(prevIndex);
+    setSelectedImage(filteredImages[prevIndex].src);
+  };
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-background via-muted to-card">
+      <ImageStructuredData images={galleryItems} />
+      <SEOBreadcrumb 
+        items={[
+          { label: "Home", href: "/" },
+          { label: "Gallery", href: "/gallery" }
+        ]}
+      />
+      
+      <Navigation />
+      
+      <section className="py-32 relative overflow-hidden">
+        {/* Luxury mesh background */}
+        <div className="absolute inset-0 mesh-luxury opacity-40"></div>
+        
+        {/* Sophisticated floating elements */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute top-20 left-20 w-96 h-96 bg-gradient-gold rounded-full opacity-10 animate-luxury-float blur-3xl"></div>
+          <div className="absolute bottom-20 right-20 w-64 h-64 bg-gradient-primary rounded-full opacity-15 animate-luxury-float animation-delay-1000 blur-2xl"></div>
+          <div className="absolute top-1/2 right-1/4 w-48 h-48 bg-gradient-platinum rounded-full opacity-20 animate-luxury-float animation-delay-500 blur-xl"></div>
+        </div>
+
+        <div className="container mx-auto px-6 relative z-10">
+          {/* Back Button */}
+          <Link to="/#gallery">
+            <Button 
+              variant="outline" 
+              className="mb-8 glass-luxury text-foreground hover:bg-white/10 backdrop-blur-2xl font-premium"
+            >
+              <ArrowLeft className="w-4 h-4 mr-2" />
+              Back to Home
+            </Button>
+          </Link>
+
+          {/* Elegant Header */}
+          <div className="text-center mb-20 animate-fade-in">
+            <div className="relative inline-block">
+              <div className="absolute -inset-8 bg-gradient-to-r from-transparent via-primary/10 to-transparent blur-xl"></div>
+              <div className="relative glass-luxury backdrop-blur-xl rounded-3xl border metallic-border shadow-platinum p-12 mb-8">
+                <div className="flex flex-col sm:flex-row items-center justify-center mb-6 gap-2 sm:gap-8">
+                  <h1 className="font-luxury text-4xl sm:text-6xl md:text-8xl font-bold text-gold">
+                    Visual
+                  </h1>
+                  <h1 className="font-luxury text-4xl sm:text-6xl md:text-8xl font-bold text-gold">
+                    Journey
+                  </h1>
+                </div>
+                
+                <div className="flex items-center justify-center mb-8">
+                  <div className="h-px bg-gradient-gold flex-1 max-w-xs"></div>
+                  <div className="h-px bg-gradient-gold flex-1 max-w-xs"></div>
+                </div>
+
+                <p className="font-premium text-lg md:text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed italic px-4">
+                  "Through the lens of passion, witness our chronicles of canine mastery — from championship triumphs to tender puppy moments, each frame tells the story of our dedication to breeding excellence"
+                </p>
+              </div>
+            </div>
+
+            {/* Category Filter */}
+            <div className="flex flex-wrap justify-center gap-6 mb-16">
+              {categories.map((category) => {
+                const IconComponent = category.icon;
+                const isActive = activeCategory === category.id;
+                return (
+                  <button
+                    key={category.id}
+                    onClick={() => setActiveCategory(category.id)}
+                    className={`group relative px-8 py-4 rounded-full backdrop-blur-xl border transition-all duration-500 hover:scale-110 ${
+                      isActive 
+                        ? 'bg-gradient-gold border-yellow-400/40 shadow-gold' 
+                        : 'glass-luxury border-border/40 hover:border-primary/30'
+                    }`}
+                  >
+                    <div className="flex items-center space-x-3">
+                      <IconComponent className={`w-5 h-5 transition-colors ${isActive ? 'text-primary' : 'text-muted-foreground group-hover:text-primary'}`} />
+                      <span className={`font-premium text-xl font-bold transition-colors ${isActive ? 'text-primary' : 'text-foreground group-hover:text-primary'}`}>
+                        {category.label}
+                      </span>
+                    </div>
+                    {isActive && (
+                      <div className="absolute inset-0 bg-gradient-gold rounded-full opacity-20 animate-pulse"></div>
+                    )}
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+
+          {/* Gallery Grid */}
+          <div className="relative">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 max-w-7xl mx-auto">
+              {filteredImages.map((item, index) => (
+                <div
+                  key={item.id}
+                  className="group cursor-pointer animate-fade-in"
+                  style={{ 
+                    animationDelay: `${index * 150}ms`,
+                    transform: `rotate(${index % 2 === 0 ? '2deg' : '-2deg'})` 
+                  }}
+                  onClick={() => openLightbox(item.src, index)}
+                >
+                  <div className="relative transform transition-all duration-700 hover:scale-105 hover:rotate-0 hover:-translate-y-8">
+                    {/* Glow Effect */}
+                    <div className="absolute -inset-4 bg-gradient-gold rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+                    
+                    {/* Main Card */}
+                    <div className="relative glass-luxury backdrop-blur-xl rounded-3xl border metallic-border overflow-hidden shadow-platinum group-hover:shadow-gold transition-all duration-700">
+                      {/* Image Container */}
+                      <div className="relative h-64 overflow-hidden">
+                        <img 
+                          src={item.src} 
+                          alt={`${item.alt} - ${item.description} - Kirangi Dogs Kenya`}
+                          title={`${item.title} - Premium dog breeding and training Kenya`}
+                          loading="lazy"
+                          className="w-full h-full object-cover transition-all duration-1000 group-hover:scale-125"
+                        />
+                        
+                        {/* Elegant Overlay */}
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500">
+                          <div className="absolute bottom-6 left-6 right-6">
+                            <div className="flex items-center justify-between mb-3">
+                              <Badge variant="secondary" className="backdrop-blur-sm bg-white/90 font-premium text-sm font-bold px-3 py-1">
+                                {item.category}
+                              </Badge>
+                              <div className="p-2 bg-white/20 backdrop-blur-sm rounded-full">
+                                <Award className="w-4 h-4 text-white" />
+                              </div>
+                            </div>
+                            <h3 className="font-luxury text-white font-bold text-lg mb-2 drop-shadow-lg">{item.title}</h3>
+                            <p className="font-premium text-white/90 text-base leading-relaxed drop-shadow-md italic">{item.description}</p>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Bottom Accent */}
+                      <div className="p-6 bg-gradient-to-r from-background/90 to-background/80">
+                        <div className="flex items-center justify-center">
+                          <div className="h-px bg-gradient-gold flex-1"></div>
+                          <div className="text-2xl text-gold mx-4">◊</div>
+                          <div className="h-px bg-gradient-gold flex-1"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Lightbox */}
+          {selectedImage && (
+            <div className="fixed inset-0 bg-black/95 z-50 flex items-center justify-center p-4">
+              <div className="relative max-w-4xl max-h-full">
+                <Button
+                  variant="outline"
+                  size="icon"
+                  className="absolute top-4 right-4 z-10 glass-luxury border-white/20 hover:bg-white/20"
+                  onClick={closeLightbox}
+                >
+                  <X className="w-4 h-4 text-white" />
+                </Button>
+                
+                <Button
+                  variant="outline"
+                  size="icon"
+                  className="absolute left-4 top-1/2 transform -translate-y-1/2 z-10 glass-luxury border-white/20 hover:bg-white/20"
+                  onClick={prevImage}
+                >
+                  <ChevronLeft className="w-4 h-4 text-white" />
+                </Button>
+                
+                <Button
+                  variant="outline"
+                  size="icon"
+                  className="absolute right-4 top-1/2 transform -translate-y-1/2 z-10 glass-luxury border-white/20 hover:bg-white/20"
+                  onClick={nextImage}
+                >
+                  <ChevronRight className="w-4 h-4 text-white" />
+                </Button>
+                
+                <img 
+                  src={selectedImage} 
+                  alt={filteredImages[currentIndex]?.alt}
+                  className="max-w-full max-h-[80vh] object-contain rounded-lg"
+                />
+              </div>
+            </div>
+          )}
+        </div>
+      </section>
+
+      <Footer />
+    </div>
+  );
+};
+
+export default Gallery;

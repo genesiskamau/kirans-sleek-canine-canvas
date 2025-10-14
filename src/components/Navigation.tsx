@@ -20,7 +20,7 @@ const Navigation = () => {
     { label: "About", href: "#about" },
     { label: "Services", href: "#services" },
     { label: "Puppies", href: "#puppies" },
-    { label: "Gallery", href: "#gallery" },
+    { label: "Gallery", href: "/gallery", isExternal: true },
     { label: "Contact", href: "#contact" },
     { label: "Reserve Puppy", href: "/puppy-form", isExternal: true }
   ];
