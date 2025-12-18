@@ -21,6 +21,7 @@ const Navigation = () => {
     { label: "Services", href: "#services" },
     { label: "Puppies", href: "#puppies" },
     { label: "Gallery", href: "/gallery", isExternal: true },
+    { label: "Blog", href: "/blog", isExternal: true },
     { label: "Contact", href: "#contact" },
     { label: "Reserve Puppy", href: "/puppy-form", isExternal: true }
   ];
