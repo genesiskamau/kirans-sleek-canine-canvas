@@ -14,7 +14,7 @@ const PuppiesSection = () => {
       price: "Contact for pricing",
       features: ["Champion bloodline", "Fully vaccinated", "Protection dogs in training"],
       image: "/lovable-uploads/chuma.jpg",
-      available: true
+      available: false
     },
     {
       id: 2,
@@ -25,7 +25,7 @@ const PuppiesSection = () => {
       price: "Contact for pricing",
       features: ["Show quality", "Early training", "Socialized"],
       image: "/lovable-uploads/kito.jpg",
-      available: true
+      available: false
     },
     {
       id: 3,
@@ -36,7 +36,7 @@ const PuppiesSection = () => {
       price: "Contact for pricing",
       features: ["Working line", "Protection dogs in training", "Protective instinct", "Family friendly"],
       image: "/lovable-uploads/safi.jpg",
-      available: true
+      available: false
     }
   ];
 
@@ -100,7 +100,7 @@ const PuppiesSection = () => {
                     variant={puppy.available ? "default" : "secondary"}
                     className={puppy.available ? "bg-primary text-primary-foreground" : ""}
                   >
-                    {puppy.available ? "Available" : "Reserved"}
+                    {puppy.available ? "Available" : "Sold"}
                   </Badge>
                 </div>
                 <div className="absolute top-4 right-4">
@@ -155,7 +155,7 @@ const PuppiesSection = () => {
                   onClick={() => puppy.available && window.open('tel:+254785535569', '_self')}
                 >
                   <Phone className="w-4 h-4 mr-2" />
-                  {puppy.available ? 'Reserve Now' : 'Reserved'}
+                  {puppy.available ? 'Reserve Now' : 'Sold'}
                 </Button>
               </CardContent>
             </Card>
