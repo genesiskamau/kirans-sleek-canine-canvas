@@ -1,14 +1,30 @@
 import { useState } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { Heart, Sparkles } from "lucide-react";
+import { Heart, Sparkles, Lock } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 
 const ForJessOnly = () => {
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
   const [stage, setStage] = useState<"question" | "no-escape" | "yes">("question");
   const [noButtonPosition, setNoButtonPosition] = useState({ x: 0, y: 0 });
   const [noAttempts, setNoAttempts] = useState(0);
 
+  const correctPassword = "Jecinta";
+
+  const handlePasswordSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (password === correctPassword) {
+      setIsAuthenticated(true);
+      setError("");
+    } else {
+      setError("Wrong password! Try again 💔");
+      setPassword("");
+    }
+  };
   const funnyNoMessages = [
     "Are you sure? 🥺",
     "Think again... 💔",
@@ -35,6 +51,80 @@ const ForJessOnly = () => {
   const handleYesClick = () => {
     setStage("yes");
   };
+
+  // Password Gate
+  if (!isAuthenticated) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-pink-900 via-red-900 to-pink-800 relative overflow-hidden">
+        <Navigation />
+        
+        {/* Floating hearts background */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          {[...Array(15)].map((_, i) => (
+            <Heart
+              key={i}
+              className="absolute text-pink-500/20 animate-pulse"
+              style={{
+                left: `${Math.random() * 100}%`,
+                top: `${Math.random() * 100}%`,
+                animationDelay: `${Math.random() * 2}s`,
+                animationDuration: `${Math.random() * 3 + 2}s`
+              }}
+              size={Math.random() * 40 + 20}
+            />
+          ))}
+        </div>
+
+        <div className="relative z-10 min-h-screen flex flex-col items-center justify-center px-4 pt-24">
+          <div className="bg-black/40 backdrop-blur-md rounded-3xl p-8 md:p-12 max-w-md w-full border border-pink-500/30 shadow-2xl">
+            <div className="text-center mb-8">
+              <Lock className="w-16 h-16 text-pink-400 mx-auto mb-4" />
+              <h1 className="text-3xl md:text-4xl font-bold text-white mb-2">
+                🔒 Secret Page
+              </h1>
+              <p className="text-pink-200">
+                This page is for someone special only! 💕
+              </p>
+            </div>
+
+            <form onSubmit={handlePasswordSubmit} className="space-y-6">
+              <div>
+                <label className="block text-pink-200 mb-2 text-sm">
+                  Enter the secret password:
+                </label>
+                <Input
+                  type="password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  placeholder="Type the password..."
+                  className="bg-white/10 border-pink-400/30 text-white placeholder:text-pink-300/50 focus:border-pink-400"
+                />
+              </div>
+
+              {error && (
+                <p className="text-red-400 text-center animate-pulse">
+                  {error}
+                </p>
+              )}
+
+              <Button
+                type="submit"
+                className="w-full bg-gradient-to-r from-pink-500 to-red-500 hover:from-pink-600 hover:to-red-600 text-white py-6 text-lg font-bold rounded-xl"
+              >
+                Enter 💖
+              </Button>
+            </form>
+
+            <p className="text-center text-pink-300/60 text-sm mt-6">
+              Hint: Her beautiful name 💕
+            </p>
+          </div>
+        </div>
+
+        <Footer />
+      </div>
+    );
+  }
 
   // Question Stage - Main Valentine's proposal
   if (stage === "question") {
