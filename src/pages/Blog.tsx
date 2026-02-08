@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { ArrowLeft, Calendar, Clock, BookOpen, Dog, Brain, Heart, ChevronDown, ChevronUp } from "lucide-react";
+import { ArrowLeft, Calendar, Clock, BookOpen, Dog, Brain, Heart, Shield, ChevronDown, ChevronUp } from "lucide-react";
 import { Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
@@ -11,6 +11,92 @@ const Blog = () => {
   const [expandedPost, setExpandedPost] = useState<number | null>(null);
 
   const blogPosts = [
+    {
+      id: 0,
+      title: "Choosing a Protection Dog: What Every Buyer Should Know",
+      subtitle: "By Kirangi Dogs – Kenya's Premier Breeder and Trainer of Working-Line German Shepherds and Black Russian Terriers",
+      date: "February 2025",
+      category: "Protection Dogs",
+      icon: Shield,
+      readTime: "10 min read",
+      content: `
+When deciding to buy a protection dog, most people have their eyes fixed on coat color, markings or how cute the puppy looks. However, true protection is not about appearance – it's about temperament, nerve, stability, and working drives. At Kirangi Dogs, we keep on reminding our clients that a beautiful coat may please the eye, but only strong instincts can protect your family.
+
+## Puppy or Mature, Trained Dog?
+
+One dilemma people face when acquiring a dog for family or personal protection is whether to choose from a puppy or a mature trained dog. Here is what you need to know.
+
+### Selecting a Puppy for Protection
+
+Selecting a puppy allows you to raise and bond with your future protection partner from an early age. However, it requires time, patience and expert training to develop the puppy into a reliable, confident and functional protection dog.
+
+### Advantages of Starting with a Puppy
+
+- **Early Bonding:** Bonding entails building trust and attachment which strengthens loyalty and responsiveness later in training and handling.
+- **Customized Training:** Training in obedience and protection can be tailor-made to meet your unique needs.
+- **Environmental Adaptation:** It allows puppies to grow up naturally accustomed to your family, surroundings, and routines.
+- **Lower Initial Costs:** Puppies cost less upfront compared to mature trained dogs.
+
+### Disadvantages of Buying a Puppy
+
+- **Unpredictability:** Not every puppy, even from the best working lines will mature into a top protection dog.
+- **Time:** It takes about 18-24 months of consistent training before a dog becomes fully reliable in protection.
+- **Higher Long-Term Costs:** You will need to either take the dog into a facility or bring a trainer for professional training for the dog to operate within its full potential.
+- **Un-intended Outcomes:** Lack of proper understanding in handling and socialization can cause life-long behavioral issues.
+
+TIP: Puppies are suitable for families or individuals who want to grow with their dog, enjoy training, and value long-term bonding.
+
+## Selecting a Mature, Trained Dog
+
+Mature, professionally trained dogs, which have acquired structured obedience and protection skills are an excellent choice for those who need immediate peace of mind.
+
+### Advantages
+
+- **Predictable Temperament:** You can readily see and know the dog's exact behavior, drive, and working ability.
+- **Ready to Serve:** A trained dog is ready for immediate deployment in your home.
+- **Professional Foundation:** Acquiring a dog guarantees stability, control, and reliability.
+- **Time-Saving:** You skip the long period of puppyhood and training.
+
+### Drawbacks
+
+- **Higher Costs:** The training and skill development will reflect on the final price.
+- **Longer Adjustment Period:** It takes longer for a mature dog to bond with the new family.
+- **Limited Room for Customization:** With established behaviors and habits, the dog and the new owner will require more time for adaptation.
+
+TIP: Best for families or individuals in need of immediate protection and proven working ability without investing time in training.
+
+## What Really Matters: Drives or Looks
+
+At Kirangi Dogs, our breeding and training focuses on working ability, nerve strength and character - not just coat color or physical appearance.
+
+We evaluate every dog based on the following critical traits:
+
+1. **Nerve Stability:** The dog must be calm under stress, loud environments and various kinds of distractions.
+2. **Confidence:** Willingness to engage threats decisively.
+3. **Protective Drive:** Instinct to defend.
+4. **Trainability:** Eagerness to learn and cooperate.
+5. **Recovery Time:** The dog must settle quickly after stimulation, distraction or sudden change in environments.
+
+## How Kirangi Dogs Helps You Choose
+
+Every client who visits Kirangi Dogs receives personalized assessment and guidance. We help you find the ideal dog based on:
+
+- Your home environment (family, space, routine)
+- Security needs and goals (personal, estate, or business protection)
+- Your handling experience and comfort level
+- Budget and desired time frame
+
+After we assess your needs, we will recommend either a high-potential puppy or a professionally trained adult dog that is ready for immediate deployment.
+
+At Kirangi Dogs, our mission is simply to match the right owner with the right dog, guaranteeing safety, companionship, and peace of mind.
+
+Whatever your choice is: At Kirangi Dogs, every dog is not just a pet – it's a guardian, friend and a loyal partner in protection.
+
+## Ready For the Journey?
+
+Contact Kirangi Dogs today for a scheduled consultation or to book a dog. We'll help you select a dog based on character, capability, and purpose – not appearance.
+      `
+    },
     {
       id: 1,
       title: "Assistance Dogs for ADHD and Autism Spectrum Disorder (ASD)",
