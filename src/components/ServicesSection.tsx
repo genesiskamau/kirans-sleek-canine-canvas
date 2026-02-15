@@ -1,107 +1,84 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Crown, Target, Zap, ArrowRight } from "lucide-react";
+import { Brain, Shield, GraduationCap, ArrowRight } from "lucide-react";
 
 const ServicesSection = () => {
   const services = [
     {
-      icon: Crown,
-      title: "Premium Breeding",
-      description: "We do selective breeding of Black Russian Terriers, German Shepherds, and English Springer Spaniels from world-class sires and dams. Every puppy comes with full registration and pedigree documentation.",
-      features: [
-        "Dogs registered with East Africa Kennel Club", 
-        "World-class bloodlines",
-        "Full registration"
-      ],
-      color: "bg-primary"
+      icon: Brain,
+      title: "Service & Assistance Dogs",
+      description: "Carefully trained dogs for individuals living with PTSD, autism, anxiety, and other mental health conditions.",
+      outcomes: [
+        "Panic & anxiety interruption",
+        "Emotional grounding & calming",
+        "Routine & safety support",
+        "Deep pressure therapy"
+      ]
     },
     {
-      icon: Target,
-      title: "Kirangi Dog Academy",
-      description: "Professional training services covering functional obedience, protection work, dog sports, and scent work. Our experienced trainers work with dogs of all ages.",
-      features: [
-        "Functional obedience",
-        "Protection training",
-        "Dog sports preparation",
-        "Scent work training",
-        "Medical assistance dogs"
-      ],
-      color: "bg-accent"
+      icon: Shield,
+      title: "Elite Protection Dogs",
+      description: "Professionally trained protection dogs for private individuals, families, and high-risk professionals.",
+      outcomes: [
+        "Controlled protection work",
+        "Obedience under pressure",
+        "Ethical & responsible training",
+        "Immediate deployment ready"
+      ]
     },
     {
-      icon: Zap,
-      title: "Elite Protection dogs",
-      description: "Our well-trained protection dogs are always ready for deployment to events for security coverage. Professional, reliable, and highly effective.",
-      features: [
-        "Event security",
-        "Personal protection",
-        "Immediate deployment"
-      ],
-      color: "bg-secondary"
+      icon: GraduationCap,
+      title: "Advanced Training Programs",
+      description: "Comprehensive training programs for dogs of all ages — from behavioral correction to competition-level obedience.",
+      outcomes: [
+        "Behavioral correction",
+        "Advanced obedience",
+        "Scent & detection work",
+        "Custom training plans"
+      ]
     }
   ];
 
   return (
-    <section id="services" className="py-20 bg-background">
+    <section id="services" className="py-24 bg-background">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-6">
-            Professional Dog Services in Kenya
+          <p className="text-sm tracking-[0.2em] text-secondary uppercase mb-4">What We Do</p>
+          <h2 className="font-heading text-3xl md:text-5xl text-foreground mb-6">
+            Professional Dog Services
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            From breeding exceptional dogs to professional training and security services, 
-            we offer comprehensive solutions for all your canine needs across East Africa.
+          <p className="text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+            From life-changing service dogs to elite protection training, we deliver 
+            results that matter — with discipline, compassion, and purpose.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-8 mb-16">
+        <div className="grid lg:grid-cols-3 gap-6">
           {services.map((service, index) => (
-            <Card 
+            <div 
               key={index} 
-              className="group bg-card border-0 shadow-card hover:shadow-warm transition-all duration-500 transform hover:scale-105 overflow-hidden animate-scale-in opacity-0"
-              style={{ 
-                animationDelay: `${index * 300}ms`,
-                animationFillMode: 'forwards'
-              }}
+              className="group bg-card border border-border rounded-2xl p-8 hover-lift transition-all duration-500"
             >
-              <CardHeader className="relative">
-                <div className={`absolute top-0 left-0 right-0 h-2 ${service.color} transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 ease-out`}></div>
-                <div className="flex items-center space-x-4 mb-4">
-                  <div className={`p-4 rounded-lg ${service.color.replace('bg-', 'bg-')} text-white transform group-hover:scale-125 group-hover:-rotate-6 transition-all duration-700 shadow-lg group-hover:shadow-xl`}>
-                    <service.icon className="w-8 h-8 group-hover:animate-pulse" />
-                  </div>
-                  <CardTitle className="font-serif text-2xl text-foreground">
-                    {service.title}
-                  </CardTitle>
-                </div>
-              </CardHeader>
+              <div className="w-12 h-12 bg-primary/20 rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary/30 transition-colors">
+                <service.icon className="w-6 h-6 text-secondary" />
+              </div>
               
-              <CardContent className="space-y-6">
-                <p className="text-muted-foreground leading-relaxed">
-                  {service.description}
-                </p>
-                
-                <ul className="space-y-2">
-                  {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-sm text-muted-foreground">
-                      <ArrowRight className="w-4 h-4 text-primary mr-2 flex-shrink-0" />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-              </CardContent>
-            </Card>
+              <h3 className="font-heading text-xl text-foreground mb-3">
+                {service.title}
+              </h3>
+              
+              <p className="text-muted-foreground text-sm leading-relaxed mb-6">
+                {service.description}
+              </p>
+              
+              <ul className="space-y-3">
+                {service.outcomes.map((outcome, i) => (
+                  <li key={i} className="flex items-center text-sm text-muted-foreground">
+                    <ArrowRight className="w-4 h-4 text-secondary mr-3 flex-shrink-0" />
+                    {outcome}
+                  </li>
+                ))}
+              </ul>
+            </div>
           ))}
-        </div>
-
-        <div className="text-center">
-          <Button 
-            size="lg" 
-            className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 rounded-full text-lg font-semibold shadow-warm"
-            onClick={() => window.open('https://wa.me/254785535569', '_blank')}
-          >
-            Get a Custom Quote
-          </Button>
         </div>
       </div>
     </section>
