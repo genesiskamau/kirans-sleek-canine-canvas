@@ -1,104 +1,71 @@
 import { Button } from "@/components/ui/button";
-import { PawPrint, Phone, Mail } from "lucide-react";
-import heroImage from "@/assets/hero-image.png";
+import { ArrowRight, Phone } from "lucide-react";
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-background via-muted to-card">
-      {/* Luxury mesh background */}
-      <div className="absolute inset-0 mesh-luxury opacity-40"></div>
-      
-      {/* Sophisticated floating elements - mobile optimized */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-10 sm:top-20 left-5 sm:left-20 w-48 h-48 sm:w-96 sm:h-96 bg-gradient-gold rounded-full opacity-10 animate-luxury-float blur-xl sm:blur-3xl motion-reduce:animate-none"></div>
-        <div className="absolute bottom-10 sm:bottom-20 right-5 sm:right-20 w-32 h-32 sm:w-64 sm:h-64 bg-gradient-primary rounded-full opacity-15 animate-luxury-float animation-delay-1000 blur-lg sm:blur-2xl motion-reduce:animate-none"></div>
-        <div className="absolute top-1/2 right-1/4 w-24 h-24 sm:w-48 sm:h-48 bg-gradient-platinum rounded-full opacity-20 animate-luxury-float animation-delay-500 blur-sm sm:blur-xl motion-reduce:animate-none"></div>
-      </div>
-      
-      {/* Optimized background image */}
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      {/* Background image */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url(/lovable-uploads/hero-dog.jpg)` }}
       >
-        <div className="absolute inset-0 bg-gradient-royal opacity-70"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-background/90 via-background/70 to-background"></div>
       </div>
       
-      {/* Luxury content */}
-      <div className="relative z-10 container mx-auto px-6 text-center pt-48 md:pt-56">
-        <div className="animate-elegant-scale">
-          {/* Premium logo presentation */}
-          <div className="space-y-8 mb-16">
-            <div className="relative group mx-auto w-fit">
-              {/* Circular background with glass effect */}
-              <div className="w-40 h-40 glass-luxury backdrop-blur-3xl rounded-full overflow-hidden p-4 border-2 border-yellow-400/30 shadow-royal mx-auto group-hover:scale-105 transition-all duration-700">
-                <img 
-                  src="/lovable-uploads/e809515a-f089-4ecc-8f2c-98fc7069cd50.png" 
-                  alt="Kirangi Dogs Kennel Logo - Premium Dog Breeder Kenya specializing in Black Russian Terriers, German Shepherds and English Springer Spaniels" 
-                  className="w-full h-full object-contain drop-shadow-2xl rounded-full group-hover:rotate-6 animate-royal-pulse"
-                  width="126"
-                  height="126"
-                  loading="eager"
-                />
-              </div>
-              {/* Luxury glow effect */}
-              <div className="absolute inset-0 w-40 h-40 bg-gradient-gold rounded-full opacity-20 blur-xl animate-royal-pulse mx-auto"></div>
-            </div>
-          </div>
+      <div className="relative z-10 container mx-auto px-6 text-center pt-32 pb-20">
+        {/* Logo */}
+        <div className="mb-10">
+          <img 
+            src="/lovable-uploads/e809515a-f089-4ecc-8f2c-98fc7069cd50.png" 
+            alt="Kirangi Dogs Logo" 
+            className="w-24 h-24 rounded-full mx-auto border-2 border-secondary/30"
+            width="96"
+            height="96"
+            loading="eager"
+          />
+        </div>
+        
+        {/* Main headline */}
+        <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight mb-6 max-w-5xl mx-auto">
+          Training Dogs That{" "}
+          <span className="text-gold">Protect</span>,{" "}
+          <span className="text-gold">Support</span> &{" "}
+          <span className="text-gold">Save Lives</span>.
+        </h1>
+        
+        <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed">
+          Professional service dog & elite protection training in Kenya — trusted by local and international clients.
+        </p>
+        
+        {/* CTA buttons */}
+        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
+          <Button 
+            size="lg"
+            className="bg-secondary text-secondary-foreground hover:bg-secondary/90 px-8 py-6 text-base font-semibold tracking-wide"
+            onClick={() => window.open('https://wa.me/254785535569', '_blank')}
+          >
+            Apply for Training
+            <ArrowRight className="w-5 h-5 ml-2" />
+          </Button>
           
-          {/* Luxury typography */}
-          <div className="space-y-8 mb-16">
-            <h1 className="font-luxury font-bold text-4xl sm:text-6xl md:text-7xl xl:text-9xl leading-none tracking-tight">
-              <span className="text-gold block animate-elegant-scale drop-shadow-2xl motion-reduce:animate-none">
-                KIRANGI
-              </span>
-              <span className="text-white block text-2xl sm:text-3xl md:text-4xl xl:text-6xl font-light mt-2 sm:mt-4 tracking-widest animate-elegant-scale animation-delay-300 motion-reduce:animate-none">
-                DOGS
-              </span>
-            </h1>
-            
-            <div className="w-24 h-0.5 bg-gradient-gold mx-auto animate-golden-shimmer"></div>
-            
-            <p className="text-base sm:text-lg md:text-xl xl:text-2xl max-w-3xl mx-auto leading-relaxed text-white/95 animate-fade-in-up animation-delay-600 font-premium font-light motion-reduce:animate-none px-4">
-              Breeders specialing in champion bloodlines of the
-              <span className="text-gold font-semibold"> Black russian terrier</span>, 
-              <span className="text-gold font-semibold"> German shepherd</span> 
-              and <span className="text-gold font-semibold"> English Springer spaniel</span>
-            </p>
-          </div>
-          
-          {/* Luxury action buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 justify-center items-center mb-20 animate-fade-in-up animation-delay-900 px-4">
-            <Button 
-              size="lg" 
-              className="group bg-gradient-gold hover:scale-105 sm:hover:scale-110 text-primary px-4 sm:px-8 md:px-12 py-4 sm:py-6 md:py-8 text-sm sm:text-lg md:text-xl font-bold shadow-gold hover:shadow-2xl transition-all duration-700 hover:glow-gold font-premium tracking-wide hover-luxury w-full sm:w-auto"
-            >
-              <Phone className="w-4 h-4 sm:w-5 md:w-6 mr-2 sm:mr-4 group-hover:animate-bounce flex-shrink-0" />
-              <span className="truncate">CALL +254-785-535-569</span>
-            </Button>
-            
-            <Button 
-              variant="outline" 
-              size="lg"
-              className="glass-luxury group text-white hover:bg-white/10 px-4 sm:px-8 md:px-12 py-4 sm:py-6 md:py-8 text-sm sm:text-lg md:text-xl font-bold backdrop-blur-2xl hover:scale-105 sm:hover:scale-110 transition-all duration-700 hover:shadow-platinum font-premium tracking-wide hover-luxury w-full sm:w-auto"
-            >
-              <Mail className="w-4 h-4 sm:w-5 md:w-6 mr-2 sm:mr-4 group-hover:animate-bounce flex-shrink-0" />
-              <span className="truncate">INQUIRE NOW</span>
-            </Button>
-          </div>
-          
-          {/* Premium certification badge */}
-          <div className="glass-luxury rounded-xl px-3 sm:px-6 md:px-8 py-3 sm:py-4 mx-auto w-fit max-w-[90vw] backdrop-blur-2xl border metallic-border shadow-platinum">
-            <div className="flex items-center space-x-2 sm:space-x-3">
-              <div className="w-2 h-2 sm:w-3 sm:h-3 bg-gradient-gold rounded-full animate-royal-pulse flex-shrink-0"></div>
-              <p className="text-xs sm:text-sm md:text-lg text-white font-premium font-medium tracking-wide text-center">
-                DOGS REGISTERED BY EAST AFRICA KENNEL CLUB
-              </p>
-              <div className="w-2 h-2 sm:w-3 sm:h-3 bg-gradient-gold rounded-full animate-royal-pulse animation-delay-500 flex-shrink-0"></div>
-            </div>
-          </div>
+          <Button 
+            variant="outline"
+            size="lg"
+            className="border-foreground/20 text-foreground hover:bg-foreground/5 px-8 py-6 text-base font-semibold tracking-wide"
+            onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+          >
+            Book a Consultation
+          </Button>
+        </div>
+        
+        {/* Trust badge */}
+        <div className="inline-flex items-center gap-3 border border-border rounded-full px-6 py-3">
+          <div className="w-2 h-2 bg-primary rounded-full"></div>
+          <p className="text-sm text-muted-foreground tracking-wide">
+            REGISTERED WITH EAST AFRICA KENNEL CLUB
+          </p>
         </div>
       </div>
-      
     </section>
   );
 };

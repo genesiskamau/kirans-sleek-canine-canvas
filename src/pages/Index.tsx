@@ -1,12 +1,16 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Navigation from "@/components/Navigation";
 import HeroSection from "@/components/HeroSection";
-import AboutSection from "@/components/AboutSection";
+import ProblemSolutionSection from "@/components/ProblemSolutionSection";
 import ServicesSection from "@/components/ServicesSection";
+import AboutSection from "@/components/AboutSection";
+import CaseStudySection from "@/components/CaseStudySection";
+import ProcessSection from "@/components/ProcessSection";
 import PuppiesSection from "@/components/PuppiesSection";
 import GallerySection from "@/components/GallerySection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import FAQSection from "@/components/FAQSection";
+import CTASection from "@/components/CTASection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import LoadingScreen from "@/components/LoadingScreen";
@@ -17,8 +21,9 @@ const Index = () => {
 
   const handleLoadingComplete = () => {
     setIsLoading(false);
-    setTimeout(() => setShowContent(true), 300);
+    setTimeout(() => setShowContent(true), 200);
   };
+
   return (
     <>
       {isLoading && <LoadingScreen onComplete={handleLoadingComplete} />}
@@ -27,30 +32,20 @@ const Index = () => {
         <div className="min-h-screen bg-background overflow-x-hidden animate-fade-in">
           <Navigation />
           <main>
-            <div id="home" className="animate-fade-in">
+            <div id="home">
               <HeroSection />
             </div>
-            <div className="animate-fade-in-up animation-delay-200">
-              <AboutSection />
-            </div>
-            <div className="animate-slide-in-left animation-delay-400">
-              <ServicesSection />
-            </div>
-            <div className="animate-scale-in animation-delay-600">
-              <PuppiesSection />
-            </div>
-            <div className="animate-rotate-in animation-delay-800">
-              <GallerySection />
-            </div>
-            <div className="animate-slide-up animation-delay-1000">
-              <TestimonialsSection />
-            </div>
-            <div className="animate-fade-in-up animation-delay-1200">
-              <FAQSection />
-            </div>
-            <div className="animate-fade-in-up animation-delay-1400">
-              <ContactSection />
-            </div>
+            <ProblemSolutionSection />
+            <ServicesSection />
+            <AboutSection />
+            <CaseStudySection />
+            <ProcessSection />
+            <PuppiesSection />
+            <GallerySection />
+            <TestimonialsSection />
+            <FAQSection />
+            <CTASection />
+            <ContactSection />
           </main>
           <Footer />
         </div>

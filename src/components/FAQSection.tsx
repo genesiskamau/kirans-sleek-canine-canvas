@@ -1,4 +1,3 @@
-import React from 'react';
 import {
   Accordion,
   AccordionContent,
@@ -9,36 +8,32 @@ import {
 const FAQSection = () => {
   const faqs = [
     {
-      question: "What dog breeds do you specialize in at Kirangi Dogs Kennel?",
-      answer: "We specialize in three premium breeds: Black Russian Terriers, German Shepherds, and English Springer Spaniels. All our dogs come from world-class bloodlines and are registered with the East Africa Kennel Club."
+      question: "What types of service dogs does Kirangi Dogs train?",
+      answer: "We train service and assistance dogs for PTSD, autism spectrum conditions, anxiety disorders, and other mental health needs. Each dog is individually trained to match the specific requirements of its future handler."
     },
     {
-      question: "Are your puppies registered and certified?",
-      answer: "Yes, all our puppies come with full registration from the East Africa Kennel Club, complete pedigree documentation, and health certifications. We maintain the highest breeding standards in Kenya."
+      question: "How long does protection dog training take?",
+      answer: "Protection dog training typically takes 4-8 months depending on the dog's age, temperament, and the level of training required. We provide regular progress updates throughout the process."
     },
     {
-      question: "Do you provide training services for dogs?",
-      answer: "Absolutely! Our Kirangi Dog Academy offers comprehensive training including functional obedience, protection work, dog sports preparation, scent work training, and medical assistance dog training."
+      question: "Do you work with international clients?",
+      answer: "Yes. We've successfully trained and placed dogs with international clients, including individuals in the United States. We handle all logistics and provide ongoing remote support after placement."
     },
     {
-      question: "What after-sale services do you provide?",
-      answer: "We provide comprehensive after-sale services including ongoing support, training advice, health guidance, and assistance with any questions about your dog's development and care."
+      question: "What breeds do you specialize in?",
+      answer: "We specialize in Black Russian Terriers, German Shepherds, and English Springer Spaniels. All our breeding dogs come from champion bloodlines and are registered with the East Africa Kennel Club."
     },
     {
-      question: "Do you offer K9 security services in Kenya?",
-      answer: "Yes, we provide professional K9 security services including event security, personal protection, and immediate deployment services across Kenya and East Africa."
+      question: "What is your selection process for clients?",
+      answer: "We conduct a thorough assessment to ensure the right match between dog and client. This includes understanding your lifestyle, needs, expectations, and commitment level. Not every applicant is accepted — we prioritize quality placements."
     },
     {
-      question: "How can I contact Kirangi Dogs Kennel?",
-      answer: "You can reach us at +254-785-535-569 for immediate assistance. We serve clients across Kenya and East Africa with our premium dog breeding and training services."
+      question: "Do you provide post-placement support?",
+      answer: "Absolutely. Every placement comes with comprehensive handler training and continued support. We remain available for guidance, follow-up training, and any questions throughout the dog's life."
     },
     {
-      question: "What makes your breeding program special?",
-      answer: "Our breeding program focuses on champion-grade dogs from world-class bloodlines. We emphasize health, temperament, and conformation to breed standards, ensuring each puppy meets the highest quality standards."
-    },
-    {
-      question: "Do you ship puppies across East Africa?",
-      answer: "Yes, we can arrange safe transportation for our puppies across East Africa. We ensure proper documentation and health certificates for interstate and international shipping."
+      question: "How can I apply for a service or protection dog?",
+      answer: "Contact us via WhatsApp at +254-785-535-569 or email kirangidogs@gmail.com to begin the application process. We'll schedule an initial consultation to discuss your needs."
     }
   ];
 
@@ -48,45 +43,34 @@ const FAQSection = () => {
     "mainEntity": faqs.map(faq => ({
       "@type": "Question",
       "name": faq.question,
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": faq.answer
-      }
+      "acceptedAnswer": { "@type": "Answer", "text": faq.answer }
     }))
   };
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
-      <section id="faq" className="py-20 bg-gradient-to-br from-muted/30 via-background to-card/20">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <section id="faq" className="py-24 bg-background">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-6">
+            <p className="text-sm tracking-[0.2em] text-secondary uppercase mb-4">FAQ</p>
+            <h2 className="font-heading text-3xl md:text-4xl text-foreground mb-6">
               Frequently Asked Questions
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Everything you need to know about our premium dog breeding services, 
-              training programs, and K9 security services in Kenya.
-            </p>
           </div>
 
-          <div className="max-w-4xl mx-auto">
-            <Accordion type="single" collapsible className="w-full space-y-4">
+          <div className="max-w-3xl mx-auto">
+            <Accordion type="single" collapsible className="space-y-3">
               {faqs.map((faq, index) => (
                 <AccordionItem 
                   key={index} 
                   value={`item-${index}`}
-                  className="bg-card border border-border rounded-lg px-6 py-2 shadow-sm hover:shadow-md transition-shadow"
+                  className="bg-card border border-border rounded-xl px-6"
                 >
-                  <AccordionTrigger className="text-left hover:no-underline py-6">
-                    <h3 className="font-semibold text-foreground pr-4">
-                      {faq.question}
-                    </h3>
+                  <AccordionTrigger className="text-left hover:no-underline py-5 text-sm font-semibold text-foreground">
+                    {faq.question}
                   </AccordionTrigger>
-                  <AccordionContent className="text-muted-foreground leading-relaxed pb-6">
+                  <AccordionContent className="text-muted-foreground text-sm leading-relaxed pb-5">
                     {faq.answer}
                   </AccordionContent>
                 </AccordionItem>
