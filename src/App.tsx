@@ -8,6 +8,7 @@ import NotFound from "./pages/NotFound";
 import PuppyForm from "./pages/PuppyForm";
 import Gallery from "./pages/Gallery";
 import Blog from "./pages/Blog";
+import BlogPost from "./pages/BlogPost";
 
 const queryClient = new QueryClient();
 
@@ -22,6 +23,7 @@ const App = () => (
           <Route path="/puppy-form" element={<PuppyForm />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:slug" element={<BlogPost />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
