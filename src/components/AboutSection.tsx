@@ -12,7 +12,7 @@ const AboutSection = () => {
             <div className="space-y-6">
               <p className="text-muted-foreground leading-relaxed">
                 Kirangi Dogs is led by <span className="text-foreground font-semibold">Joseph Chege</span>, 
-                a professional dog trainer with years of hands-on experience in service dog training, 
+                a professional dog trainer and Occupational Therapist with many years of hands-on experience in service dog training, 
                 protection work, and advanced canine behavior.
               </p>
               <p className="text-muted-foreground leading-relaxed">
@@ -31,9 +31,9 @@ const AboutSection = () => {
             
             <div className="space-y-6">
               <p className="text-muted-foreground leading-relaxed">
-                Our work extends beyond Kenya — we've trained PTSD service dogs for international 
-                clients, including U.S.-based individuals who trusted our expertise from thousands 
-                of miles away. That level of trust isn't given easily. It's earned.
+                Our work extends beyond Kenya and covers the larger East African Community — 
+                we've trained service dogs and protection dogs for clients across the region 
+                and internationally. That level of trust isn't given easily. It's earned.
               </p>
               <p className="text-muted-foreground leading-relaxed">
                 We also maintain a selective breeding program for Black Russian Terriers, German 
