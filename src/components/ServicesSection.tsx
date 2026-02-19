@@ -5,10 +5,13 @@ const ServicesSection = () => {
     {
       icon: Brain,
       title: "Service & Assistance Dogs",
-      description: "Carefully trained dogs for individuals living with PTSD, autism, anxiety, and other mental health conditions.",
+      description: "Carefully trained for individuals living with Mobility challenges, PTSD, ADHD, Anxiety, among others.",
+      subheadings: ["Psychiatric Dogs", "Mobility Dogs", "Medical Alert Dogs"],
+      tagline: "For: Independence, safety, stability and confidence.",
       outcomes: [
         "Panic & anxiety interruption",
         "Emotional grounding & calming",
+        "Mobility tasks",
         "Routine & safety support",
         "Deep pressure therapy"
       ]
@@ -64,10 +67,24 @@ const ServicesSection = () => {
               <h3 className="font-heading text-xl text-foreground mb-3">
                 {service.title}
               </h3>
+
+              {'subheadings' in service && service.subheadings && (
+                <div className="flex flex-wrap gap-2 mb-3">
+                  {(service.subheadings as string[]).map((sh, i) => (
+                    <span key={i} className="text-xs bg-secondary/20 text-secondary px-2 py-1 rounded-full font-medium">
+                      {sh}
+                    </span>
+                  ))}
+                </div>
+              )}
               
-              <p className="text-muted-foreground text-sm leading-relaxed mb-6">
+              <p className="text-muted-foreground text-sm leading-relaxed mb-2">
                 {service.description}
               </p>
+
+              {'tagline' in service && service.tagline && (
+                <p className="text-secondary text-xs font-medium italic mb-5">{service.tagline as string}</p>
+              )}
               
               <ul className="space-y-3">
                 {service.outcomes.map((outcome, i) => (
