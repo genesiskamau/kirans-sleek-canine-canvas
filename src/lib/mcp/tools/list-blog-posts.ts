@@ -1,5 +1,5 @@
 import { defineTool } from "@lovable.dev/mcp-js";
-import { blogPosts } from "@/data/blogPosts";
+import { blogPosts } from "../../../data/blogPosts";
 
 export default defineTool({
   name: "list_blog_posts",
