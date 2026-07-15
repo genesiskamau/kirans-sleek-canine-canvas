@@ -1,0 +1,185 @@
+{
+  "version": 1,
+  "sdk_version": "0.22.1",
+  "path": "/functions/v1/mcp",
+  "auth": {
+    "type": "none"
+  },
+  "mcp": {
+    "server": {
+      "name": "kirangi-dogs-mcp",
+      "version": "0.1.0",
+      "title": "Kirangi Dogs"
+    },
+    "tools": [
+      {
+        "name": "list_blog_posts",
+        "title": "List blog posts",
+        "description": "List every published Kirangi Dogs blog post with slug, title, subtitle, category, date and estimated read time. Use `get_blog_post` to fetch the full article body by slug.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {}
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "get_blog_post",
+        "title": "Get blog post",
+        "description": "Fetch a single Kirangi Dogs blog post (title, metadata, and full markdown body) by its slug. Use `list_blog_posts` to discover valid slugs.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "slug": {
+              "type": "string",
+              "minLength": 1,
+              "description": "The blog post slug, e.g. `choosing-a-protection-dog`."
+            }
+          },
+          "required": [
+            "slug"
+          ],
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#"
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "list_services",
+        "title": "List services",
+        "description": "List the services Kirangi Dogs offers: puppies, protection dogs, service/assistance dogs, and professional training.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {}
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "get_contact_info",
+        "title": "Get contact info",
+        "description": "Get Kirangi Dogs' public contact details: phone, email, WhatsApp, website, blog, and puppy reservation link.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {}
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "submit_puppy_booking",
+        "title": "Submit puppy booking inquiry",
+        "description": "Submit a reservation request for the upcoming Black Russian Terrier litter (expected December). Sends the inquiry to Kirangi Dogs and emails the requester a confirmation.",
+        "annotations": {
+          "readOnlyHint": false,
+          "destructiveHint": false,
+          "openWorldHint": true
+        },
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "minLength": 1,
+              "description": "Full name of the person making the reservation."
+            },
+            "phone": {
+              "type": "string",
+              "minLength": 5,
+              "description": "Contact phone number (include country code)."
+            },
+            "email": {
+              "type": "string",
+              "format": "email",
+              "description": "Email address for the confirmation reply."
+            },
+            "preferred_sex": {
+              "type": "string",
+              "enum": [
+                "Male",
+                "Female",
+                "Either"
+              ],
+              "description": "Preferred puppy sex."
+            },
+            "notes": {
+              "type": "string",
+              "description": "Optional additional questions or notes for the breeder."
+            }
+          },
+          "required": [
+            "name",
+            "phone",
+            "email",
+            "preferred_sex"
+          ],
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#"
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "submit_contact_inquiry",
+        "title": "Send contact inquiry",
+        "description": "Send a general contact-form inquiry to Kirangi Dogs (delivered by email). Use for questions about training, protection dogs, assistance dogs, or general information — use `submit_puppy_booking` for puppy reservations.",
+        "annotations": {
+          "readOnlyHint": false,
+          "destructiveHint": false,
+          "openWorldHint": true
+        },
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "minLength": 1,
+              "description": "Full name of the sender."
+            },
+            "email": {
+              "type": "string",
+              "format": "email",
+              "description": "Reply-to email address."
+            },
+            "phone": {
+              "type": "string",
+              "description": "Optional contact phone number."
+            },
+            "message": {
+              "type": "string",
+              "minLength": 1,
+              "description": "The inquiry or question."
+            }
+          },
+          "required": [
+            "name",
+            "email",
+            "message"
+          ],
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#"
+        },
+        "outputSchema": null
+      }
+    ]
+  }
+}
