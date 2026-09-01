@@ -66,7 +66,7 @@ const ContactSection = () => {
               </div>
             </a>
             <a href="mailto:kirangidogs@gmail.com" className="flex items-center gap-4 bg-background border border-border rounded-xl p-5 hover-lift">
-              <Mail className="w-5 h-5 text-secondary flex-shrink-0" />
+              <Envelope className="w-5 h-5 text-secondary flex-shrink-0" />
               <div>
                 <p className="text-foreground text-sm font-semibold">Email</p>
                 <p className="text-muted-foreground text-xs">kirangidogs@gmail.com</p>
@@ -136,7 +136,7 @@ const ContactSection = () => {
                   type="submit"
                   className="flex-1 bg-secondary text-secondary-foreground hover:bg-secondary/90 h-12 font-semibold"
                 >
-                  <Send className="w-4 h-4 mr-2" />
+                  <PaperPlaneTilt className="w-4 h-4 mr-2" />
                   Send Inquiry
                 </Button>
                 <Button 
@@ -145,7 +145,7 @@ const ContactSection = () => {
                   className="border-foreground/20 text-foreground hover:bg-foreground/5 h-12"
                   onClick={() => window.open('https://wa.me/254785535569', '_blank')}
                 >
-                  <MessageCircle className="w-4 h-4 mr-2" />
+                  <WhatsappLogo className="w-4 h-4 mr-2" />
                   WhatsApp
                 </Button>
               </div>

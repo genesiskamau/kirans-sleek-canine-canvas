@@ -21,7 +21,7 @@ export const blogPosts: BlogPost[] = [
     subtitle: "By Kirangi Dogs – Kenya's Premier Breeder and Trainer of Working-Line German Shepherds and Black Russian Terriers",
     date: "February 2025",
     category: "Protection Dogs",
-    icon: Shield,
+    icon: ShieldChevron,
     readTime: "10 min read",
     content: `
 When deciding to buy a protection dog, most people have their eyes fixed on coat color, markings or how cute the puppy looks. However, true protection is not about appearance – it's about temperament, nerve, stability, and working drives. At Kirangi Dogs, we keep on reminding our clients that a beautiful coat may please the eye, but only strong instincts can protect your family.
@@ -108,7 +108,7 @@ Contact Kirangi Dogs today for a scheduled consultation or to book a dog. We'll 
     subtitle: "An Occupational Therapist's Perspective for OTs, Parents, Teachers & Caregivers",
     date: "September 09, 2025",
     category: "Assistance Dogs",
-    icon: Heart,
+    icon: HandHeart,
     readTime: "15 min read",
     content: `
 ## Understanding Autism Assistance Dogs

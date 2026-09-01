@@ -31,7 +31,7 @@ const Footer = () => {
                 +254-785-535-569
               </a>
               <a href="mailto:kirangidogs@gmail.com" className="flex items-center gap-3 text-sm text-muted-foreground hover:text-foreground transition-colors">
-                <Mail className="w-4 h-4 text-secondary" />
+                <Envelope className="w-4 h-4 text-secondary" />
                 kirangidogs@gmail.com
               </a>
               <div className="flex items-center gap-3 text-sm text-muted-foreground">

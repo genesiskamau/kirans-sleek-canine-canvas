@@ -121,7 +121,7 @@ const BlogPost = () => {
 
                 <div className="flex items-center gap-6 text-sm text-foreground/60 mb-10">
                   <div className="flex items-center gap-2">
-                    <Calendar className="w-4 h-4" />
+                    <CalendarBlank className="w-4 h-4" />
                     <span className="font-premium">{post.date}</span>
                   </div>
                   <div className="flex items-center gap-2">

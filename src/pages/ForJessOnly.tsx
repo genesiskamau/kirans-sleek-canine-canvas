@@ -76,7 +76,7 @@ const ForJessOnly = () => {
       <div className="min-h-screen bg-background flex flex-col items-center justify-center px-4 text-center space-y-6">
         <div className="relative">
           <Heart className="w-24 h-24 text-pink-500 animate-pulse" />
-          <Sparkles className="w-8 h-8 text-yellow-400 absolute -top-2 -right-2 animate-bounce" />
+          <Sparkle className="w-8 h-8 text-yellow-400 absolute -top-2 -right-2 animate-bounce" />
         </div>
         <h1 className="text-4xl md:text-5xl font-bold text-foreground">
           Yaaay! 🎉💕
