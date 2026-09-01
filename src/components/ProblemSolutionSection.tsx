@@ -1,11 +1,11 @@
-import { AlertTriangle, Heart, Shield, Brain } from "lucide-react";
+import { Warning, Heartbeat, ShieldWarning, Brain } from "@phosphor-icons/react";
 
 const ProblemSolutionSection = () => {
   const problems = [
     { icon: Brain, text: "PTSD episodes & flashbacks" },
-    { icon: Heart, text: "Autism sensory challenges" },
-    { icon: AlertTriangle, text: "Anxiety & panic disorders" },
-    { icon: Shield, text: "Personal & family security concerns" },
+    { icon: Heartbeat, text: "Autism sensory challenges" },
+    { icon: Warning, text: "Anxiety & panic disorders" },
+    { icon: ShieldWarning, text: "Personal & family security concerns" },
   ];
 
   return (

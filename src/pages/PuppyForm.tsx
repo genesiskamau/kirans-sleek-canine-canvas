@@ -4,7 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
-import { ArrowLeft, Heart, Send, CheckCircle2 } from "lucide-react";
+import { ArrowLeft, PawPrint, PaperPlaneTilt, CheckCircle } from "@phosphor-icons/react";
 import { Link } from "react-router-dom";
 
 const PuppyForm = () => {
@@ -83,7 +83,7 @@ const PuppyForm = () => {
         <div className="relative z-10 max-w-2xl w-full text-center animate-fade-in">
           <div className="glass-luxury backdrop-blur-2xl rounded-3xl metallic-border p-12 shadow-platinum">
             <div className="w-20 h-20 bg-gradient-gold rounded-full flex items-center justify-center mx-auto mb-6 animate-bounce shadow-gold">
-              <CheckCircle2 className="w-10 h-10 text-primary" />
+              <CheckCircle className="w-10 h-10 text-primary" />
             </div>
             
             <h1 className="text-4xl md:text-5xl font-bold font-luxury text-gold mb-4">
@@ -166,7 +166,7 @@ const PuppyForm = () => {
           
           <div className="text-center">
             <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-gold rounded-full mb-6 animate-royal-pulse shadow-gold">
-              <Heart className="w-8 h-8 text-primary" />
+              <PawPrint className="w-8 h-8 text-primary" weight="fill" />
             </div>
             <h1 className="text-4xl md:text-5xl font-bold font-luxury text-gold mb-4">
               Reserve Your Black Russian Terrier Puppy
@@ -281,7 +281,7 @@ const PuppyForm = () => {
                   </>
                 ) : (
                   <>
-                    <Send className="w-5 h-5 mr-3 group-hover:translate-x-1 transition-transform duration-300" />
+                    <PaperPlaneTilt className="w-5 h-5 mr-3 group-hover:translate-x-1 transition-transform duration-300" />
                     Submit Reservation Request
                   </>
                 )}

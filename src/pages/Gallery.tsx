@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { X, ChevronLeft, ChevronRight, Award, Users, Dog, ArrowLeft } from "lucide-react";
+import { X, CaretLeft, CaretRight, Trophy, Bone, Dog, PawPrint, ShieldStar, ArrowLeft } from "@phosphor-icons/react";
 import { Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
@@ -248,12 +248,12 @@ const Gallery = () => {
   ];
 
   const categories = [
-    { id: "all", label: "All Photos", icon: Dog },
-    { id: "breeding", label: "Our Dogs", icon: Award },
-    { id: "puppies", label: "Puppies", icon: Users },
-    { id: "competitions", label: "Competitions", icon: Award },
+    { id: "all", label: "All Photos", icon: PawPrint },
+    { id: "breeding", label: "Our Dogs", icon: Dog },
+    { id: "puppies", label: "Puppies", icon: Bone },
+    { id: "competitions", label: "Competitions", icon: Trophy },
     { id: "springer", label: "English Springer Spaniel", icon: Dog },
-    { id: "protection", label: "Elite Protection Dogs", icon: Award }
+    { id: "protection", label: "Elite Protection Dogs", icon: ShieldStar }
   ];
 
   const [activeCategory, setActiveCategory] = useState("all");
@@ -410,7 +410,7 @@ const Gallery = () => {
                                 {item.category}
                               </Badge>
                               <div className="p-2 bg-background/70 backdrop-blur-sm rounded-full">
-                                <Award className="w-4 h-4 text-foreground" />
+                                <Trophy className="w-4 h-4 text-foreground" />
                               </div>
                             </div>
                             <h3 className="font-luxury text-foreground font-bold text-lg mb-2 drop-shadow-lg">{item.title}</h3>
@@ -453,7 +453,7 @@ const Gallery = () => {
                   className="absolute left-4 top-1/2 transform -translate-y-1/2 z-10 glass-luxury border-border hover:bg-muted"
                   onClick={prevImage}
                 >
-                  <ChevronLeft className="w-4 h-4 text-foreground" />
+                  <CaretLeft className="w-4 h-4 text-foreground" />
                 </Button>
                 
                 <Button
@@ -462,7 +462,7 @@ const Gallery = () => {
                   className="absolute right-4 top-1/2 transform -translate-y-1/2 z-10 glass-luxury border-border hover:bg-muted"
                   onClick={nextImage}
                 >
-                  <ChevronRight className="w-4 h-4 text-foreground" />
+                  <CaretRight className="w-4 h-4 text-foreground" />
                 </Button>
                 
                 <img 

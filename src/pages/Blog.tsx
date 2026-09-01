@@ -1,7 +1,7 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { ArrowLeft, Calendar, Clock, BookOpen, ArrowRight } from "lucide-react";
+import { ArrowLeft, CalendarBlank, Clock, BookOpenText, ArrowRight } from "@phosphor-icons/react";
 import { Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
@@ -52,7 +52,7 @@ const Blog = () => {
               <div className="absolute -inset-8 bg-gradient-to-r from-transparent via-primary/10 to-transparent blur-xl"></div>
               <div className="relative glass-luxury backdrop-blur-xl rounded-3xl border metallic-border shadow-platinum p-12 mb-8 bg-black/30">
                 <div className="flex items-center justify-center mb-6 gap-4">
-                  <BookOpen className="w-10 h-10 text-gold" />
+                  <BookOpenText className="w-10 h-10 text-gold" />
                   <h1 className="font-luxury text-4xl sm:text-6xl md:text-7xl font-bold text-gold">
                     Our Blog
                   </h1>
@@ -116,7 +116,7 @@ const Blog = () => {
                       <div className="flex items-center justify-between mt-auto pt-4 border-t border-white/10">
                         <div className="flex items-center gap-4 text-xs text-foreground/50">
                           <div className="flex items-center gap-1">
-                            <Calendar className="w-3 h-3" />
+                            <CalendarBlank className="w-3 h-3" />
                             <span className="font-premium">{post.date}</span>
                           </div>
                           <div className="flex items-center gap-1">

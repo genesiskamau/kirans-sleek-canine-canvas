@@ -1,5 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Star, Quote } from "lucide-react";
+import { Star, Quotes } from "@phosphor-icons/react";
 
 const TestimonialsSection = () => {
   const testimonials = [
@@ -40,10 +40,10 @@ const TestimonialsSection = () => {
           {testimonials.map((t) => (
             <Card key={t.id} className="bg-card border-border hover-lift">
               <CardContent className="p-8">
-                <Quote className="w-6 h-6 text-secondary/40 mb-4" />
+                <Quotes className="w-6 h-6 text-secondary/40 mb-4" />
                 <div className="flex gap-0.5 mb-4">
                   {[...Array(t.rating)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 text-secondary fill-current" />
+                    <Star key={i} className="w-4 h-4 text-secondary" weight="fill" />
                   ))}
                 </div>
                 <blockquote className="text-muted-foreground text-sm leading-relaxed mb-6 italic">

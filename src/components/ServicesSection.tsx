@@ -1,9 +1,9 @@
-import { Brain, Shield, GraduationCap, ArrowRight } from "lucide-react";
+import { HandHeart, ShieldChevron, Medal, PawPrint } from "@phosphor-icons/react";
 
 const ServicesSection = () => {
   const services = [
     {
-      icon: Brain,
+      icon: HandHeart,
       title: "Service & Assistance Dogs",
       description: "Carefully trained for individuals living with Mobility challenges, PTSD, ADHD, Anxiety, among others.",
       subheadings: ["Psychiatric Dogs", "Mobility Dogs", "Medical Alert Dogs"],
@@ -17,7 +17,7 @@ const ServicesSection = () => {
       ]
     },
     {
-      icon: Shield,
+      icon: ShieldChevron,
       title: "Elite Protection Dogs",
       description: "Professionally trained protection dogs for private individuals, families, and high-risk professionals.",
       outcomes: [
@@ -28,7 +28,7 @@ const ServicesSection = () => {
       ]
     },
     {
-      icon: GraduationCap,
+      icon: Medal,
       title: "Advanced Training Programs",
       description: "Comprehensive training programs for dogs of all ages — from behavioral correction to competition-level obedience.",
       outcomes: [
@@ -89,7 +89,7 @@ const ServicesSection = () => {
               <ul className="space-y-3">
                 {service.outcomes.map((outcome, i) => (
                   <li key={i} className="flex items-center text-sm text-muted-foreground">
-                    <ArrowRight className="w-4 h-4 text-secondary mr-3 flex-shrink-0" />
+                    <PawPrint className="w-4 h-4 text-secondary mr-3 flex-shrink-0" weight="fill" />
                     {outcome}
                   </li>
                 ))}

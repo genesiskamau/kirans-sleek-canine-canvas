@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from "react";
-import { Heart, Sparkles } from "lucide-react";
+import { Heart, Sparkle } from "@phosphor-icons/react";
 
 const PASSWORD = "Jecinta";
 
@@ -49,7 +49,7 @@ const ForJessOnly = () => {
           onSubmit={handlePassword}
           className="bg-card border border-border rounded-2xl p-8 max-w-sm w-full text-center space-y-4"
         >
-          <Heart className="w-10 h-10 text-pink-500 mx-auto animate-pulse" />
+          <Heart className="w-10 h-10 text-pink-500 mx-auto animate-pulse" weight="fill" />
           <h1 className="text-xl font-bold text-foreground">Private Page 🔒</h1>
           <p className="text-muted-foreground text-sm">Enter the password to continue</p>
           <input
@@ -75,8 +75,8 @@ const ForJessOnly = () => {
     return (
       <div className="min-h-screen bg-background flex flex-col items-center justify-center px-4 text-center space-y-6">
         <div className="relative">
-          <Heart className="w-24 h-24 text-pink-500 animate-pulse" />
-          <Sparkles className="w-8 h-8 text-yellow-400 absolute -top-2 -right-2 animate-bounce" />
+          <Heart className="w-24 h-24 text-pink-500 animate-pulse" weight="fill" />
+          <Sparkle className="w-8 h-8 text-yellow-400 absolute -top-2 -right-2 animate-bounce" weight="fill" />
         </div>
         <h1 className="text-4xl md:text-5xl font-bold text-foreground">
           Yaaay! 🎉💕
@@ -117,7 +117,7 @@ const ForJessOnly = () => {
 
   return (
     <div className="min-h-screen bg-background flex flex-col items-center justify-center px-4 text-center space-y-8">
-      <Heart className="w-16 h-16 text-pink-500 animate-pulse" />
+      <Heart className="w-16 h-16 text-pink-500 animate-pulse" weight="fill" />
       <h1 className="text-3xl md:text-5xl font-bold text-foreground">
         Will you be my Valentine? 💕
       </h1>
