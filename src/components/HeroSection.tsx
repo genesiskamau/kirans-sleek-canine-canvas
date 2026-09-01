@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Phone } from "lucide-react";
+import { ArrowRight } from "@phosphor-icons/react";
 
 const HeroSection = () => {
   return (

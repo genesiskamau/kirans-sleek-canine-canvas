@@ -9,7 +9,7 @@ import { defineMcp } from "npm:@lovable.dev/mcp-js@0.22.2";
 import { defineTool } from "npm:@lovable.dev/mcp-js@0.22.2";
 
 // src/data/blogPosts.ts
-import { Shield, Heart, Brain, Dog } from "npm:lucide-react@^0.462.0";
+import { Brain, Dog } from "npm:@phosphor-icons/react@^2.1.10";
 var blogPosts = [
   {
     id: 0,

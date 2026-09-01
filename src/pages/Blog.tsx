@@ -1,7 +1,7 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { ArrowLeft, Calendar, Clock, BookOpen, ArrowRight } from "lucide-react";
+import { ArrowLeft, CalendarBlank, Clock, BookOpenText, ArrowRight } from "@phosphor-icons/react";
 import { Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";

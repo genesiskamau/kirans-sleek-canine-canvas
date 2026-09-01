@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from "react";
-import { Heart, Sparkles } from "lucide-react";
+import { Heart, Sparkle } from "@phosphor-icons/react";
 
 const PASSWORD = "Jecinta";
 

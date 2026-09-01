@@ -1,5 +1,5 @@
-import { Shield, Heart, Brain, Dog } from "lucide-react";
-import type { LucideIcon } from "lucide-react";
+import { ShieldChevron, HandHeart, Brain, Dog } from "@phosphor-icons/react";
+import type { Icon as PhosphorIcon } from "@phosphor-icons/react";
 
 export interface BlogPost {
   id: number;
@@ -8,7 +8,7 @@ export interface BlogPost {
   subtitle: string;
   date: string;
   category: string;
-  icon: LucideIcon;
+  icon: PhosphorIcon;
   readTime: string;
   content: string;
 }

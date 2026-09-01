@@ -1,4 +1,4 @@
-import { Brain, Shield, GraduationCap, ArrowRight } from "lucide-react";
+import { HandHeart, ShieldChevron, Medal, PawPrint } from "@phosphor-icons/react";
 
 const ServicesSection = () => {
   const services = [

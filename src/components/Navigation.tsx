@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Phone } from "lucide-react";
+import { List, X, Phone } from "@phosphor-icons/react";
 import { Link } from "react-router-dom";
 
 const Navigation = () => {

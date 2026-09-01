@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { X, ChevronLeft, ChevronRight, Award, Users, Dog, ArrowLeft } from "lucide-react";
+import { X, CaretLeft, CaretRight, Trophy, Bone, Dog, PawPrint, ShieldStar, ArrowLeft } from "@phosphor-icons/react";
 import { Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";

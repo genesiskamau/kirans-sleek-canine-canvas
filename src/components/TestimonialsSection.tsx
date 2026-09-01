@@ -1,5 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Star, Quote } from "lucide-react";
+import { Star, Quotes } from "@phosphor-icons/react";
 
 const TestimonialsSection = () => {
   const testimonials = [

@@ -1,4 +1,4 @@
-import { Phone, Mail, MapPin } from "lucide-react";
+import { Phone, Envelope, MapPin } from "@phosphor-icons/react";
 
 const Footer = () => {
   return (

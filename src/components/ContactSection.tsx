@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Phone, Mail, MapPin, MessageCircle, Send } from "lucide-react";
+import { Phone, Envelope, MapPin, WhatsappLogo, PaperPlaneTilt } from "@phosphor-icons/react";
 import { useToast } from "@/hooks/use-toast";
 
 const ContactSection = () => {

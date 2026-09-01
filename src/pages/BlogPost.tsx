@@ -2,7 +2,7 @@ import React from "react";
 import { useParams, Link, Navigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { ArrowLeft, Calendar, Clock } from "lucide-react";
+import { ArrowLeft, CalendarBlank, Clock } from "@phosphor-icons/react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import SEOBreadcrumb from "@/components/SEOBreadcrumb";

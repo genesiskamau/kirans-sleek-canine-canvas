@@ -1,4 +1,4 @@
-import { ClipboardList, Search, Settings, BarChart3, Handshake } from "lucide-react";
+import { ClipboardText, MagnifyingGlass, Strategy, ChartLineUp, Handshake } from "@phosphor-icons/react";
 
 const ProcessSection = () => {
   const steps = [
