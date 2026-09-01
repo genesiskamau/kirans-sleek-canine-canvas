@@ -3,10 +3,10 @@
 // supabase function: mcp
 // Bundled from src/lib/mcp/index.ts by @lovable.dev/mcp-js.
 // src/lib/mcp/index.ts
-import { defineMcp } from "npm:@lovable.dev/mcp-js@0.22.2";
+import { defineMcp } from "npm:@lovable.dev/mcp-js@0.22.1";
 
 // src/lib/mcp/tools/list-blog-posts.ts
-import { defineTool } from "npm:@lovable.dev/mcp-js@0.22.2";
+import { defineTool } from "npm:@lovable.dev/mcp-js@0.22.1";
 
 // src/data/blogPosts.ts
 import { Shield, Heart, Brain, Dog } from "npm:lucide-react@^0.462.0";
@@ -458,7 +458,7 @@ var list_blog_posts_default = defineTool({
 });
 
 // src/lib/mcp/tools/get-blog-post.ts
-import { defineTool as defineTool2 } from "npm:@lovable.dev/mcp-js@0.22.2";
+import { defineTool as defineTool2 } from "npm:@lovable.dev/mcp-js@0.22.1";
 import { z } from "npm:zod@^3.25.76";
 var get_blog_post_default = defineTool2({
   name: "get_blog_post",
@@ -486,7 +486,7 @@ var get_blog_post_default = defineTool2({
 });
 
 // src/lib/mcp/tools/list-services.ts
-import { defineTool as defineTool3 } from "npm:@lovable.dev/mcp-js@0.22.2";
+import { defineTool as defineTool3 } from "npm:@lovable.dev/mcp-js@0.22.1";
 var SERVICES = [
   {
     name: "Working-Line German Shepherd Puppies",
@@ -522,7 +522,7 @@ var list_services_default = defineTool3({
 });
 
 // src/lib/mcp/tools/get-contact-info.ts
-import { defineTool as defineTool4 } from "npm:@lovable.dev/mcp-js@0.22.2";
+import { defineTool as defineTool4 } from "npm:@lovable.dev/mcp-js@0.22.1";
 var CONTACT = {
   business: "Kirangi Dogs",
   location: "Kenya (serving international clients across the East African Community and beyond)",
@@ -546,7 +546,7 @@ var get_contact_info_default = defineTool4({
 });
 
 // src/lib/mcp/tools/submit-puppy-booking.ts
-import { defineTool as defineTool5 } from "npm:@lovable.dev/mcp-js@0.22.2";
+import { defineTool as defineTool5 } from "npm:@lovable.dev/mcp-js@0.22.1";
 import { z as z2 } from "npm:zod@^3.25.76";
 var FUNCTION_URL = "https://fqcsnlghwugkkwsegpsb.supabase.co/functions/v1/submit-puppy-booking";
 var ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZxY3NubGdod3Vna2t3c2VncHNiIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTc2NjYzNDAsImV4cCI6MjA3MzI0MjM0MH0.qQaU-SyNA4Jg2c2VZy_FKKNis-Vcxzb-8Wlbp6t--cQ";
@@ -606,7 +606,7 @@ var submit_puppy_booking_default = defineTool5({
 });
 
 // src/lib/mcp/tools/submit-contact-inquiry.ts
-import { defineTool as defineTool6 } from "npm:@lovable.dev/mcp-js@0.22.2";
+import { defineTool as defineTool6 } from "npm:@lovable.dev/mcp-js@0.22.1";
 import { z as z3 } from "npm:zod@^3.25.76";
 var FUNCTION_URL2 = "https://fqcsnlghwugkkwsegpsb.supabase.co/functions/v1/send-contact-email";
 var ANON_KEY2 = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZxY3NubGdod3Vna2t3c2VncHNiIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTc2NjYzNDAsImV4cCI6MjA3MzI0MjM0MH0.qQaU-SyNA4Jg2c2VZy_FKKNis-Vcxzb-8Wlbp6t--cQ";
@@ -678,5 +678,5 @@ var mcp_default = defineMcp({
 });
 
 // lovable-mcp-supabase-entry.ts
-import { createSupabaseHandler } from "npm:@lovable.dev/mcp-js@0.22.2/stacks/supabase";
+import { createSupabaseHandler } from "npm:@lovable.dev/mcp-js@0.22.1/stacks/supabase";
 Deno.serve(createSupabaseHandler(mcp_default, { functionName: "mcp" }));
