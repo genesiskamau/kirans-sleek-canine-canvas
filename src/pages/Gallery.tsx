@@ -311,7 +311,7 @@ const Gallery = () => {
           <Link to="/#gallery">
             <Button 
               variant="outline" 
-              className="mb-8 glass-luxury text-foreground hover:bg-white/10 backdrop-blur-2xl font-premium"
+              className="mb-8 glass-luxury text-foreground hover:bg-muted backdrop-blur-2xl font-premium"
             >
               <ArrowLeft className="w-4 h-4 mr-2" />
               Back to Home
@@ -406,15 +406,15 @@ const Gallery = () => {
                         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500">
                           <div className="absolute bottom-6 left-6 right-6">
                             <div className="flex items-center justify-between mb-3">
-                              <Badge variant="secondary" className="backdrop-blur-sm bg-white/90 font-premium text-sm font-bold px-3 py-1">
+                              <Badge variant="secondary" className="backdrop-blur-sm bg-card/90 font-premium text-sm font-bold px-3 py-1">
                                 {item.category}
                               </Badge>
-                              <div className="p-2 bg-white/20 backdrop-blur-sm rounded-full">
-                                <Award className="w-4 h-4 text-white" />
+                              <div className="p-2 bg-background/70 backdrop-blur-sm rounded-full">
+                                <Award className="w-4 h-4 text-foreground" />
                               </div>
                             </div>
-                            <h3 className="font-luxury text-white font-bold text-lg mb-2 drop-shadow-lg">{item.title}</h3>
-                            <p className="font-premium text-white/90 text-base leading-relaxed drop-shadow-md italic">{item.description}</p>
+                            <h3 className="font-luxury text-foreground font-bold text-lg mb-2 drop-shadow-lg">{item.title}</h3>
+                            <p className="font-premium text-foreground/90 text-base leading-relaxed drop-shadow-md italic">{item.description}</p>
                           </div>
                         </div>
                       </div>
@@ -441,28 +441,28 @@ const Gallery = () => {
                 <Button
                   variant="outline"
                   size="icon"
-                  className="absolute top-4 right-4 z-10 glass-luxury border-white/20 hover:bg-white/20"
+                  className="absolute top-4 right-4 z-10 glass-luxury border-border hover:bg-muted"
                   onClick={closeLightbox}
                 >
-                  <X className="w-4 h-4 text-white" />
+                  <X className="w-4 h-4 text-foreground" />
                 </Button>
                 
                 <Button
                   variant="outline"
                   size="icon"
-                  className="absolute left-4 top-1/2 transform -translate-y-1/2 z-10 glass-luxury border-white/20 hover:bg-white/20"
+                  className="absolute left-4 top-1/2 transform -translate-y-1/2 z-10 glass-luxury border-border hover:bg-muted"
                   onClick={prevImage}
                 >
-                  <ChevronLeft className="w-4 h-4 text-white" />
+                  <ChevronLeft className="w-4 h-4 text-foreground" />
                 </Button>
                 
                 <Button
                   variant="outline"
                   size="icon"
-                  className="absolute right-4 top-1/2 transform -translate-y-1/2 z-10 glass-luxury border-white/20 hover:bg-white/20"
+                  className="absolute right-4 top-1/2 transform -translate-y-1/2 z-10 glass-luxury border-border hover:bg-muted"
                   onClick={nextImage}
                 >
-                  <ChevronRight className="w-4 h-4 text-white" />
+                  <ChevronRight className="w-4 h-4 text-foreground" />
                 </Button>
                 
                 <img 

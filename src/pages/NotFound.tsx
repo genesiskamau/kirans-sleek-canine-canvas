@@ -40,7 +40,7 @@ const NotFound = () => {
         <div className="space-y-3">
           <Link 
             to="/" 
-            className="inline-block bg-amber-600 text-white px-6 py-3 rounded-lg hover:bg-amber-700 transition-colors font-medium"
+            className="inline-block bg-amber-600 text-foreground px-6 py-3 rounded-lg hover:bg-amber-700 transition-colors font-medium"
           >
             Return to Home
           </Link>

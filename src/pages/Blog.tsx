@@ -39,7 +39,7 @@ const Blog = () => {
           <Link to="/">
             <Button
               variant="outline"
-              className="mb-8 glass-luxury text-white hover:bg-white/10 backdrop-blur-2xl font-premium border-white/30"
+              className="mb-8 glass-luxury text-foreground hover:bg-muted backdrop-blur-2xl font-premium border-white/30"
             >
               <ArrowLeft className="w-4 h-4 mr-2" />
               Back to Home
@@ -64,7 +64,7 @@ const Blog = () => {
                   <div className="h-px bg-gradient-gold flex-1 max-w-xs"></div>
                 </div>
 
-                <p className="font-premium text-lg md:text-xl text-white/80 max-w-4xl mx-auto leading-relaxed italic px-4">
+                <p className="font-premium text-lg md:text-xl text-foreground/80 max-w-4xl mx-auto leading-relaxed italic px-4">
                   "Insights, education, and stories from the world of professional dog breeding, training, and canine-assisted therapy"
                 </p>
               </div>
@@ -100,21 +100,21 @@ const Blog = () => {
                         </Badge>
                       </div>
 
-                      <h2 className="font-luxury text-xl md:text-2xl text-white font-bold mb-2 group-hover:text-gold transition-colors">
+                      <h2 className="font-luxury text-xl md:text-2xl text-foreground font-bold mb-2 group-hover:text-gold transition-colors">
                         {post.title}
                       </h2>
-                      <p className="font-premium text-white/60 text-sm mb-4 italic">
+                      <p className="font-premium text-foreground/60 text-sm mb-4 italic">
                         {post.subtitle}
                       </p>
 
                       {excerpt && (
-                        <p className="font-premium text-white/70 text-sm leading-relaxed mb-6 flex-1">
+                        <p className="font-premium text-muted-foreground text-sm leading-relaxed mb-6 flex-1">
                           {excerpt}…
                         </p>
                       )}
 
                       <div className="flex items-center justify-between mt-auto pt-4 border-t border-white/10">
-                        <div className="flex items-center gap-4 text-xs text-white/50">
+                        <div className="flex items-center gap-4 text-xs text-foreground/50">
                           <div className="flex items-center gap-1">
                             <Calendar className="w-3 h-3" />
                             <span className="font-premium">{post.date}</span>

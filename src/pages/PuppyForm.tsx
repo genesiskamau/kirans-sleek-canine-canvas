@@ -90,12 +90,12 @@ const PuppyForm = () => {
               Thank You!
             </h1>
             
-            <p className="text-xl text-white/90 mb-6 font-premium">
+            <p className="text-xl text-foreground/90 mb-6 font-premium">
               Your puppy reservation request has been received successfully.
             </p>
             
             <div className="bg-card/30 rounded-2xl p-6 mb-8 border metallic-border">
-              <p className="text-white/80 leading-relaxed font-premium">
+              <p className="text-foreground/80 leading-relaxed font-premium">
                 We're excited about your interest in our Black Russian Terrier puppies! 
                 Our team will review your request and contact you within <span className="text-gold font-semibold">24-48 hours</span> with 
                 more information about the December litter, pricing details, and the next steps in the reservation process.
@@ -103,10 +103,10 @@ const PuppyForm = () => {
             </div>
 
             <div className="space-y-3 mb-8">
-              <p className="text-white/70 font-premium">
+              <p className="text-muted-foreground font-premium">
                 A confirmation email has been sent to <span className="text-gold font-semibold">{formData.email}</span>
               </p>
-              <p className="text-white/70 text-sm font-premium">
+              <p className="text-muted-foreground text-sm font-premium">
                 Questions? Call us at <a href="tel:+254785535569" className="text-gold hover:text-gold/80 underline">+254-785-535-569</a>
               </p>
             </div>
@@ -124,7 +124,7 @@ const PuppyForm = () => {
               <Button 
                 size="lg"
                 variant="outline"
-                className="glass-luxury text-white hover:bg-white/10 rounded-full px-8 font-bold backdrop-blur-2xl hover:scale-105 transition-all duration-700 font-premium"
+                className="glass-luxury text-foreground hover:bg-muted rounded-full px-8 font-bold backdrop-blur-2xl hover:scale-105 transition-all duration-700 font-premium"
                 onClick={() => window.open('https://wa.me/254785535569', '_blank')}
               >
                 Chat on WhatsApp
@@ -171,7 +171,7 @@ const PuppyForm = () => {
             <h1 className="text-4xl md:text-5xl font-bold font-luxury text-gold mb-4">
               Reserve Your Black Russian Terrier Puppy
             </h1>
-            <p className="text-lg text-white/90 leading-relaxed max-w-2xl mx-auto font-premium">
+            <p className="text-lg text-foreground/90 leading-relaxed max-w-2xl mx-auto font-premium">
               We're expecting our next litter of Black Russian Terrier puppies in <span className="text-gold font-semibold">December</span>! 
               Please fill in your details below to reserve a spot or ask any questions.
             </p>
@@ -183,7 +183,7 @@ const PuppyForm = () => {
           <form onSubmit={handleSubmit} className="space-y-6">
             {/* Name */}
             <div className="space-y-2">
-              <Label htmlFor="name" className="text-white font-semibold text-lg font-premium">
+              <Label htmlFor="name" className="text-foreground font-semibold text-lg font-premium">
                 Your Name <span className="text-gold">*</span>
               </Label>
               <Input
@@ -193,13 +193,13 @@ const PuppyForm = () => {
                 onChange={handleChange}
                 placeholder="Enter your full name"
                 required
-                className="h-12 bg-card/30 border-muted text-white placeholder:text-muted-foreground focus:border-primary focus:ring-primary/20 rounded-xl font-premium"
+                className="h-12 bg-card/30 border-muted text-foreground placeholder:text-muted-foreground focus:border-primary focus:ring-primary/20 rounded-xl font-premium"
               />
             </div>
 
             {/* Phone */}
             <div className="space-y-2">
-              <Label htmlFor="phone" className="text-white font-semibold text-lg font-premium">
+              <Label htmlFor="phone" className="text-foreground font-semibold text-lg font-premium">
                 Phone Number <span className="text-gold">*</span>
               </Label>
               <Input
@@ -210,13 +210,13 @@ const PuppyForm = () => {
                 onChange={handleChange}
                 placeholder="+254 xxx xxx xxx"
                 required
-                className="h-12 bg-card/30 border-muted text-white placeholder:text-muted-foreground focus:border-primary focus:ring-primary/20 rounded-xl font-premium"
+                className="h-12 bg-card/30 border-muted text-foreground placeholder:text-muted-foreground focus:border-primary focus:ring-primary/20 rounded-xl font-premium"
               />
             </div>
 
             {/* Email */}
             <div className="space-y-2">
-              <Label htmlFor="email" className="text-white font-semibold text-lg font-premium">
+              <Label htmlFor="email" className="text-foreground font-semibold text-lg font-premium">
                 Email Address <span className="text-gold">*</span>
               </Label>
               <Input
@@ -227,13 +227,13 @@ const PuppyForm = () => {
                 onChange={handleChange}
                 placeholder="your.email@example.com"
                 required
-                className="h-12 bg-card/30 border-muted text-white placeholder:text-muted-foreground focus:border-primary focus:ring-primary/20 rounded-xl font-premium"
+                className="h-12 bg-card/30 border-muted text-foreground placeholder:text-muted-foreground focus:border-primary focus:ring-primary/20 rounded-xl font-premium"
               />
             </div>
 
             {/* Preferred Sex */}
             <div className="space-y-2">
-              <Label htmlFor="preferred_sex" className="text-white font-semibold text-lg font-premium">
+              <Label htmlFor="preferred_sex" className="text-foreground font-semibold text-lg font-premium">
                 Preferred Puppy Sex <span className="text-gold">*</span>
               </Label>
               <select
@@ -242,7 +242,7 @@ const PuppyForm = () => {
                 value={formData.preferred_sex}
                 onChange={handleChange}
                 required
-                className="w-full h-12 bg-card/30 border border-muted text-white rounded-xl px-4 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all font-premium"
+                className="w-full h-12 bg-card/30 border border-muted text-foreground rounded-xl px-4 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all font-premium"
               >
                 <option value="Either">Either (No Preference)</option>
                 <option value="Male">Male</option>
@@ -252,7 +252,7 @@ const PuppyForm = () => {
 
             {/* Notes */}
             <div className="space-y-2">
-              <Label htmlFor="notes" className="text-white font-semibold text-lg font-premium">
+              <Label htmlFor="notes" className="text-foreground font-semibold text-lg font-premium">
                 Additional Enquiries or Notes
               </Label>
               <Textarea
@@ -262,7 +262,7 @@ const PuppyForm = () => {
                 onChange={handleChange}
                 placeholder="Tell us about any specific requirements, questions, or additional information..."
                 rows={5}
-                className="bg-card/30 border-muted text-white placeholder:text-muted-foreground focus:border-primary focus:ring-primary/20 rounded-xl resize-none font-premium"
+                className="bg-card/30 border-muted text-foreground placeholder:text-muted-foreground focus:border-primary focus:ring-primary/20 rounded-xl resize-none font-premium"
               />
             </div>
 
@@ -289,7 +289,7 @@ const PuppyForm = () => {
             </div>
 
             {/* Privacy Notice */}
-            <p className="text-sm text-white/70 text-center pt-2 font-premium">
+            <p className="text-sm text-muted-foreground text-center pt-2 font-premium">
               Your information will be kept confidential and used only to process your puppy reservation request.
             </p>
           </form>
@@ -297,7 +297,7 @@ const PuppyForm = () => {
 
         {/* Contact Info */}
         <div className="mt-8 text-center">
-          <p className="text-white/70 mb-2 font-premium">Prefer to speak with us directly?</p>
+          <p className="text-muted-foreground mb-2 font-premium">Prefer to speak with us directly?</p>
           <div className="flex flex-wrap justify-center gap-4">
             <a href="tel:+254785535569" className="text-gold hover:text-gold/80 transition-colors font-premium">
               📞 +254-785-535-569
