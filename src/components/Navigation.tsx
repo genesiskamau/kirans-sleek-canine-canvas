@@ -16,8 +16,8 @@ const Navigation = () => {
   const navItems = [
     { label: "Home", href: "#home" },
     { label: "Services", href: "#services" },
-    { label: "About", href: "#about" },
-    { label: "Process", href: "#process" },
+    { label: "About", href: "/about", isExternal: true },
+    { label: "Process", href: "/process", isExternal: true },
     { label: "Puppies", href: "#puppies" },
     { label: "Gallery", href: "/gallery", isExternal: true },
     { label: "Blog", href: "/blog", isExternal: true },

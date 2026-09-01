@@ -1,39 +1,41 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "@phosphor-icons/react";
+import { ArrowRight, Dog, Bone, Trophy, ShieldStar } from "@phosphor-icons/react";
 import { Link } from "react-router-dom";
 
 const GallerySection = () => {
-  const featuredImages = [
+  const categories = [
     {
-      src: "/lovable-uploads/rock-1.jpg",
-      alt: "Rock of Kirangi - Elite protection dog",
-      title: "Rock of Kirangi",
-    },
-    {
-      src: "/lovable-uploads/lulu-1.jpg",
-      alt: "Lulu - Detection Dog, English Springer Spaniel",
-      title: "Lulu of Kirangi",
-    },
-    {
+      icon: Dog,
+      title: "Our Dogs",
+      description: "Champion bloodline breeding dogs",
       src: "/lovable-uploads/0d1e1051-e6d3-42c1-9102-f592d9acc724.png",
       alt: "Makena - German Shepherd champion bloodline",
-      title: "Makena of Kirangi",
+      category: "breeding",
     },
     {
-      src: "/lovable-uploads/b5b5cffe-0477-45d1-9d18-128381fbf7f8.png",
-      alt: "Ndegwa - Award winning at Nanyuki Dog Show",
-      title: "Ndegwa",
+      icon: Bone,
+      title: "Puppies",
+      description: "Available & upcoming litters",
+      src: "/lovable-uploads/chuma.jpg",
+      alt: "Chuma - Kirangi puppy",
+      category: "puppies",
     },
     {
+      icon: Trophy,
+      title: "Competitions",
+      description: "Dog shows & Mount Kenya Expo",
       src: "/lovable-uploads/mount-kenya-expo-7.jpg",
       alt: "Mount Kenya Dog Expo 2024",
-      title: "Mount Kenya Expo",
+      category: "competitions",
     },
     {
-      src: "/lovable-uploads/rock-3.jpg",
-      alt: "Protection dog training session",
-      title: "Protection Training",
-    }
+      icon: ShieldStar,
+      title: "Elite Protection",
+      description: "Trained protection dogs at work",
+      src: "/lovable-uploads/rock-1.jpg",
+      alt: "Rock of Kirangi - Elite protection dog",
+      category: "protection",
+    },
   ];
 
   return (
@@ -44,23 +46,29 @@ const GallerySection = () => {
           <h2 className="font-heading text-3xl md:text-4xl text-foreground mb-6">
             Gallery
           </h2>
+          <p className="text-muted-foreground max-w-xl mx-auto">
+            Explore the dogs of Kirangi by category.
+          </p>
         </div>
 
-        <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 max-w-5xl mx-auto mb-12">
-          {featuredImages.map((item, index) => (
-            <div key={index} className="group relative overflow-hidden rounded-xl aspect-square">
-              <img 
-                src={item.src} 
-                alt={item.alt}
-                loading="lazy"
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <div className="absolute bottom-4 left-4">
-                  <p className="text-foreground text-sm font-semibold">{item.title}</p>
-                </div>
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 max-w-5xl mx-auto mb-12">
+          {categories.map((item, index) => (
+            <Link key={index} to={`/gallery?category=${item.category}`} className="group">
+              <div className="relative overflow-hidden rounded-xl aspect-square mb-4">
+                <img 
+                  src={item.src} 
+                  alt={item.alt}
+                  loading="lazy"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-background/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </div>
-            </div>
+              <div className="flex items-center gap-2 mb-1">
+                <item.icon className="w-4 h-4 text-secondary" weight="duotone" />
+                <h3 className="font-heading text-base text-foreground">{item.title}</h3>
+              </div>
+              <p className="text-muted-foreground text-xs leading-relaxed">{item.description}</p>
+            </Link>
           ))}
         </div>
 
