@@ -3,6 +3,17 @@ import { Phone, Mail, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const ComingSoon = () => {
+  useEffect(() => {
+    document.title = "Coming Soon | Kirangi Dogs";
+    const meta = document.createElement("meta");
+    meta.name = "robots";
+    meta.content = "noindex, nofollow";
+    document.head.appendChild(meta);
+    return () => {
+      document.head.removeChild(meta);
+    };
+  }, []);
+
   return (
     <div className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-[#0F0F0F]">
       {/* Background image with dark overlay */}
