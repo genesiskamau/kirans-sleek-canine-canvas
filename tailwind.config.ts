@@ -77,9 +77,11 @@ export default {
 				'soft': 'var(--shadow-soft)'
 			},
 			fontFamily: {
-				'heading': ['"DM Serif Display"', 'Georgia', 'serif'],
-				'sans': ['Inter', 'system-ui', 'sans-serif'],
-				'mono': ['"JetBrains Mono"', 'monospace']
+				'heading': ['"Space Mono"', 'ui-monospace', 'monospace'],
+				'luxury': ['"Space Mono"', 'ui-monospace', 'monospace'],
+				'sans': ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+				'premium': ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+				'mono': ['"Space Mono"', 'monospace']
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
