@@ -2,72 +2,71 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Kirangi Dogs — Premium Service & Protection Dog Training
-   Color Palette: Matte Black, Deep Forest Green, Warm Off-White, Dark Earth Brown, Muted Gold
+/* Kirangi Dogs — Light editorial theme
+   Palette: Warm Bone / Ink Black / Logo Orange / Deep Forest Green
+   Type: Space Mono (display) + Plus Jakarta Sans (body)
    All colors MUST be HSL.
 */
 
 @layer base {
   :root {
-    /* Matte Black base */
-    --background: 0 0% 6%;
-    --foreground: 40 10% 95%;
+    /* Warm bone paper */
+    --background: 40 30% 96%;
+    --foreground: 24 12% 10%;
 
-    --card: 0 0% 9%;
-    --card-foreground: 40 10% 95%;
+    --card: 0 0% 100%;
+    --card-foreground: 24 12% 10%;
 
-    --popover: 0 0% 9%;
-    --popover-foreground: 40 10% 95%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 24 12% 10%;
 
-    /* Deep Forest Green */
-    --primary: 160 60% 14%;
-    --primary-foreground: 40 10% 95%;
+    /* Logo Orange */
+    --primary: 22 90% 62%;
+    --primary-foreground: 24 30% 8%;
 
-    /* Muted Gold / Bronze */
-    --secondary: 37 45% 52%;
-    --secondary-foreground: 0 0% 6%;
+    /* Deep Forest Green (ink panels, buttons) */
+    --secondary: 158 42% 15%;
+    --secondary-foreground: 40 30% 96%;
 
-    /* Dark Earth Brown */
-    --muted: 0 10% 14%;
-    --muted-foreground: 40 10% 65%;
+    --muted: 38 22% 92%;
+    --muted-foreground: 28 8% 38%;
 
-    /* Muted Gold accent */
-    --accent: 37 45% 52%;
-    --accent-foreground: 0 0% 6%;
+    /* Orange accent */
+    --accent: 22 90% 62%;
+    --accent-foreground: 24 30% 8%;
 
     --destructive: 0 70% 45%;
-    --destructive-foreground: 40 10% 95%;
+    --destructive-foreground: 40 30% 96%;
 
-    --border: 0 0% 16%;
-    --input: 0 0% 16%;
-    --ring: 160 60% 14%;
+    --border: 34 18% 86%;
+    --input: 34 18% 86%;
+    --ring: 22 90% 62%;
 
-    /* Premium gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(160 60% 14%), hsl(160 50% 20%));
-    --gradient-gold: linear-gradient(135deg, hsl(37 45% 52%), hsl(37 55% 62%));
-    --gradient-dark: linear-gradient(135deg, hsl(0 0% 6%), hsl(0 0% 10%));
-    --gradient-royal: linear-gradient(180deg, hsl(0 0% 4% / 0.95), hsl(160 60% 14% / 0.4));
-    --gradient-earth: linear-gradient(135deg, hsl(0 12% 18%), hsl(0 10% 14%));
-    --gradient-glass: linear-gradient(135deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02));
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(22 90% 62%), hsl(30 92% 68%));
+    --gradient-gold: linear-gradient(135deg, hsl(22 90% 55%), hsl(32 92% 64%));
+    --gradient-dark: linear-gradient(135deg, hsl(158 42% 13%), hsl(158 38% 18%));
+    --gradient-royal: linear-gradient(180deg, hsl(40 30% 96% / 0.92), hsl(40 30% 96% / 0.6));
+    --gradient-earth: linear-gradient(135deg, hsl(38 26% 93%), hsl(38 22% 88%));
+    --gradient-glass: linear-gradient(135deg, hsl(0 0% 100% / 0.75), hsl(0 0% 100% / 0.5));
 
-    /* Shadow system */
-    --shadow-luxury: 0 25px 50px -12px hsl(0 0% 0% / 0.5);
-    --shadow-gold: 0 20px 40px -15px hsl(37 45% 52% / 0.3);
-    --shadow-soft: 0 10px 30px -10px hsl(0 0% 0% / 0.4);
+    /* Shadows — soft, paper-like */
+    --shadow-luxury: 0 24px 60px -24px hsl(24 20% 20% / 0.22);
+    --shadow-gold: 0 20px 40px -18px hsl(22 90% 52% / 0.32);
+    --shadow-soft: 0 10px 30px -14px hsl(24 20% 20% / 0.18);
 
-    /* Transitions */
     --transition-smooth: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
 
-    --radius: 0.5rem;
+    --radius: 1rem;
 
-    --sidebar-background: 0 0% 9%;
-    --sidebar-foreground: 40 10% 95%;
-    --sidebar-primary: 160 60% 14%;
-    --sidebar-primary-foreground: 40 10% 95%;
-    --sidebar-accent: 0 0% 14%;
-    --sidebar-accent-foreground: 40 10% 95%;
-    --sidebar-border: 0 0% 16%;
-    --sidebar-ring: 160 60% 14%;
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 24 12% 10%;
+    --sidebar-primary: 158 42% 15%;
+    --sidebar-primary-foreground: 40 30% 96%;
+    --sidebar-accent: 38 22% 92%;
+    --sidebar-accent-foreground: 24 12% 10%;
+    --sidebar-border: 34 18% 86%;
+    --sidebar-ring: 22 90% 62%;
   }
 }
 
@@ -78,7 +77,13 @@
 
   body {
     @apply bg-background text-foreground;
-    font-family: 'Inter', system-ui, sans-serif;
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Space Mono', ui-monospace, monospace;
+    letter-spacing: -0.02em;
   }
 }
 
@@ -93,14 +98,23 @@
   .animation-delay-1000 { animation-delay: 1000ms; }
   .animation-delay-1200 { animation-delay: 1200ms; }
 
-  /* Glass effect */
-  .glass {
-    backdrop-filter: blur(16px) saturate(180%);
+  /* Frosted paper panel */
+  .glass,
+  .glass-luxury {
+    backdrop-filter: blur(16px) saturate(140%);
     background: var(--gradient-glass);
-    border: 1px solid hsl(0 0% 100% / 0.08);
+    border: 1px solid hsl(var(--border));
   }
 
-  /* Gold text gradient */
+  .metallic-border {
+    border: 1px solid hsl(var(--border));
+  }
+
+  .shadow-platinum {
+    box-shadow: var(--shadow-soft);
+  }
+
+  /* Accent text (orange) */
   .text-gold {
     background: var(--gradient-gold);
     -webkit-background-clip: text;
@@ -108,7 +122,6 @@
     background-clip: text;
   }
 
-  /* Subtle hover lift */
   .hover-lift {
     transition: var(--transition-smooth);
   }
@@ -118,9 +131,8 @@
     box-shadow: var(--shadow-luxury);
   }
 
-  /* Gold line separator */
   .gold-line {
-    background: linear-gradient(90deg, transparent, hsl(37 45% 52%), transparent);
+    background: linear-gradient(90deg, transparent, hsl(22 90% 62%), transparent);
   }
 
   @media (prefers-reduced-motion: reduce) {
