@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { X, CaretLeft, CaretRight, Trophy, Bone, Dog, PawPrint, ShieldStar, ArrowLeft } from "@phosphor-icons/react";
-import { Link } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import ImageStructuredData from "@/components/ImageStructuredData";
@@ -256,7 +256,12 @@ const Gallery = () => {
     { id: "protection", label: "Elite Protection Dogs", icon: ShieldStar }
   ];
 
-  const [activeCategory, setActiveCategory] = useState("all");
+  const [searchParams] = useSearchParams();
+  const initialCategory = searchParams.get("category");
+  const validCategories = ["breeding", "puppies", "competitions", "springer", "protection"];
+  const [activeCategory, setActiveCategory] = useState(
+    initialCategory && validCategories.includes(initialCategory) ? initialCategory : "all"
+  );
 
   const filteredImages = activeCategory === "all" 
     ? galleryItems 
