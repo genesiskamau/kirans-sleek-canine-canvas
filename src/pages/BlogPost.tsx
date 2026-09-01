@@ -92,7 +92,7 @@ const BlogPost = () => {
           <Link to="/blog">
             <Button
               variant="outline"
-              className="mb-8 glass-luxury text-white hover:bg-white/10 backdrop-blur-2xl font-premium border-white/30"
+              className="mb-8 glass-luxury text-foreground hover:bg-muted backdrop-blur-2xl font-premium border-white/30"
             >
               <ArrowLeft className="w-4 h-4 mr-2" />
               Back to Blog
@@ -112,14 +112,14 @@ const BlogPost = () => {
                   </Badge>
                 </div>
 
-                <h1 className="font-luxury text-3xl md:text-5xl text-white font-bold mb-3">
+                <h1 className="font-luxury text-3xl md:text-5xl text-foreground font-bold mb-3">
                   {post.title}
                 </h1>
-                <p className="font-premium text-white/70 text-lg mb-6 italic">
+                <p className="font-premium text-muted-foreground text-lg mb-6 italic">
                   {post.subtitle}
                 </p>
 
-                <div className="flex items-center gap-6 text-sm text-white/60 mb-10">
+                <div className="flex items-center gap-6 text-sm text-foreground/60 mb-10">
                   <div className="flex items-center gap-2">
                     <Calendar className="w-4 h-4" />
                     <span className="font-premium">{post.date}</span>
@@ -131,7 +131,7 @@ const BlogPost = () => {
                 </div>
 
                 <div className="border-t border-white/10 pt-8 prose prose-invert prose-lg max-w-none">
-                  <div className="font-premium text-white/90 leading-relaxed space-y-6">
+                  <div className="font-premium text-foreground/90 leading-relaxed space-y-6">
                     {renderContent(post.content)}
                   </div>
                 </div>
