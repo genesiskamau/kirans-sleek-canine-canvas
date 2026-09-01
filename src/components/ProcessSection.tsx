@@ -3,25 +3,25 @@ import { ClipboardText, MagnifyingGlass, Strategy, ChartLineUp, Handshake } from
 const ProcessSection = () => {
   const steps = [
     {
-      icon: ClipboardList,
+      icon: ClipboardText,
       number: "01",
       title: "Application",
       description: "Submit your inquiry with details about your needs — service dog, protection dog, or training program."
     },
     {
-      icon: Search,
+      icon: MagnifyingGlass,
       number: "02",
       title: "Assessment",
       description: "We conduct a suitability assessment to understand your lifestyle, requirements, and expectations."
     },
     {
-      icon: Settings,
+      icon: Strategy,
       number: "03",
       title: "Custom Plan",
       description: "A tailored training plan is developed based on your specific needs and the dog's temperament."
     },
     {
-      icon: BarChart3,
+      icon: ChartLineUp,
       number: "04",
       title: "Training & Updates",
       description: "Your dog undergoes structured training with regular progress reports and video updates."
