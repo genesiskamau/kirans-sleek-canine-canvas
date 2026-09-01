@@ -58,7 +58,7 @@ const Footer = () => {
             © 2025 kirangidogs.com — All rights reserved
           </p>
           <p className="text-xs text-muted-foreground/60">
-            Made By <a href="https://gencodesigns.com" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors underline">Genco Designs — Genesis Kamau</a>
+            Designed by <a href="https://gencodesigns.com" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors underline">Genco Designs — Kamau Mung'ara</a>
           </p>
         </div>
       </div>
