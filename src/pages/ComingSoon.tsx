@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Phone, Mail, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
