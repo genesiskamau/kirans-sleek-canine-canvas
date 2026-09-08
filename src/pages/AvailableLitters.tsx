@@ -1,10 +1,11 @@
+import { useState } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { PawPrint, Dog, Bone, WhatsappLogo } from "@phosphor-icons/react";
+import { PawPrint, Dog, Bone, WhatsappLogo, X } from "@phosphor-icons/react";
 import atosImg from "@/assets/gsd-atos.jpg.asset.json";
 import diegoImg from "@/assets/gsd-diego.jpg.asset.json";
 import brtMalesImg from "@/assets/brt-males.jpg.asset.json";
@@ -51,6 +52,14 @@ const litters = [
 ];
 
 const AvailableLitters = () => {
+  const [lightboxImage, setLightboxImage] = useState<{
+    src: string;
+    alt: string;
+  } | null>(null);
+
+  const openLightbox = (src: string, alt: string) => setLightboxImage({ src, alt });
+  const closeLightbox = () => setLightboxImage(null);
+
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
@@ -92,13 +101,22 @@ const AvailableLitters = () => {
                       className="bg-card border-border overflow-hidden"
                     >
                       <div className="relative">
-                        <img
-                          src={puppy.image}
-                          alt={`${puppy.name} - ${litter.title}`}
-                          className="w-full h-64 object-cover"
-                          loading="lazy"
-                        />
-                        <Badge className="absolute top-3 left-3 bg-secondary text-secondary-foreground">
+                        <button
+                          type="button"
+                          onClick={() =>
+                            openLightbox(puppy.image, `${puppy.name} - ${litter.title}`)
+                          }
+                          className="block w-full focus:outline-none focus-visible:ring-2 focus-visible:ring-secondary"
+                          aria-label={`View full photo of ${puppy.name}`}
+                        >
+                          <img
+                            src={puppy.image}
+                            alt={`${puppy.name} - ${litter.title}`}
+                            className="w-full h-64 object-cover cursor-pointer transition-transform duration-300 hover:scale-105"
+                            loading="lazy"
+                          />
+                        </button>
+                        <Badge className="absolute top-3 left-3 bg-secondary text-secondary-foreground pointer-events-none">
                           Available
                         </Badge>
                       </div>
@@ -142,6 +160,32 @@ const AvailableLitters = () => {
           </div>
         </div>
       </main>
+
+      {lightboxImage && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-foreground/90 p-4"
+          onClick={closeLightbox}
+          role="dialog"
+          aria-modal="true"
+          aria-label="Full size puppy photo"
+        >
+          <button
+            type="button"
+            onClick={closeLightbox}
+            className="absolute top-6 right-6 p-2 rounded-full bg-background/80 text-foreground hover:bg-background transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-secondary"
+            aria-label="Close full size photo"
+          >
+            <X className="w-6 h-6" weight="bold" />
+          </button>
+          <img
+            src={lightboxImage.src}
+            alt={lightboxImage.alt}
+            className="max-w-full max-h-[85vh] object-contain rounded-lg shadow-2xl"
+            onClick={(e) => e.stopPropagation()}
+          />
+        </div>
+      )}
+
       <Footer />
     </div>
   );
