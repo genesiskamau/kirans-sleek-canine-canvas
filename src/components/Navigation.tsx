@@ -19,6 +19,7 @@ const Navigation = () => {
     { label: "About", href: "/about", isExternal: true },
     { label: "Process", href: "/process", isExternal: true },
     { label: "Puppies", href: "#puppies" },
+    { label: "Available Litters", href: "/available-litters", isExternal: true },
     { label: "Gallery", href: "/gallery", isExternal: true },
     { label: "Blog", href: "/blog", isExternal: true },
     { label: "Contact", href: "#contact" },

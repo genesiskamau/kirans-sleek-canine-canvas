@@ -8,6 +8,7 @@ import About from "./pages/About";
 import Process from "./pages/Process";
 import NotFound from "./pages/NotFound";
 import PuppyForm from "./pages/PuppyForm";
+import AvailableLitters from "./pages/AvailableLitters";
 import Gallery from "./pages/Gallery";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
@@ -26,6 +27,7 @@ const App = () => (
           <Route path="/about" element={<About />} />
           <Route path="/process" element={<Process />} />
           <Route path="/puppy-form" element={<PuppyForm />} />
+          <Route path="/available-litters" element={<AvailableLitters />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:slug" element={<BlogPost />} />
