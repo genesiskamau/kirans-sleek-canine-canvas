@@ -163,7 +163,7 @@ const AvailableLitters = () => {
 
       {lightboxImage && (
         <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-ink/90 p-4"
+          className="fixed inset-0 z-50 flex items-center justify-center bg-foreground/90 p-4"
           onClick={closeLightbox}
           role="dialog"
           aria-modal="true"
