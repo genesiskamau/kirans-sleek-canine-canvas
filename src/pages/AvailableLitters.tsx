@@ -160,6 +160,32 @@ const AvailableLitters = () => {
           </div>
         </div>
       </main>
+
+      {lightboxImage && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-ink/90 p-4"
+          onClick={closeLightbox}
+          role="dialog"
+          aria-modal="true"
+          aria-label="Full size puppy photo"
+        >
+          <button
+            type="button"
+            onClick={closeLightbox}
+            className="absolute top-6 right-6 p-2 rounded-full bg-background/80 text-foreground hover:bg-background transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-secondary"
+            aria-label="Close full size photo"
+          >
+            <X className="w-6 h-6" weight="bold" />
+          </button>
+          <img
+            src={lightboxImage.src}
+            alt={lightboxImage.alt}
+            className="max-w-full max-h-[85vh] object-contain rounded-lg shadow-2xl"
+            onClick={(e) => e.stopPropagation()}
+          />
+        </div>
+      )}
+
       <Footer />
     </div>
   );
