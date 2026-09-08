@@ -101,13 +101,22 @@ const AvailableLitters = () => {
                       className="bg-card border-border overflow-hidden"
                     >
                       <div className="relative">
-                        <img
-                          src={puppy.image}
-                          alt={`${puppy.name} - ${litter.title}`}
-                          className="w-full h-64 object-cover"
-                          loading="lazy"
-                        />
-                        <Badge className="absolute top-3 left-3 bg-secondary text-secondary-foreground">
+                        <button
+                          type="button"
+                          onClick={() =>
+                            openLightbox(puppy.image, `${puppy.name} - ${litter.title}`)
+                          }
+                          className="block w-full focus:outline-none focus-visible:ring-2 focus-visible:ring-secondary"
+                          aria-label={`View full photo of ${puppy.name}`}
+                        >
+                          <img
+                            src={puppy.image}
+                            alt={`${puppy.name} - ${litter.title}`}
+                            className="w-full h-64 object-cover cursor-pointer transition-transform duration-300 hover:scale-105"
+                            loading="lazy"
+                          />
+                        </button>
+                        <Badge className="absolute top-3 left-3 bg-secondary text-secondary-foreground pointer-events-none">
                           Available
                         </Badge>
                       </div>
