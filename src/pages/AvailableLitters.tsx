@@ -1,10 +1,11 @@
+import { useState } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { PawPrint, Dog, Bone, WhatsappLogo } from "@phosphor-icons/react";
+import { PawPrint, Dog, Bone, WhatsappLogo, X } from "@phosphor-icons/react";
 import atosImg from "@/assets/gsd-atos.jpg.asset.json";
 import diegoImg from "@/assets/gsd-diego.jpg.asset.json";
 import brtMalesImg from "@/assets/brt-males.jpg.asset.json";
