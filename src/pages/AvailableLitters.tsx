@@ -52,6 +52,14 @@ const litters = [
 ];
 
 const AvailableLitters = () => {
+  const [lightboxImage, setLightboxImage] = useState<{
+    src: string;
+    alt: string;
+  } | null>(null);
+
+  const openLightbox = (src: string, alt: string) => setLightboxImage({ src, alt });
+  const closeLightbox = () => setLightboxImage(null);
+
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
